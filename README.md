@@ -11,7 +11,7 @@
 
 ## Styling Conventions
 
-- Padding : p-6, Gap : gap-6 
-- Font-Size: <p> : text-sm, heading: text-lg
-
-
+- Padding : p-6,
+- Gap : gap-6
+- Border-Radius: rounded-lg
+- Font-Size: paragraph => text-sm, heading => text-xl
