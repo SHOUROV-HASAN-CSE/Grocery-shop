@@ -21,27 +21,27 @@ const Sidebar = () => {
       label: 'Dashboard',
     },
     {
-      href: '/vendor',
+      href: '/dashboard/vendor',
       icon: <MdOutlineSupportAgent className='h-5 w-5' />,
       label: 'Vendor',
     },
     {
-      href: '/order',
+      href: '/dashboard/order',
       icon: <FiShoppingCart className='h-5 w-5' />,
       label: 'Order',
     },
     {
-      href: '/bundle-order',
+      href: '/dashboard/bundle-order',
       icon: <BiSolidOffer className='h-5 w-5' />,
       label: 'Bundle Order',
     },
     {
-      href: '/brand',
+      href: '/dashboard/brand',
       icon: <AiFillStar className='h-5 w-5' />,
       label: 'Brand',
     },
     {
-      href: '/category',
+      href: '/dashboard/category',
       icon: <HiOutlineViewGrid className='h-5 w-5' />,
       label: 'Category',
     },
