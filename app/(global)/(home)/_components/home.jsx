@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { featuresData } from '@/data/features-data';
 import { Hero } from './hero/hero';
-import { categories } from '@/data/categories';
+import { categories } from '@/data/categories-data';
+import { FeaturedProducts } from './featured-products/featured-products';
 
 export const Home = () => {
   return (
@@ -28,10 +29,12 @@ export const Home = () => {
         ))}
       </div>
       {/* scrolling text */}
-      <div className='mt-6 rounded-lg bg-white p-2'>
+      <div className='mt-6 rounded-lg bg-white pb-1 pt-2'>
         <marquee behavior='scroll' direction='left'>
-          23rd December Saturday, our all outlets are open. Additionally, our
-          online activities will remain open.
+          <span className='text-xs'>
+            23rd December Saturday, our all outlets are open. Additionally, our
+            online activities will remain open.
+          </span>
         </marquee>
       </div>
 
@@ -54,6 +57,8 @@ export const Home = () => {
           ))}
         </div>
       </div>
+
+      <FeaturedProducts />
     </>
   );
 };
