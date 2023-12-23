@@ -1,7 +1,7 @@
 'use client';
 import Image from 'next/image';
 
-export const ProductCard = ({ image, title, price, info }) => {
+const ProductCard = ({ image, title, price, info }) => {
   return (
     <div className='overflow-hidden rounded-lg bg-white py-3'>
       <div className='relative h-[250px]'>
@@ -31,3 +31,5 @@ export const ProductCard = ({ image, title, price, info }) => {
     </div>
   );
 };
+
+export default ProductCard;

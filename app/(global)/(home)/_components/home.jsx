@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { featuresData } from '@/data/features-data';
+import { featuresData } from '../../../../data/features-data';
 import { Hero } from './hero/hero';
-import { categories } from '@/data/categories-data';
+import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
 
 export const Home = () => {

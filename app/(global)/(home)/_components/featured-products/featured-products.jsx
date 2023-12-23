@@ -1,5 +1,5 @@
-import { ProductCard } from '@/components/product-card';
-import { productsData } from '@/data/products-data';
+import ProductCard from '../../../../../components/product-card';
+import { productsData } from '../../../../../data/features-data';
 
 export const FeaturedProducts = () => {
   return (
@@ -9,7 +9,7 @@ export const FeaturedProducts = () => {
         Get Your Desired Product from Featured Category!
       </p>
       <div className='mt-10 grid grid-cols-4 gap-6'>
-        {productsData.map((product, index) => (
+        {productsData?.map((product, index) => (
           <ProductCard
             key={index}
             image={product.image}
