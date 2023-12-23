@@ -2,7 +2,7 @@
 const CategoryPage = () => {
   return (
     <div>
-      category
+      category items
     </div>
   )
 }
