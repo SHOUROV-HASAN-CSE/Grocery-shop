@@ -2,9 +2,9 @@ import { LuSearch } from 'react-icons/lu';
 
 export const Search = () => {
   return (
-    <div className='flex w-full max-w-[500px] rounded-lg bg-white'>
+    <div className='flex w-full rounded-lg bg-white'>
       <input
-        className='form-input w-full border-0 bg-transparent text-black outline-none'
+        className='text=sm form-input w-full border-0 bg-transparent text-black outline-none placeholder:text-sm'
         type='text'
         placeholder='Search ...'
       />

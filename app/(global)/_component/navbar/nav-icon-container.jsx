@@ -11,7 +11,7 @@ export const NavIconContainer = ({ icon, title, subtitle, className, url }) => {
     >
       <div className='text-2xl text-orange-600'>{icon}</div>
       <div>
-        <h4 className='font-semibold text-white'>{title}</h4>
+        <h5 className='text-sm font-semibold text-white'>{title}</h5>
         <p
           onClick={(e) => e.stopPropagation()}
           className='text-xs text-gray-400'
