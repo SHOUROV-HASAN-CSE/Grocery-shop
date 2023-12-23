@@ -1,7 +1,9 @@
-export default function Home() {
+import { Home } from './(home)/_components/home';
+
+export default function HomePage() {
   return (
-    <main>
-      <h1>Hello Dev</h1>
+    <main className='container'>
+      <Home />
     </main>
   );
 }
