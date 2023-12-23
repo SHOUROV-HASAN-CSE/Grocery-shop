@@ -14,5 +14,11 @@ module.exports = {
       },
     },
   },
+<<<<<<< Updated upstream
   plugins: [],
 }
+=======
+  plugins: [require('daisyui'), require('@tailwindcss/forms')],
+  
+};
+>>>>>>> Stashed changes
