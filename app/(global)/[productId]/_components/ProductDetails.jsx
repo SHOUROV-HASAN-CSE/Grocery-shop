@@ -110,8 +110,11 @@ const ProductDetails = ({ productId }) => {
       />
 
       <div className='flex gap-5'>
-        <div className='w-[75%]'>
+        <div className='flex w-[75%] flex-col gap-8'>
           <QuickLinks questions={questions} reviews={reviews} />
+
+          <Description description={description} />
+          <LatestPrice model={model} price={price} />
 
           <Questions questions={questions} />
 
@@ -127,9 +130,6 @@ const ProductDetails = ({ productId }) => {
           </div>
         </div>
       </div>
-
-      {/* <Description description={description} />
-      <LatestPrice model={model} price={price} /> */}
     </div>
   );
 };

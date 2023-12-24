@@ -1,6 +1,5 @@
 const Question = ({ question }) => {
   const { date, user, answer, question: q } = question;
-  console.log(question);
   return (
     <div className='flex flex-col gap-2 border-b py-5'>
       <p className='pl-7'>

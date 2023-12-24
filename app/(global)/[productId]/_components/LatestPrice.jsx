@@ -1,6 +1,6 @@
 const LatestPrice = ({ model, price }) => {
   return (
-    <div>
+    <div className='flex flex-col gap-5 p-5 shadow-md'>
       <h4 className='text-xl font-semibold'>
         What is the price of {model} in Bangladesh?
       </h4>
