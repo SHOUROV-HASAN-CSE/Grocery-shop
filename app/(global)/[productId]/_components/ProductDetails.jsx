@@ -2,6 +2,7 @@ import Description from './Description';
 import LatestPrice from './LatestPrice';
 import FocusPoint from './FocusPoint';
 import QuickLinks from './QuickLinks/QuickLinks';
+import SimilarProducts from './SimilarProducts/SimilarProducts';
 
 const product = {
   model: 'Dell D1918H Monitor',
@@ -60,12 +61,18 @@ const ProductDetails = ({ productId }) => {
       />
 
       <div className='flex'>
-        <div className='w-4/5'>
+        <div className='w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
         </div>
 
         {/* releted products */}
-        <div className='w-1/5 bg-red-500'>h</div>
+
+        <div className='w-[25%] '>
+          <div className='flex flex-col gap-5'>
+            <SimilarProducts title={'Related Products'} />
+            <SimilarProducts title={'Recently Viewed'} />
+          </div>
+        </div>
       </div>
 
       {/* <Description description={description} />
