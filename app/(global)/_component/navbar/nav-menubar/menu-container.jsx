@@ -8,7 +8,7 @@ export const MenuContainer = ({ title, menus }) => {
       <Menubar.Trigger className='font-semibold'>{title}</Menubar.Trigger>
       <Menubar.Portal>
         <Menubar.Content
-          className='border-t-[3px] bg-white py-3 text-sm shadow-md focus-within:border-orange-600'
+          className='z-20 border-t-[3px] bg-white py-3 text-sm shadow-md focus-within:border-orange-600'
           sideOffset={10}
           alignOffset={-10}
         >
@@ -17,20 +17,20 @@ export const MenuContainer = ({ title, menus }) => {
               {url ? (
                 <Link
                   className='px-3 py-1 hover:bg-orange-500 hover:text-white'
-                  key={index}
+                  key={`${url}-${index}`}
                   href={url}
                 >
                   {title}
                 </Link>
               ) : null}
               {subMenus && subMenus.length > 0 ? (
-                <Menubar.Sub>
+                <Menubar.Sub key={`submenu-${index}`}>
                   <Menubar.SubTrigger className='flex cursor-pointer items-center justify-between gap-5 px-3 py-1 text-sm outline-none hover:bg-orange-500 hover:text-white'>
                     {title} <IoMdArrowDropright />
                   </Menubar.SubTrigger>
                   <Menubar.Portal>
                     <Menubar.SubContent
-                      className='flex flex-col gap-1 bg-white py-2 text-xs shadow'
+                      className='z-30 flex min-w-[100px] flex-col gap-1 bg-white py-2 text-xs shadow'
                       sideOffset={5}
                     >
                       {subMenus.map(

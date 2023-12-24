@@ -9,4 +9,7 @@
   .container {
     @apply mx-auto max-w-[1280px];
   }
+  .outlinedButton {
+    @apply w-full rounded border-2 border-blue-900 px-5 py-2 text-sm font-semibold text-blue-900;
+  }
 }

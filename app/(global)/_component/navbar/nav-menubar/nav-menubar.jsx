@@ -1,7 +1,7 @@
 'use client';
 import * as Menubar from '@radix-ui/react-menubar';
 import { MenuContainer } from './menu-container';
-import { navMenuData } from '../nav-data';
+import { navMenuData } from '../../../../../data/nav-data';
 
 export const NavMenubar = () => {
   return (
