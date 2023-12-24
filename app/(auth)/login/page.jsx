@@ -3,7 +3,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-const Login = () => {
+const LoginPage = () => {
   return (
     <div>
       {/* <br />
@@ -11,7 +11,7 @@ const Login = () => {
       <div className='hero min-h-screen bg-base-200 pt-20'>
         <div className=' flex-col lg:flex-row-reverse'>
           <div className='   w-1/2 text-center lg:text-left'>
-            <Image src='/login.png' alt='#' fill ></Image>
+            <Image src='/login.png' alt='#' fill></Image>
           </div>
           <div className='card w-full max-w-sm flex-shrink-0 bg-base-100 shadow-2xl'>
             <form className='card-body'>
@@ -40,7 +40,10 @@ const Login = () => {
                   className='input input-bordered text-black'
                 />
                 <label className='label'>
-                  <Link href={'#'} className='link-hover link label-text-alt text-red-400'>
+                  <Link
+                    href={'#'}
+                    className='link-hover link label-text-alt text-red-400'
+                  >
                     Forgot password?
                   </Link>
                 </label>
@@ -58,12 +61,14 @@ const Login = () => {
               <h1 className='font-3xl mt-5 text-center font-bold text-black'>
                 Sign in with
               </h1>
-              <div className='relative h-2 w-2  flex justify-around py-4'>
+              <div className='relative flex h-2  w-2 justify-around py-4'>
                 {/* <Image className='  ' src='/google.png' fill></Image> */}
               </div>
               <p className='mb-5 text-center text-black'>
                 New to our shop{' '}
-                <Link className='font-bold text-orange-500' href={'#'}>Sign Up</Link>
+                <Link className='font-bold text-orange-500' href={'#'}>
+                  Sign Up
+                </Link>
               </p>
             </div>
           </div>
@@ -73,4 +78,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;
