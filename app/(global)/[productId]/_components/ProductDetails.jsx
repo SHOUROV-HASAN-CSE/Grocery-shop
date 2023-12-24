@@ -4,6 +4,8 @@ import FocusPoint from './FocusPoint';
 import QuickLinks from './QuickLinks/QuickLinks';
 import SimilarProducts from './SimilarProducts/SimilarProducts';
 
+import Questions from './questions/Questions';
+
 import Reviews from './Reviews/Reviews';
 
 const product = {
@@ -44,6 +46,7 @@ const product = {
       user: 'Nahiyan Hossain',
       date: '19 Oct 2023',
     },
+
     {
       rating: 3,
       comment:
@@ -52,7 +55,29 @@ const product = {
       date: '19 Oct 2023',
     },
   ],
-  questions: [1, 2, 3],
+  questions: [
+    {
+      question: 'Is this GPU can work with Amd ryzen 5 3500x?',
+      answer:
+        'Yes sir, Colorful GeForce GT710-2GD3-V 2GB Graphics Card will work with Amd ryzen 5 3500x.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+    {
+      question: 'Will it run with i3 4130 and asus H81 motherboard?',
+      answer:
+        'Sorry Sir, the Colorful GeForce GT710-2GD3-V 2GB Graphics Card will not be supported by the Core i3 4130 Processor. The bottleneck percentage of the Processor and Graphics Card is 100%. This means that you will not get any performance out of the Graphics Card.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+    {
+      question: 'Is this GPU can work with Amd ryzen 5 3500x?',
+      answer:
+        'Yes sir, Colorful GeForce GT710-2GD3-V 2GB Graphics Card will work with Amd ryzen 5 3500x.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+  ],
 };
 
 const ProductDetails = ({ productId }) => {
@@ -87,6 +112,9 @@ const ProductDetails = ({ productId }) => {
       <div className='flex gap-5'>
         <div className='w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
+
+          <Questions questions={questions} />
+
           <Reviews reviews={reviews} />
         </div>
 
