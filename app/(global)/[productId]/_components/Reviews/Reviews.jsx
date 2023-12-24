@@ -4,15 +4,20 @@ import Review from './Review';
 const Reviews = ({ reviews }) => {
   return (
     <div className='p-5 shadow-md ' id='reviews'>
-      <div className='border-b pb-4'>
-        <h4 className='text-xl font-semibold'>Reviews ({reviews.length})</h4>
-        <p className='mt-2 text-sm'>
-          Get specific details about this product from customers who own it.
-        </p>
-        <div className='mt-5 flex items-center gap-2'>
-          <StarRating ratings={4} />{' '}
-          <span className='text-lg font-semibold'>4 out of 5</span>
+      <div className='flex items-center justify-between border-b pb-4'>
+        <div>
+          <h4 className='text-xl font-semibold'>Reviews ({reviews.length})</h4>
+          <p className='mt-2 text-sm'>
+            Get specific details about this product from customers who own it.
+          </p>
+          <div className='mt-5 flex items-center gap-2'>
+            <StarRating ratings={4} />{' '}
+            <span className='text-lg font-semibold'>4 out of 5</span>
+          </div>
         </div>
+        <button className='rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white'>
+          Write a Review
+        </button>
       </div>
       <div className=''>
         {reviews.map((review, i) => (

@@ -3,6 +3,7 @@ import { featuresData } from '../../../../data/features-data';
 import { Hero } from './hero/hero';
 import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
+import { FlashProducts } from './flash-products/flash-products';
 
 export const Home = () => {
   return (
@@ -29,7 +30,7 @@ export const Home = () => {
         ))}
       </div>
       {/* scrolling text */}
-      <div className='mt-6 rounded-lg bg-white pb-1 pt-2'>
+      <div className='mt-6 rounded-lg bg-white px-3 pb-1 pt-2'>
         <marquee behavior='scroll' direction='left'>
           <span className='text-xs'>
             23rd December Saturday, our all outlets are open. Additionally, our
@@ -40,7 +41,7 @@ export const Home = () => {
 
       {/* category */}
       <div className='mt-10 text-center'>
-        <h3 className='text-lg font-bold'>Featured Category</h3>
+        <h3 className='mt-16 text-lg font-bold'>Featured Category</h3>
         <p className='mt-1 text-xs font-semibold'>
           Get Your Desired Product from Featured Category!
         </p>
@@ -59,6 +60,7 @@ export const Home = () => {
       </div>
 
       <FeaturedProducts />
+      <FlashProducts />
     </>
   );
 };

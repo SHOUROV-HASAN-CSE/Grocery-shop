@@ -1,7 +1,7 @@
-"use client"
+'use client';
 
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 import { AiFillStar } from 'react-icons/ai';
 import { BiSolidOffer } from 'react-icons/bi';
@@ -11,8 +11,9 @@ import {
   MdOutlineProductionQuantityLimits,
   MdOutlineSupportAgent,
 } from 'react-icons/md';
-const Sidebar = () => {
-  const router = useRouter()
+const Sidebar = ({ isVisible }) => {
+
+  const path = usePathname();
 
   const menuItems = [
     {
@@ -48,32 +49,41 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className='z-30 hidden w-64 flex-shrink-0 overflow-y-auto bg-white shadow-sm lg:block dark:bg-gray-800 transition-width duration-500 ease-in-out '>
+    <aside
+      className={`transition-width z-50 w-64 flex-shrink-0 overflow-y-auto bg-white shadow-sm duration-500 ease-in-out lg:block dark:bg-gray-800 `}
+    >
       <div className='h-16 py-4 text-gray-500 dark:text-gray-400'>
-        <Link href='/' className='ps-5 text-2xl font-bold'>
-          Grocery Shop
+        <Link href='/'>
+          <img
+            src='https://seeklogo.com/images/1/shop-logo-C0083F2CCF-seeklogo.com.png'
+            alt=''
+            className='mx-auto h-6 object-cover md:h-12'
+            srcset=''
+          />
         </Link>
         <ul className='mt-6'>
-      {menuItems.map((menuItem, index) => (
-          <li key={index}>
-            <Link href={menuItem.href}>
-              <div
-                className={`inline-flex w-full items-center px-6 py-4 text-sm font-semibold transition-colors duration-150 hover:text-emerald-700 dark:hover:text-gray-200 ${
-                  router.pathname === menuItem.href ? 'bg-emerald-500' : ''
-                }`}
-              >
-                <span className="absolute inset-y-0 left-0 w-1 rounded-br-lg rounded-tr-lg bg-emerald-500" aria-hidden="true"></span>
-                {menuItem.icon}
-                <span className="ml-4">{menuItem.label}</span>
-              </div>
-            </Link>
-          </li>
-        ))}
-      </ul>
+          {menuItems.map((menuItem, index) => (
+            <li className='relative px-6 py-3' key={index}>
+              <Link href={menuItem.href}>
+                <div
+                  className={`inline-flex w-full items-center px-6 py-4 text-sm font-semibold transition-colors duration-150 hover:text-emerald-700 dark:hover:text-gray-200 ${
+                    path === menuItem.href ? 'text-emerald-500' : ''
+                  }`}
+                >
+                  {path === menuItem.href && (
+                    <span
+                      className='absolute inset-y-0 left-0 w-1 rounded-br-lg rounded-tr-lg bg-emerald-500'
+                      aria-hidden='true'
+                    ></span>
+                  )}
+                  {menuItem.icon}
+                  <span className='ml-4 '>{menuItem.label}</span>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
-     
-   
-    
     </aside>
   );
 };
