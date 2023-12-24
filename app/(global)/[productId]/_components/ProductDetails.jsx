@@ -4,6 +4,8 @@ import FocusPoint from './FocusPoint';
 import QuickLinks from './QuickLinks/QuickLinks';
 import SimilarProducts from './SimilarProducts/SimilarProducts';
 
+import Reviews from './Reviews/Reviews';
+
 const product = {
   model: 'Dell D1918H Monitor',
   price: 9900,
@@ -27,7 +29,29 @@ const product = {
     'Features: Flicker Free',
   ],
 
-  reviews: [1, 2, 3],
+  reviews: [
+    {
+      rating: 4,
+      comment:
+        'Colorful GeForce GT710-2GD3-V 2GB Graphics Card is a very good product. I play free fire on my PC but does not face any problem yet.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+    {
+      rating: 5,
+      comment:
+        'Colorful GeForce GT710-2GD3-V 2GB Graphics Card is a very good product. I play free fire on my PC but does not face any problem yet.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+    {
+      rating: 3,
+      comment:
+        'Colorful GeForce GT710-2GD3-V 2GB Graphics Card is a very good product. I play free fire on my PC but does not face any problem yet.',
+      user: 'Nahiyan Hossain',
+      date: '19 Oct 2023',
+    },
+  ],
   questions: [1, 2, 3],
 };
 
@@ -60,9 +84,10 @@ const ProductDetails = ({ productId }) => {
         keyFeatures={keyFeatures}
       />
 
-      <div className='flex'>
+      <div className='flex gap-5'>
         <div className='w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
+          <Reviews reviews={reviews} />
         </div>
 
         {/* releted products */}
