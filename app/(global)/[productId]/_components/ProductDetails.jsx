@@ -1,6 +1,7 @@
 import Description from './Description';
 import LatestPrice from './LatestPrice';
 import FocusPoint from './FocusPoint';
+import QuickLinks from './QuickLinks/QuickLinks';
 
 const product = {
   model: 'Dell D1918H Monitor',
@@ -16,6 +17,17 @@ const product = {
   status: 'In Stock',
   productCode: '10585',
   brand: 'Dell',
+  title: 'Dell D1918H 18.5 Inch LED Monitor (VGA, HDMI)',
+  keyFeatures: [
+    'Model: Dell D1918H',
+    'Resolution: HD (1366 x 768)',
+    'Display: TN, 60Hz, 5ms',
+    'Ports: HDMI, VGA',
+    'Features: Flicker Free',
+  ],
+
+  reviews: [1, 2, 3],
+  questions: [1, 2, 3],
 };
 
 const ProductDetails = ({ productId }) => {
@@ -28,10 +40,14 @@ const ProductDetails = ({ productId }) => {
     status,
     productCode,
     brand,
+    title,
+    keyFeatures,
+    reviews,
+    questions,
   } = product;
 
   return (
-    <div>
+    <div className='mx-auto w-[75%]'>
       <FocusPoint
         price={price}
         brand={brand}
@@ -39,7 +55,18 @@ const ProductDetails = ({ productId }) => {
         productCode={productCode}
         regularPrice={regularPrice}
         status={status}
+        title={title}
+        keyFeatures={keyFeatures}
       />
+
+      <div className='flex'>
+        <div className='w-4/5'>
+          <QuickLinks questions={questions} reviews={reviews} />
+        </div>
+
+        {/* releted products */}
+        <div className='w-1/5 bg-red-500'>h</div>
+      </div>
 
       {/* <Description description={description} />
       <LatestPrice model={model} price={price} /> */}

@@ -26,7 +26,9 @@
     "app/(dashboard)/dashboard/products/page.jsx",
     "app/(global)/[productId]/_components/Description.jsx",
     "app/(global)/[productId]/_components/ProductDetails.jsx",
-    "app/(global)/[productId]/page.jsx"
+    "app/(global)/[productId]/page.jsx",
+    "app/(global)/[productId]/_components/focusPoint/Image.jsx",
+    "app/(global)/[productId]/_components/focusPoint/Quantity.jsx"
   ],
   "exclude": ["node_modules"]
 }
