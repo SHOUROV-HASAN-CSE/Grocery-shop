@@ -11,9 +11,13 @@ const StarRating = ({ ratings, length, review }) => {
             ) : (
               <div>
                 {ratings >= i + 1 ? (
-                  <GoStarFill className={`${review ? '' : 'text-[18.5px]'}`} />
+                  <GoStarFill
+                    className={`${review ? 'text-[14.5px]' : 'text-[18.5px]'}`}
+                  />
                 ) : (
-                  <GoStar className={`${review ? '' : 'text-[18.5px]'}`} />
+                  <GoStar
+                    className={`${review ? 'text-[14.5px]' : 'text-[18.5px]'}`}
+                  />
                 )}
               </div>
             )}
