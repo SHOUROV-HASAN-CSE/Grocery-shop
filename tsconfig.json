@@ -23,7 +23,10 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/(dashboard)/dashboard/products/page.jsx"
+    "app/(dashboard)/dashboard/products/page.jsx",
+    "app/(global)/[productId]/_components/Description.jsx",
+    "app/(global)/[productId]/_components/ProductDetails.jsx",
+    "app/(global)/[productId]/page.jsx"
   ],
   "exclude": ["node_modules"]
 }
