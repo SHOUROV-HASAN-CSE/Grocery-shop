@@ -3,7 +3,7 @@ import React from 'react';
 
 import Image from 'next/image';
 
-const login = () => {
+const Login = () => {
   return (
     <div>
       {/* <br />
@@ -73,4 +73,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
