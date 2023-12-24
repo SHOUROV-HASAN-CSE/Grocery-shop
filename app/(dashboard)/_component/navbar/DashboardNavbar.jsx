@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const DashboardNavbar = ({ toggleVisibility, toggleDarkMode }) => {
   return (
     <div className=' transition-width bg-base-100 dark:bg-gray-800 duration-500 ease-linear'>
@@ -26,10 +28,10 @@ const DashboardNavbar = ({ toggleVisibility, toggleDarkMode }) => {
             </div>
           </div>
         </div>
-        <div className='navbar-center'>
-          <a className='btn btn-ghost text-xl dark:text-emerald-500 '>Grocery Shop</a>
+        <div className='navbar-center '>
+          <Link href="/" className='btn btn-ghost text-xl dark:text-emerald-500 '>Grocery Shop</Link>
         </div>
-        <div className='navbar-end md:gap-5 '>
+        <div className='ml-auto navbar-end md:gap-5 '>
           <label className='swap swap-rotate'>
            
             <input
@@ -41,7 +43,7 @@ const DashboardNavbar = ({ toggleVisibility, toggleDarkMode }) => {
             />
 
             <svg
-              className='swap-on h-5 w-5 fill-emerald-500 '
+              className='swap-on h-5 w-5 fill-black dark:fill-emerald-500 '
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
             >
@@ -50,7 +52,7 @@ const DashboardNavbar = ({ toggleVisibility, toggleDarkMode }) => {
 
      
             <svg
-              className='swap-off h-5 w-5 fill-current  '
+              className='swap-off h-5 w-5 fill-black dark:fill-emerald-500 '
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'
             >
