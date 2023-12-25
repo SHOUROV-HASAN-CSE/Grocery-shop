@@ -7,6 +7,7 @@ import SimilarProducts from './SimilarProducts/SimilarProducts';
 import Questions from './questions/Questions';
 
 import Reviews from './Reviews/Reviews';
+import Specifications from './specifications/Specifications';
 
 const product = {
   model: 'Dell D1918H Monitor',
@@ -111,6 +112,8 @@ const ProductDetails = ({ productId }) => {
       <div className='flex gap-5'>
         <div className='flex w-[75%] flex-col gap-8'>
           <QuickLinks questions={questions} reviews={reviews} />
+
+          <Specifications />
 
           <Description description={description} />
           <LatestPrice model={model} price={price} />
