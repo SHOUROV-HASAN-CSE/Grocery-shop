@@ -13,3 +13,48 @@
     @apply w-full rounded border-2 border-blue-900 px-5 py-2 text-sm font-semibold text-blue-900;
   }
 }
+
+/* -----------------pagination -------------------- */
+
+.pagination {
+  justify-content: center;
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.page-item .page-link {
+  position: relative;
+  display: block;
+  margin: 0 1px;
+  min-height: 30px;
+  min-width: 30px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 30px;
+  color: #000305;
+  text-decoration: none;
+}
+
+.page-item a.page-link:hover {
+  background-color: #cccccc;
+}
+
+.page-item.active .page-link {
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #ef4a23;
+}
+
+.page-item.active:hover .page-link {
+  background-color: #ef4a23;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+}
+
+/* ---------------- -------------------- */

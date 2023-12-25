@@ -1,8 +1,18 @@
+'use client';
 import { BsQuestionSquare } from 'react-icons/bs';
 import Question from './Question';
 import NoData from '../NoData';
+import { useState } from 'react';
+
+import ResponsivePagination from 'react-responsive-pagination';
 
 const Questions = ({ questions }) => {
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
   return (
     <div className='p-5 shadow-md ' id='questions'>
       <div className='flex items-center justify-between border-b pb-4'>
@@ -34,6 +44,16 @@ const Questions = ({ questions }) => {
             {questions?.map((question, i) => (
               <Question key={i} question={question} />
             ))}
+
+            <div className='flex justify-end pt-5'>
+              {questions.length >= 2 && (
+                <ResponsivePagination
+                  total={totalPages}
+                  current={currentPage}
+                  onPageChange={(page) => handlePageChange(page)}
+                />
+              )}
+            </div>
           </>
         )}
       </div>
