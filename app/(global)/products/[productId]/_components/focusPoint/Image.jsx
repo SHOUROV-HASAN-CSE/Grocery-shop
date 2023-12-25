@@ -3,7 +3,15 @@ import Image from 'next/image';
 const ImageView = ({ setActiveImage, activeImage, images }) => {
   return (
     <div className='w-2/5 '>
-      <Image src={activeImage} alt='' width={500} height={500} />
+      <div className='overflow-hidden'>
+        <Image
+          src={activeImage}
+          alt=''
+          width={500}
+          height={500}
+          className='cursor-pointer duration-700 hover:scale-[115%]'
+        />
+      </div>
 
       <div className=' flex  justify-center  '>
         <div className='flex '>
