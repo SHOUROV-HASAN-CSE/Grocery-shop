@@ -46,7 +46,6 @@ const product = {
       user: 'Nahiyan Hossain',
       date: '19 Oct 2023',
     },
-
     {
       rating: 3,
       comment:

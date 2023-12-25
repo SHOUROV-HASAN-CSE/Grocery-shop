@@ -1,5 +1,8 @@
+import NoData from '../NoData';
 import StarRating from '../StarRating';
 import Review from './Review';
+
+import { CgNotes } from 'react-icons/cg';
 
 const Reviews = ({ reviews }) => {
   return (
@@ -19,10 +22,23 @@ const Reviews = ({ reviews }) => {
           Write a Review
         </button>
       </div>
+
+      {/* reviews */}
       <div className=''>
-        {reviews.map((review, i) => (
-          <Review key={i} review={review} />
-        ))}
+        {reviews.length === 0 ? (
+          <NoData
+            icon={<CgNotes className='text-4xl' />}
+            text={
+              'This product has no reviews yet. Be the first one to write a review.'
+            }
+          />
+        ) : (
+          <>
+            {reviews.map((review, i) => (
+              <Review key={i} review={review} />
+            ))}
+          </>
+        )}
       </div>
     </div>
   );
