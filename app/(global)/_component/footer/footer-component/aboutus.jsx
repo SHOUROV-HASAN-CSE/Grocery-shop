@@ -17,9 +17,9 @@ const Aboutus = () => {
     { pathname: '/brands', title: 'Brands' },
   ];
   return (
-    <div className='col-span-2'>
-      <h3 className='text-white'>ABOUT US</h3>
-      <div className='grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3'>
+    <div className='md:col-span-2'>
+      <h3 className='text-white text-center sm:text-left text-lg py-6 tracking-wider'>ABOUT US</h3>
+      <div className='flex flex-wrap justify-center sm:grid gap-5 sm:grid-cols-2 md:grid-cols-3'>
         {navLinks?.map((element, i) => (
           <div className='text-gray-300' key={i}>
             <Link  href={element.pathname}>
