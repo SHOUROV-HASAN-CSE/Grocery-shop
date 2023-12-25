@@ -5,6 +5,8 @@ import ImageView from './focusPoint/Image';
 
 import { MdOutlineStar } from 'react-icons/md';
 import Quantity from './focusPoint/Quantity';
+import PayOption from './focusPoint/PayOption';
+import Link from 'next/link';
 
 const FocusPoint = ({
   images,
@@ -45,16 +47,25 @@ const FocusPoint = ({
                 </p>
               ))}
             </div>
-            <button className='mt-3 cursor-pointer border-b-2 border-red-400 pb-[2px] font-medium  text-red-500 hover:text-red-700 '>
-              View More Info
-            </button>
+            <p className='mt-3'>
+              {' '}
+              <Link
+                href={'#specification'}
+                className=' cursor-pointer border-b-2 border-red-400 pb-[2px] font-medium  text-red-500 hover:text-red-700 '
+              >
+                View More Info
+              </Link>
+            </p>
           </div>
-          <button className='mt-10 flex items-center gap-5  rounded-full bg-red-100 p-5'>
+          <button className='mt-10 flex cursor-default items-center  gap-5 rounded-full bg-red-100 p-5'>
             <MdOutlineStar className='rounded-full bg-red-500 p-[2px] text-3xl text-white' />
             <p>
               <span className='text-xl font-semibold'>100</span> Star Points
             </p>
           </button>
+
+          {/* <PayOption /> */}
+
           <Quantity />
         </div>
       </div>

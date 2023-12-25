@@ -25,7 +25,7 @@ const Quantity = () => {
         <FiPlus className='cursor-pointer text-2xl   font-medium ' />
       </button>
 
-      <button className='rounded-sm bg-blue-600 px-20  py-2 font-semibold text-white'>
+      <button className='rounded-sm bg-blue-700  px-20 py-2 font-semibold  text-white duration-200 hover:bg-blue-800'>
         Buy Now
       </button>
     </div>
