@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const ImageView = ({ setActiveImage, activeImage, images }) => {
   return (
-    <div className='w-2/5 '>
+    <div className='w-full lg:w-2/5 '>
       <div className='overflow-hidden'>
         <Image
           src={activeImage}
