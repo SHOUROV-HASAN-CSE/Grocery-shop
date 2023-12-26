@@ -3,7 +3,7 @@ import React from 'react';
 const registration = () => {
     return (
        
-<div class="bg-gray-100 flex items-center justify-center h-screen ">
+<div class="    bg-[url('https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?w=740&t=st=1703600703~exp=1703601303~hmac=70c29866dc8c4df6d181cb14362a69bb299b9c9dff54512ef72567c127dde05e')]   flex items-center justify-center h-screen ">
     <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full ">
         <div class="flex justify-center mb-6">
             <span class="inline-block bg-gray-200 rounded-full p-3">
