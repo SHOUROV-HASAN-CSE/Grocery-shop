@@ -21,7 +21,7 @@ const FocusPoint = ({
   const [activeImage, setActiveImage] = useState(images[0]);
 
   return (
-    <div className=' px-4 py-10 lg:px-[unset]'>
+    <div className='  py-10'>
       <div className='flex flex-col lg:flex-row'>
         <ImageView
           activeImage={activeImage}
@@ -30,7 +30,7 @@ const FocusPoint = ({
         />
 
         <div className=' w-full lg:w-3/5'>
-          <h2 className='text-xl font-medium'>{title}</h2>
+          <h2 className='mt-4 text-xl font-medium md:mt-[unset]'>{title}</h2>
           <div className='mt-3 flex flex-wrap gap-y-1'>
             <Info info={price} title={'Price'} />
             <Info info={`${regularPrice}৳`} title={'Regular Price'} />
@@ -64,7 +64,7 @@ const FocusPoint = ({
               <span className='text-xl font-semibold'>100</span> Star Points
             </p>
           </button>
-          {/* <PayOption /> */}
+          <PayOption />
           <Quantity />
         </div>
       </div>

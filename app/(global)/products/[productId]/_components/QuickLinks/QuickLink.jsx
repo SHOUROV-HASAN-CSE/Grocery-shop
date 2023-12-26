@@ -5,7 +5,7 @@ const QuickLink = ({ tag, path, bg }) => {
   return (
     <Link
       href={path}
-      className={`rounded-sm  px-3 py-2 ${
+      className={`rounded-sm px-3  py-2 text-center ${
         bg
           ? 'bg-[#EF4A23] text-white'
           : 'text-black shadow-md hover:bg-[#EF4A23] hover:text-white'
