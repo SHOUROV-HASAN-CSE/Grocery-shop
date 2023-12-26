@@ -10,8 +10,8 @@ export const Navbar = () => {
       <nav className='navbar bg-primary py-3 text-white'>
         <div className='container flex gap-6 whitespace-nowrap'>
           <Link className='text-xl font-bold' href={'/'}>
-            <span className='text-orange-600'>Star</span>{' '}
-            <span className='text-sky-600'>Tech</span>
+            <span className='text-orange-600'>LOGO</span>{' '}
+            <span className='text-sky-600'>HERE</span>
           </Link>
           <Search />
 
