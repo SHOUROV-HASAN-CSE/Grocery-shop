@@ -1,3 +1,6 @@
+import { ProductCard } from "@/components/product-card";
+import { flashProductsData } from "@/data/products-data";
+
 const CategoryPage = () => {
   return (
     <div className='container bg-[#f2f4f8]'>
@@ -29,7 +32,7 @@ const CategoryPage = () => {
 
       {/* main section */}
       <div className="grid grid-cols-12 gap-4">
-        <div className="col-span-3 ">
+        <div className="col-span-3">
           {/* section 1 */}
           <div className="rounded-md bg-[#fff] p-6 mb-2">
           <p className="pb-20">Price Range</p>
@@ -76,12 +79,53 @@ const CategoryPage = () => {
           </div>
           </div>
 
-
-
         </div>
+        {/* Second Section */}
 
-        <div className="col-span-9 rounded-md bg-[#fff] ">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa repellat necessitatibus illum accusamus ut. Cum minima veritatis autem iusto excepturi quis, ratione ut iure voluptate odit assumenda dolorum molestias quibusdam!</p>
+        <div className="col-span-9">
+          {/* section 1 */}
+          <div className="rounded-md bg-[#fff] p-2 mb-2">
+            <h2 className="ps-2">Brother</h2>
+            <div></div>
+
+          </div>
+          {/* section 2     Product Section */}
+
+         <div className='text-center'>
+      <div className='grid grid-cols-4 gap-6'>
+        {flashProductsData?.map((product, index) => (
+          <ProductCard
+            key={index}
+            image={product.image}
+            price={product.price}
+            title={product.title}
+            rating={product.rating}
+            discount={product.discount}
+            reviewsCount={product.reviewsCount}
+          />
+        ))}
+      </div>
+    </div>
+
+
+          {/* section 3 */}
+          <div className="mt-6">
+            <div className="flex items-center justify-between">
+              <div className="join">
+              <button className="join-item btn">PREV</button>
+              <button className="join-item btn btn-active">1</button>
+              <button className="join-item btn">2</button>
+              <button className="join-item btn">NEXT</button>
+              </div>
+              <p>Showing 1 to 20 of 31 (2 Pages)</p>
+            </div>
+          </div>
+
+    
+    
+       
+       
+       
         </div>
       </div>
     </div>
