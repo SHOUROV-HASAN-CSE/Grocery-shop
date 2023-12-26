@@ -21,7 +21,7 @@ const FocusPoint = ({
   const [activeImage, setActiveImage] = useState(images[0]);
 
   return (
-    <div className=' px-4 py-10 lg:px-[unset]'>
+    <div className='  py-10'>
       <div className='flex flex-col lg:flex-row'>
         <ImageView
           activeImage={activeImage}

@@ -97,7 +97,7 @@ const ProductDetails = ({ productId }) => {
   } = product;
 
   return (
-    <div className='mx-auto w-full lg:w-[75%]'>
+    <div className='mx-auto w-full px-4 lg:w-[75%] lg:px-[unset] '>
       <FocusPoint
         price={price}
         brand={brand}
@@ -109,7 +109,7 @@ const ProductDetails = ({ productId }) => {
         keyFeatures={keyFeatures}
       />
 
-      <div className='flex gap-5'>
+      <div className='flex flex-col gap-5 lg:flex-row '>
         <div className='flex w-full flex-col gap-8 lg:w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
 
