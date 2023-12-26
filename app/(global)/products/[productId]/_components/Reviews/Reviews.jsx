@@ -1,7 +1,20 @@
+'use client';
+import NoData from '../NoData';
 import StarRating from '../StarRating';
 import Review from './Review';
+import ResponsivePagination from 'react-responsive-pagination';
+
+import { CgNotes } from 'react-icons/cg';
+import { useState } from 'react';
 
 const Reviews = ({ reviews }) => {
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
     <div className='p-5 shadow-md ' id='reviews'>
       <div className='flex items-center justify-between border-b pb-4'>
@@ -19,10 +32,33 @@ const Reviews = ({ reviews }) => {
           Write a Review
         </button>
       </div>
+
+      {/* reviews */}
       <div className=''>
-        {reviews.map((review, i) => (
-          <Review key={i} review={review} />
-        ))}
+        {reviews.length === 0 ? (
+          <NoData
+            icon={<CgNotes className='text-4xl' />}
+            text={
+              'This product has no reviews yet. Be the first one to write a review.'
+            }
+          />
+        ) : (
+          <>
+            {reviews.map((review, i) => (
+              <Review key={i} review={review} />
+            ))}
+
+            <div className='flex justify-end pt-5'>
+              {reviews.length >= 2 && (
+                <ResponsivePagination
+                  total={totalPages}
+                  current={currentPage}
+                  onPageChange={(page) => handlePageChange(page)}
+                />
+              )}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
