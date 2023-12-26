@@ -97,7 +97,7 @@ const ProductDetails = ({ productId }) => {
   } = product;
 
   return (
-    <div className='mx-auto w-[75%]'>
+    <div className='mx-auto w-full lg:w-[75%]'>
       <FocusPoint
         price={price}
         brand={brand}
@@ -110,7 +110,7 @@ const ProductDetails = ({ productId }) => {
       />
 
       <div className='flex gap-5'>
-        <div className='flex w-[75%] flex-col gap-8'>
+        <div className='flex w-full flex-col gap-8 lg:w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
 
           <Specifications />
@@ -125,7 +125,7 @@ const ProductDetails = ({ productId }) => {
 
         {/* releted products */}
 
-        <div className='w-[25%] '>
+        <div className='w-full lg:w-[25%] '>
           <div className='flex flex-col gap-5'>
             <SimilarProducts title={'Related Products'} />
             <SimilarProducts title={'Recently Viewed'} />
