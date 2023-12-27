@@ -102,7 +102,7 @@ const ProductDetails = ({ productId }) => {
   } = product;
 
   return (
-    <div className='mx-auto w-full px-4 lg:w-[75%] lg:px-[unset] '>
+    <div className='mx-auto w-full px-4 xl:w-[75%] xl:px-[unset] '>
       {/* breadcrumb */}
 
       <div className='mt-4  flex items-center gap-2 text-sm text-gray-600'>
@@ -132,7 +132,7 @@ const ProductDetails = ({ productId }) => {
       />
 
       <div className='flex flex-col gap-5 lg:flex-row '>
-        <div className='flex w-full flex-col gap-8 lg:w-[75%]'>
+        <div className='gap- flex w-full flex-col lg:w-[60%] xl:w-[75%]'>
           <QuickLinks questions={questions} reviews={reviews} />
 
           <Specifications />
@@ -147,7 +147,7 @@ const ProductDetails = ({ productId }) => {
 
         {/* releted products */}
 
-        <div className='w-full lg:w-[25%] '>
+        <div className='w-full lg:w-[40%] xl:w-[25%] '>
           <div className='flex flex-col gap-5'>
             <SimilarProducts title={'Related Products'} />
             <SimilarProducts title={'Recently Viewed'} />
