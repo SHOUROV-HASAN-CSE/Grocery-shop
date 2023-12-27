@@ -1,24 +1,13 @@
-import { CircleContainer } from '@/components/circle-container';
+import { zones } from '@/data/zone';
+import { CheckoutCard } from '../checkout-card';
 import { Input } from '@/components/form-components/input';
 import { Select } from '@/components/form-components/select';
 import { TextArea } from '@/components/form-components/text-area';
-import { zones } from '@/data/zone';
-import { orange } from 'tailwindcss/colors';
 
 export const CustomerInfo = () => {
   return (
-    <div className='rounded bg-white p-4 shadow'>
-      <div className='flex items-center gap-3 border-b pb-3'>
-        <CircleContainer
-          bgColor={orange[100]}
-          fontColor={orange[600]}
-          className={'font-bold'}
-        >
-          1
-        </CircleContainer>
-        <h3 className=''>Customer Information</h3>
-      </div>
-      <div className='mt-4 space-y-4'>
+    <CheckoutCard count={1} title='Customer Information' className='h-fit'>
+      <div className='space-y-4'>
         <div className='flex gap-4'>
           <Input
             label='First Name'
@@ -61,6 +50,6 @@ export const CustomerInfo = () => {
         </div>
         <TextArea label='Comment' name='comment' placeholder='Comment' />
       </div>
-    </div>
+    </CheckoutCard>
   );
 };

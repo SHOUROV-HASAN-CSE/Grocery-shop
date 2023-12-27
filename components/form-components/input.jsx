@@ -1,6 +1,6 @@
 export const Input = ({ name, label, placeholder, type, required }) => {
   return (
-    <div className='w-full space-y-2'>
+    <div className={`w-full ${label ? 'space-y-2' : ''}`}>
       <label className='block text-sm font-bold' htmlFor={name}>
         {label}
       </label>
