@@ -9,7 +9,7 @@ const RModal = () => {
     <div>
       <input type='checkbox' id='r-modal' className='modal-toggle' />
       <div className='modal' role='dialog'>
-        <div className='modal-box'>
+        <div className='modal-box w-[450px] rounded-md'>
           <h3 className='text-xl font-semibold text-[#3749BB]'>Write Review</h3>
 
           <div className='pt-4'>

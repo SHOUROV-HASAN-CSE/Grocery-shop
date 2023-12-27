@@ -4,6 +4,7 @@ import Info from './focusPoint/Info';
 import ImageView from './focusPoint/Image';
 
 import { MdOutlineStar } from 'react-icons/md';
+
 import Quantity from './focusPoint/Quantity';
 import PayOption from './focusPoint/PayOption';
 import Link from 'next/link';
@@ -64,7 +65,9 @@ const FocusPoint = ({
               <span className='text-xl font-semibold'>100</span> Star Points
             </p>
           </button>
+
           <PayOption />
+
           <Quantity />
         </div>
       </div>
