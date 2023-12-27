@@ -1,17 +1,19 @@
 import Link from 'next/link';
-import React from 'react';
 
-const QuickLink = ({ tag, path, bg }) => {
+const QuickLink = ({ tag, path, active, setActive, activeStyle }) => {
   return (
     <Link
       href={path}
-      className={`rounded-sm px-3  py-2 text-center ${
-        bg
-          ? 'bg-[#EF4A23] text-white'
-          : 'text-black shadow-md hover:bg-[#EF4A23] hover:text-white'
-      }`}
+      onClick={() => setActive(active)}
+      className={` relative origin-left   transform rounded-sm pb-1 text-center  `}
     >
       {tag}
+
+      {activeStyle && (
+        <div className='mt-1 flex w-full justify-center'>
+          <div className=' h-[2px] w-[100%]  bg-[#EF4A23] '></div>
+        </div>
+      )}
     </Link>
   );
 };
