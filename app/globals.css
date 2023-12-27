@@ -9,8 +9,23 @@
   .container {
     @apply mx-auto w-[95%] md:w-[90%] xl:w-[1200px] 2xl:w-[1320px];
   }
+  .blueButton {
+    @apply rounded bg-blue-500 px-5 py-2 font-semibold text-white;
+  }
   .outlinedButton {
     @apply w-full rounded border-2 border-blue-900 px-5 py-2 text-sm font-semibold text-blue-900;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
   }
 }
 
