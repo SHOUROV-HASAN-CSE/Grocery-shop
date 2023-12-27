@@ -34,7 +34,7 @@ const SimilarProducts = ({ title }) => {
           <div key={i} className='  flex gap-3 border-t py-6'>
             <div>
               <Link href={product?.id}>
-                <Image src={product?.img} alt='' width={80} height={80} />
+                <Image src={product?.img} alt='' width={100} height={100} />
               </Link>
             </div>
             <div className='flex flex-col gap-3'>
