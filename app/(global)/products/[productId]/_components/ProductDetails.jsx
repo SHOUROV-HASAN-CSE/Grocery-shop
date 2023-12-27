@@ -4,10 +4,13 @@ import FocusPoint from './FocusPoint';
 import QuickLinks from './QuickLinks/QuickLinks';
 import SimilarProducts from './SimilarProducts/SimilarProducts';
 
+import { TiHome } from 'react-icons/ti';
+
 import Questions from './questions/Questions';
 
 import Reviews from './Reviews/Reviews';
 import Specifications from './specifications/Specifications';
+import Link from 'next/link';
 
 const product = {
   model: 'Dell D1918H Monitor',
@@ -22,6 +25,7 @@ const product = {
   regularPrice: '10,500',
   status: 'In Stock',
   productCode: '10585',
+  category: 'monitor',
   brand: 'Dell',
   title: 'Dell D1918H 18.5 Inch LED Monitor (VGA, HDMI)',
   keyFeatures: [
@@ -90,6 +94,7 @@ const ProductDetails = ({ productId }) => {
     status,
     productCode,
     brand,
+    category,
     title,
     keyFeatures,
     reviews,
@@ -98,6 +103,21 @@ const ProductDetails = ({ productId }) => {
 
   return (
     <div className='mx-auto w-full px-4 lg:w-[75%] lg:px-[unset] '>
+      <div className='mt-4  flex items-center gap-2 text-sm text-gray-600'>
+        <Link className='flex items-center' href={'/'}>
+          <TiHome />
+        </Link>
+        <Link href={'/category'}>
+          / <span className='capitalize hover:underline'>{category}</span>
+        </Link>
+        <Link href={'/brand'}>
+          / <span className='capitalize hover:underline'>{brand}</span>
+        </Link>
+        <Link href={'/title'}>
+          / <span className='capitalize hover:underline'>{title}</span>
+        </Link>
+      </div>
+
       <FocusPoint
         price={price}
         brand={brand}
