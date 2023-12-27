@@ -6,6 +6,7 @@ import ResponsivePagination from 'react-responsive-pagination';
 
 import { CgNotes } from 'react-icons/cg';
 import { useState } from 'react';
+import RModal from './RModal';
 
 const Reviews = ({ reviews }) => {
   const totalPages = 5;
@@ -29,9 +30,12 @@ const Reviews = ({ reviews }) => {
           </div>
         </div>
         <div>
-          <button className='rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white'>
+          <label
+            htmlFor='r-modal'
+            className='cursor-pointer rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white'
+          >
             Write a Review
-          </button>
+          </label>
         </div>
       </div>
 
@@ -62,6 +66,8 @@ const Reviews = ({ reviews }) => {
           </>
         )}
       </div>
+
+      <RModal />
     </div>
   );
 };
