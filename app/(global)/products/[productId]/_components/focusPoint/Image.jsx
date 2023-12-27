@@ -3,7 +3,7 @@ import Image from 'next/image';
 const ImageView = ({ setActiveImage, activeImage, images }) => {
   return (
     <div className='w-full lg:w-2/5 '>
-      <div className='overflow-hidden'>
+      <div className='flex justify-center overflow-hidden'>
         <Image
           src={activeImage}
           alt=''

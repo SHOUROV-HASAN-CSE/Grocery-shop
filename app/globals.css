@@ -72,4 +72,17 @@
   cursor: auto;
 }
 
-/* ---------------- -------------------- */
+/* ---------------- input type text -------------------- */
+input[type='number'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* border: none; */
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ------------------------------------------------------------------ */

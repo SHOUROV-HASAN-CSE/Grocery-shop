@@ -4,6 +4,7 @@ import Info from './focusPoint/Info';
 import ImageView from './focusPoint/Image';
 
 import { MdOutlineStar } from 'react-icons/md';
+
 import Quantity from './focusPoint/Quantity';
 import PayOption from './focusPoint/PayOption';
 import Link from 'next/link';
@@ -29,8 +30,8 @@ const FocusPoint = ({
           images={images}
         />
 
-        <div className=' w-full lg:w-3/5'>
-          <h2 className='mt-4 text-xl font-medium md:mt-[unset]'>{title}</h2>
+        <div className=' w-full  lg:w-3/5'>
+          <h2 className='mt-4 text-xl font-medium lg:mt-[unset]'>{title}</h2>
           <div className='mt-3 flex flex-wrap gap-y-1'>
             <Info info={price} title={'Price'} />
             <Info info={`${regularPrice}৳`} title={'Regular Price'} />
@@ -64,7 +65,9 @@ const FocusPoint = ({
               <span className='text-xl font-semibold'>100</span> Star Points
             </p>
           </button>
+
           <PayOption />
+
           <Quantity />
         </div>
       </div>

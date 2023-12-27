@@ -6,7 +6,7 @@ export default function GlobalLayout({ children }) {
     <div className='relative'>
       <Navbar />
       <main>{children}</main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

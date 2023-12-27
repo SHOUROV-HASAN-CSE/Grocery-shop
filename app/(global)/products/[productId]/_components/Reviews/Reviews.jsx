@@ -6,6 +6,7 @@ import ResponsivePagination from 'react-responsive-pagination';
 
 import { CgNotes } from 'react-icons/cg';
 import { useState } from 'react';
+import RModal from './RModal';
 
 const Reviews = ({ reviews }) => {
   const totalPages = 5;
@@ -17,8 +18,8 @@ const Reviews = ({ reviews }) => {
 
   return (
     <div className='p-5 shadow-md ' id='reviews'>
-      <div className='flex flex-col justify-between gap-y-3 border-b  pb-4 md:items-center lg:flex-row lg:gap-y-[unset]'>
-        <div>
+      <div className='flex flex-col justify-between gap-y-3 border-b  pb-4 md:flex-row md:items-center lg:gap-y-[unset]'>
+        <div className='lg:w-[75%] xl:w-[unset]'>
           <h4 className='text-xl font-semibold'>Reviews ({reviews.length})</h4>
           <p className='mt-2 text-sm'>
             Get specific details about this product from customers who own it.
@@ -28,10 +29,13 @@ const Reviews = ({ reviews }) => {
             <span className='text-lg font-semibold'>4 out of 5</span>
           </div>
         </div>
-        <div>
-          <button className='rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white'>
+        <div className='  flex justify-end lg:w-[25%] xl:w-[unset]'>
+          <label
+            htmlFor='r-modal'
+            className='cursor-pointer rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white'
+          >
             Write a Review
-          </button>
+          </label>
         </div>
       </div>
 
@@ -62,6 +66,8 @@ const Reviews = ({ reviews }) => {
           </>
         )}
       </div>
+
+      <RModal />
     </div>
   );
 };
