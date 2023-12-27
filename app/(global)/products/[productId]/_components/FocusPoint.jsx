@@ -30,8 +30,8 @@ const FocusPoint = ({
           images={images}
         />
 
-        <div className=' w-full lg:w-3/5'>
-          <h2 className='mt-4 text-xl font-medium md:mt-[unset]'>{title}</h2>
+        <div className=' w-full  xl:w-3/5'>
+          <h2 className='mt-4 text-xl font-medium lg:mt-[unset]'>{title}</h2>
           <div className='mt-3 flex flex-wrap gap-y-1'>
             <Info info={price} title={'Price'} />
             <Info info={`${regularPrice}৳`} title={'Regular Price'} />

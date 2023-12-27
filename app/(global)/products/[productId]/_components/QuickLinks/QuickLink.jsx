@@ -5,7 +5,7 @@ const QuickLink = ({ tag, path, active, setActive, activeStyle }) => {
     <Link
       href={path}
       onClick={() => setActive(active)}
-      className={` relative origin-left   transform rounded-sm pb-1 text-center  `}
+      className={` relative  rounded-sm pb-1 text-center  `}
     >
       {tag}
 

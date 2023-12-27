@@ -18,7 +18,7 @@ const Reviews = ({ reviews }) => {
 
   return (
     <div className='p-5 shadow-md ' id='reviews'>
-      <div className='flex flex-col justify-between gap-y-3 border-b  pb-4 md:items-center lg:flex-row lg:gap-y-[unset]'>
+      <div className='flex flex-col justify-between gap-y-3 border-b  pb-4 md:flex-row md:items-center lg:gap-y-[unset]'>
         <div>
           <h4 className='text-xl font-semibold'>Reviews ({reviews.length})</h4>
           <p className='mt-2 text-sm'>

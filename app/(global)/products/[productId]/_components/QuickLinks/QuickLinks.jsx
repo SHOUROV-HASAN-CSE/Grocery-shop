@@ -7,7 +7,7 @@ const QuickLinks = ({ reviews, questions }) => {
   const [active, setActive] = useState(1);
 
   return (
-    <div className='grid grid-cols-4 gap-1 text-[11px] font-medium md:flex md:gap-6 lg:text-sm'>
+    <div className='grid grid-cols-4 gap-1 text-[11px] font-medium md:gap-6 md:text-[13px] lg:flex lg:text-sm'>
       <QuickLink
         path={'#specification'}
         tag={'Specification'}

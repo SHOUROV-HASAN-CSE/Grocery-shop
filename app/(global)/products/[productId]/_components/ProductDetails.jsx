@@ -103,6 +103,8 @@ const ProductDetails = ({ productId }) => {
 
   return (
     <div className='mx-auto w-full px-4 lg:w-[75%] lg:px-[unset] '>
+      {/* breadcrumb */}
+
       <div className='mt-4  flex items-center gap-2 text-sm text-gray-600'>
         <Link className='flex items-center' href={'/'}>
           <TiHome />

@@ -10,14 +10,14 @@ const PayOption = () => {
   return (
     <div className='mt-8'>
       <p className='font-medium'>Payment Options</p>
-      <div className='mt-5 flex  flex-col gap-3 lg:flex-row'>
+      <div className='mt-5 flex  flex-col gap-3 md:flex-row'>
         <div
           onClick={() => handleOptionClick(1)}
-          className={`flex w-1/2 cursor-pointer items-center  border-2 ${
+          className={`flex cursor-pointer  items-center border-2 md:w-1/2  md:flex-row ${
             selectedOption === 1 ? ' border-blue-600' : 'border-gray-300'
           }`}
         >
-          <div className=' flex h-full items-center justify-center bg-gray-200 px-2'>
+          <div className=' flex h-[100%]  items-center justify-center px-2 md:bg-gray-200'>
             <input
               type='radio'
               name='options'
@@ -34,11 +34,11 @@ const PayOption = () => {
 
         <div
           onClick={() => handleOptionClick(2)}
-          className={`flex w-1/2 cursor-pointer items-center  border-2 ${
+          className={`flex cursor-pointer  items-center border-2 md:w-1/2  md:flex-row ${
             selectedOption === 2 ? ' border-blue-600' : 'border-gray-300'
           }`}
         >
-          <div className=' flex h-full items-center justify-center bg-gray-200 px-2'>
+          <div className=' flex h-full items-center justify-center px-2 md:bg-gray-200'>
             <input
               type='radio'
               name='options'
