@@ -9,7 +9,19 @@ const ShopPage = () => {
         <div className='breadcrumbs py-6 text-sm'>
           <ul>
             <li>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="w-4 h-4 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                fill='none'
+                viewBox='0 0 24 24'
+                className='h-4 w-4 stroke-current'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  d='M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z'
+                ></path>
+              </svg>
               <a className='ms-1'>Home </a>
             </li>
             <li>
@@ -26,7 +38,7 @@ const ShopPage = () => {
 
       {/* main section */}
       <div className='grid grid-cols-12 gap-4'>
-        <div className='hidden md:flex flex-col md:col-span-3'>
+        <div className='hidden flex-col md:col-span-3 md:flex'>
           {/* section 1 */}
           <div className='mb-2 rounded-md bg-[#fff] p-6'>
             <p className='pb-20'>Price Range</p>
@@ -93,7 +105,7 @@ const ShopPage = () => {
         </div>
         {/* Second Section */}
 
-        <div className='md:col-span-9 col-span-12'>
+        <div className='col-span-12 md:col-span-9'>
           {/* section 1 */}
           <div className='mb-2 flex h-[50px] items-center justify-between rounded-md bg-[#fff] p-2'>
             <h2 className=''>Brother</h2>
@@ -105,9 +117,8 @@ const ShopPage = () => {
                 </div>
                 <ul
                   tabIndex={0}
-                  className='menu dropdown-content z-[1] w-28 rounded-box text-xs  p-2 shadow'
+                  className='menu dropdown-content z-[1] w-28 rounded-box p-2  text-xs shadow'
                 >
-                  
                   <li>
                     <a>40</a>
                   </li>
@@ -128,6 +139,7 @@ const ShopPage = () => {
                   rating={product.rating}
                   discount={product.discount}
                   reviewsCount={product.reviewsCount}
+                  url={product.url}
                 />
               ))}
             </div>

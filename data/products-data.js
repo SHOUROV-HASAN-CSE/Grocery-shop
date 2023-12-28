@@ -7,6 +7,7 @@ export const featuredProductData = [
     price: 10200,
     rating: 4.5,
     reviewsCount: 2,
+    url: '/products/MSI',
   },
   {
     image:
@@ -16,6 +17,7 @@ export const featuredProductData = [
     price: 10200,
     rating: 4.9,
     reviewsCount: 10,
+    url: '/products/MSI',
   },
   {
     image:
@@ -24,6 +26,7 @@ export const featuredProductData = [
     price: 10200,
     rating: 3.9,
     reviewsCount: 80,
+    url: '/products/MSI',
   },
   {
     image:
@@ -32,6 +35,7 @@ export const featuredProductData = [
     price: 10200,
     rating: 4,
     reviewsCount: 16,
+    url: '/products/MSI',
   },
 ];
 
@@ -45,6 +49,7 @@ export const flashProductsData = [
     rating: 2.3,
     reviewsCount: 15,
     discount: 20,
+    url: '/products/MSI',
   },
   {
     image:
@@ -55,6 +60,7 @@ export const flashProductsData = [
     rating: 4.9,
     reviewsCount: 25,
     discount: 40,
+    url: '/products/MSI',
   },
   {
     image:
@@ -64,6 +70,7 @@ export const flashProductsData = [
     rating: 3.9,
     reviewsCount: 150,
     discount: 75,
+    url: '/products/MSI',
   },
   {
     image:
@@ -73,5 +80,6 @@ export const flashProductsData = [
     rating: 4,
     reviewsCount: 16,
     discount: 5,
+    url: '/products/MSI',
   },
 ];
