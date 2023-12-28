@@ -11,6 +11,7 @@ import Questions from './questions/Questions';
 import Reviews from './Reviews/Reviews';
 import Specifications from './specifications/Specifications';
 import Link from 'next/link';
+import VendorInfo from './VendorInfo';
 
 const product = {
   model: 'Dell D1918H Monitor',
@@ -82,6 +83,10 @@ const product = {
       date: '19 Oct 2023',
     },
   ],
+  vendorInfo: {
+    store: 'Kyc Limited Store',
+    verified: true,
+  },
 };
 
 const ProductDetails = ({ productId }) => {
@@ -99,6 +104,7 @@ const ProductDetails = ({ productId }) => {
     keyFeatures,
     reviews,
     questions,
+    vendorInfo,
   } = product;
 
   return (
@@ -138,7 +144,11 @@ const ProductDetails = ({ productId }) => {
           <Specifications />
 
           <Description description={description} />
-          <LatestPrice model={model} price={price} />
+          <VendorInfo vendorInfo={vendorInfo} />
+
+          <div className='lg:mt-10'>
+            <LatestPrice model={model} price={price} />
+          </div>
 
           <Questions questions={questions} />
 
