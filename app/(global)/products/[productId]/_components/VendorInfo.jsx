@@ -14,7 +14,7 @@ const VendorInfo = ({ vendorInfo }) => {
           Logo
         </div>
 
-        <div className='flex flex-grow flex-col  gap-5 rounded'>
+        <div className='flex flex-grow flex-col  gap-8 rounded'>
           <div>
             <Link
               href={`/store/${store}}`}
@@ -44,25 +44,6 @@ const VendorInfo = ({ vendorInfo }) => {
               </button>
             </Link>
           </div>
-
-          {/* <div className=' lg:flex- flex flex-col gap-3 md:flex-row lg:flex-col xl:flex-row'>
-            <button className='cursor-auto rounded-md border  py-2'>
-              Positive Seller Rating{' '}
-              <span className='text-lg font-medium'>(90%)</span>
-            </button>
-            <button className='cursor-auto rounded-md border px-5 py-2'>
-              Ship On Time <span className='text-lg font-medium'>(95%)</span>
-            </button>
-
-            <Link
-              href={`/store/${store}}`}
-              className='flex flex-grow items-center justify-end '
-            >
-              <button className='flex  items-center gap-1 rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white '>
-                Visit Store <FaArrowRightLong />
-              </button>
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>
