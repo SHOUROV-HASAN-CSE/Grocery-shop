@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import { featuresData } from '../../../../data/features-data';
-import { Hero } from './hero/hero';
 import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
 import { FlashProducts } from './flash-products/flash-products';
+import { Banner } from './hero/banner';
 
 export const Home = () => {
   return (
     <>
-      <Hero />
+      <div className='flex'>
+        <Banner />
+      </div>
 
       {/* features */}
       <div className='mt-6 grid grid-cols-4 gap-6'>
