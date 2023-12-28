@@ -90,4 +90,137 @@ export const navMenuData = [
       },
     ],
   },
+  {
+    title: 'Electronics',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Clothing',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Business Services',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Groceries',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Camera',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Software',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Office Equipment',
+    menus: [
+      {
+        title: 'Processors',
+        subMenus: [
+          { title: 'Lenovo', url: '/lenovo' },
+          { title: 'HP', url: '/hp' },
+        ],
+      },
+      {
+        title: 'CPU',
+        subMenus: [
+          { title: 'Intel', url: '/intel-cpu' },
+          { title: 'AMD', url: '/amd-ryzen' },
+        ],
+      },
+    ],
+  },
 ];

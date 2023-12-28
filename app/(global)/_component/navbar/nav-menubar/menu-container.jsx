@@ -1,11 +1,14 @@
 import * as Menubar from '@radix-ui/react-menubar';
 import Link from 'next/link';
 import { IoMdArrowDropright } from 'react-icons/io';
+import { MdArrowDropDown } from 'react-icons/md';
 
 export const MenuContainer = ({ title, menus }) => {
   return (
     <Menubar.Menu>
-      <Menubar.Trigger className='font-semibold'>{title}</Menubar.Trigger>
+      <Menubar.Trigger className='flex items-center gap-1 whitespace-nowrap font-semibold'>
+        {title} <MdArrowDropDown />
+      </Menubar.Trigger>
       <Menubar.Portal>
         <Menubar.Content
           className='z-20 border-t-[3px] bg-white py-3 text-sm shadow-md focus-within:border-orange-600'
