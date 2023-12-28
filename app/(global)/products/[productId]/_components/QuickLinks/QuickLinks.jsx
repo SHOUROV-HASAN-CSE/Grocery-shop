@@ -25,19 +25,27 @@ const QuickLinks = ({ reviews, questions }) => {
       />
 
       <QuickLink
-        path={'#questions'}
-        tag={`Questions (${questions.length})`}
+        path={'#vendor'}
+        tag={'Vendor Info'}
         active={3}
         setActive={setActive}
         activeStyle={active === 3 ? true : false}
       />
 
       <QuickLink
-        path={'#reviews'}
-        tag={`Reviews (${reviews.length})`}
+        path={'#questions'}
+        tag={`Questions (${questions.length})`}
         active={4}
         setActive={setActive}
         activeStyle={active === 4 ? true : false}
+      />
+
+      <QuickLink
+        path={'#reviews'}
+        tag={`Reviews (${reviews.length})`}
+        active={5}
+        setActive={setActive}
+        activeStyle={active === 5 ? true : false}
       />
     </div>
   );

@@ -1,8 +1,9 @@
+'use client';
 import Link from 'next/link';
 import { Search } from './search';
-import { NavIconContainer } from './nav-icon-container';
 import { navData } from '../../../../data/nav-data';
 import { NavMenubar } from './nav-menubar/nav-menubar';
+import { NavIconContainer } from './nav-icon-container';
 
 export const Navbar = () => {
   return (
@@ -15,20 +16,22 @@ export const Navbar = () => {
           </Link>
           <Search />
 
-          {navData.map((el, index) => (
-            <NavIconContainer
-              key={index}
-              className={el.className}
-              icon={el.icon}
-              title={el.title}
-              subtitle={el.subtitle}
-            />
-          ))}
+          <div className='hidden items-center gap-5 xl:flex'>
+            {navData.map((el, index) => (
+              <NavIconContainer
+                key={index}
+                className={el.className}
+                icon={el.icon}
+                title={el.title}
+                subtitle={el.subtitle}
+              />
+            ))}
+          </div>
 
           <button className='navButton btn'>PC Builder</button>
         </div>
       </nav>
-      <div className='sticky top-0 z-10 bg-white py-2 text-sm shadow-md'>
+      <div className='sticky top-0 z-10 w-full bg-white py-3 text-sm shadow-md'>
         <NavMenubar />
       </div>
     </>

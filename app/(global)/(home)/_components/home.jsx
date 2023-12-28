@@ -1,24 +1,28 @@
 import Link from 'next/link';
 import { featuresData } from '../../../../data/features-data';
-import { Hero } from './hero/hero';
 import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
 import { FlashProducts } from './flash-products/flash-products';
+import { Banner } from './hero/banner';
 
 export const Home = () => {
   return (
     <>
-      <Hero />
+      <div className='flex'>
+        <Banner />
+      </div>
 
       {/* features */}
-      <div className='mt-6 grid grid-cols-4 gap-6'>
+      <div className='mt-6 grid grid-cols-2 gap-6 lg:grid-cols-4'>
         {featuresData.map((feature, index) => (
           <div
             key={index}
             className='flex gap-6 rounded-lg bg-white p-4 shadow'
           >
-            <div className='flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-xl text-white'>
-              {feature.icon}
+            <div>
+              <div className='flex h-12 w-12 items-center justify-center rounded-full bg-orange-600 text-xl text-white'>
+                {feature.icon}
+              </div>
             </div>
             <div>
               <h3 className='font-bold'>{feature.title}</h3>
@@ -45,7 +49,7 @@ export const Home = () => {
         <p className='mt-1 text-xs font-semibold'>
           Get Your Desired Product from Featured Category!
         </p>
-        <div className='mt-6 grid grid-cols-6 gap-4'>
+        <div className='mt-6 grid grid-cols-3 gap-4 md:grid-cols-6'>
           {categories.map((category, index) => (
             <Link
               key={index}

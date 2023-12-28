@@ -9,16 +9,17 @@ import Quantity from './focusPoint/Quantity';
 import PayOption from './focusPoint/PayOption';
 import Link from 'next/link';
 
-const FocusPoint = ({
-  images,
-  price,
-  regularPrice,
-  status,
-  productCode,
-  brand,
-  title,
-  keyFeatures,
-}) => {
+const FocusPoint = ({ product }) => {
+  const {
+    images,
+    price,
+    regularPrice,
+    status,
+    productCode,
+    brand,
+    title,
+    keyFeatures,
+  } = product;
   const [activeImage, setActiveImage] = useState(images[0]);
 
   return (
@@ -68,7 +69,7 @@ const FocusPoint = ({
 
           <PayOption />
 
-          <Quantity />
+          <Quantity product={product} />
         </div>
       </div>
     </div>
