@@ -11,24 +11,22 @@ export const MenuContainer = ({ title, menus }) => {
       </Menubar.Trigger>
       <Menubar.Portal>
         <Menubar.Content
-          className='z-20 border-t-[3px] bg-white py-3 text-sm shadow-md focus-within:border-orange-600'
+          className='z-20 border-t-[3px] bg-white py-3 text-xs shadow-md transition focus-within:border-orange-600'
           sideOffset={10}
           alignOffset={-10}
         >
           {menus.map(({ title, url, subMenus }, index) => (
             <>
               {url ? (
-                <Link
-                  className='px-3 py-1 hover:bg-orange-500 hover:text-white'
-                  key={`${url}-${index}`}
-                  href={url}
-                >
-                  {title}
+                <Link key={`${url}-${index}`} href={url}>
+                  <Menubar.Item className='px-3 py-1 transition hover:bg-orange-500 hover:text-white'>
+                    {title}
+                  </Menubar.Item>
                 </Link>
               ) : null}
               {subMenus && subMenus.length > 0 ? (
                 <Menubar.Sub key={`submenu-${index}`}>
-                  <Menubar.SubTrigger className='flex cursor-pointer items-center justify-between gap-5 px-3 py-1 text-sm outline-none hover:bg-orange-500 hover:text-white'>
+                  <Menubar.SubTrigger className='flex cursor-pointer items-center justify-between gap-5 px-3 py-1 text-xs outline-none transition hover:bg-orange-500 hover:text-white'>
                     {title} <IoMdArrowDropright />
                   </Menubar.SubTrigger>
                   <Menubar.Portal>
@@ -38,12 +36,10 @@ export const MenuContainer = ({ title, menus }) => {
                     >
                       {subMenus.map(
                         ({ title: subTitle, url: subUrl }, subIndex) => (
-                          <Link
-                            className='px-2 hover:bg-orange-500 hover:text-white'
-                            key={`${index}-${subIndex}`}
-                            href={subUrl}
-                          >
-                            {subTitle}
+                          <Link key={`${index}-${subIndex}`} href={subUrl}>
+                            <Menubar.Item className='px-2 py-1 hover:bg-orange-500 hover:text-white'>
+                              {subTitle}
+                            </Menubar.Item>
                           </Link>
                         ),
                       )}

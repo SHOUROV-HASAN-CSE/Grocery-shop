@@ -34,20 +34,20 @@ export const navMenuData = [
     menus: [
       {
         title: 'Desktop Offer',
-        url: '/desktop-offers',
+        url: '/products/desktop-offers',
       },
       {
         title: 'Star PC',
         subMenus: [
-          { title: 'Intel PC', url: '/intel-pc' },
-          { title: 'AMD PC', url: '/amd-pc' },
+          { title: 'Intel PC', url: '/products/intel-pc' },
+          { title: 'AMD PC', url: '/products/amd-pc' },
         ],
       },
       {
         title: 'Gaming PC',
         subMenus: [
-          { title: 'Intel PC', url: '/intel-pc' },
-          { title: 'AMD PC', url: '/amd-pc' },
+          { title: 'Intel PC', url: '/products/intel-pc' },
+          { title: 'AMD PC', url: '/products/amd-pc' },
         ],
       },
     ],
@@ -58,15 +58,15 @@ export const navMenuData = [
       {
         title: 'All Laptop',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
         title: 'Gaming PC',
         subMenus: [
-          { title: 'Intel PC', url: '/intel-pc' },
-          { title: 'AMD PC', url: '/amd-pc' },
+          { title: 'Intel PC', url: '/products/intel-pc' },
+          { title: 'AMD PC', url: '/products/amd-pc' },
         ],
       },
     ],
@@ -77,8 +77,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -96,8 +96,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -115,8 +115,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -134,8 +134,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -153,8 +153,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -172,8 +172,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -191,8 +191,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
@@ -210,8 +210,8 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/lenovo' },
-          { title: 'HP', url: '/hp' },
+          { title: 'Lenovo', url: '/products/lenovo' },
+          { title: 'HP', url: '/products/hp' },
         ],
       },
       {
