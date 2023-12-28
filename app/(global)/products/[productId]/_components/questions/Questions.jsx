@@ -17,7 +17,7 @@ const Questions = ({ questions }) => {
   return (
     <div className='p-5 shadow-md ' id='questions'>
       <div className='flex flex-col justify-between gap-y-3 border-b pb-4 md:flex-row md:items-center lg:gap-y-[unset]'>
-        <div className='lg:w-[75%] xl:w-[unset]'>
+        <div className='lg:w-[75%] 2xl:w-[unset]'>
           <h4 className='text-xl font-semibold'>
             Questions ({questions?.length})
           </h4>

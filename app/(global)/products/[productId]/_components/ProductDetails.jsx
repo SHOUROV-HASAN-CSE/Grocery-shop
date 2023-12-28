@@ -11,9 +11,11 @@ import Questions from './questions/Questions';
 import Reviews from './Reviews/Reviews';
 import Specifications from './specifications/Specifications';
 import Link from 'next/link';
+import VendorInfo from './VendorInfo';
 
 const product = {
   model: 'Dell D1918H Monitor',
+  id: '9889',
   price: 9900,
   description:
     'Dell D1918H Screen Size 18.5 inch (47 cm) HD Ready (1366 X 768) TN Panel.It has Feature of Connectivity 1 VGA Port, 1 HDMI Port,Aspect Ratio 16:9, Brightness (Typical): 200 cd/mÂ².Refresh Rate: 60 Hz, Response Time 5 ms. Viewing Angle 90 degree horizontal 65 degree vertical.Flicker Free Technology.',
@@ -82,6 +84,10 @@ const product = {
       date: '19 Oct 2023',
     },
   ],
+  vendorInfo: {
+    store: 'Kyc Limited Store',
+    verified: true,
+  },
 };
 
 const ProductDetails = ({ productId }) => {
@@ -99,6 +105,7 @@ const ProductDetails = ({ productId }) => {
     keyFeatures,
     reviews,
     questions,
+    vendorInfo,
   } = product;
 
   return (
@@ -120,16 +127,7 @@ const ProductDetails = ({ productId }) => {
         </Link>
       </div>
 
-      <FocusPoint
-        price={price}
-        brand={brand}
-        images={images}
-        productCode={productCode}
-        regularPrice={regularPrice}
-        status={status}
-        title={title}
-        keyFeatures={keyFeatures}
-      />
+      <FocusPoint product={product} />
 
       <div className='flex flex-col gap-5 lg:flex-row '>
         <div className='gap- flex w-full flex-col lg:w-[60%] xl:w-[70%]'>
@@ -138,7 +136,11 @@ const ProductDetails = ({ productId }) => {
           <Specifications />
 
           <Description description={description} />
-          <LatestPrice model={model} price={price} />
+          <VendorInfo vendorInfo={vendorInfo} />
+
+          <div className='lg:mt-10'>
+            <LatestPrice model={model} price={price} />
+          </div>
 
           <Questions questions={questions} />
 
