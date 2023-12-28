@@ -34,20 +34,20 @@ export const navMenuData = [
     menus: [
       {
         title: 'Desktop Offer',
-        url: '/products/desktop-offers',
+        url: '/category-details',
       },
       {
         title: 'Star PC',
         subMenus: [
-          { title: 'Intel PC', url: '/products/intel-pc' },
-          { title: 'AMD PC', url: '/products/amd-pc' },
+          { title: 'Intel PC', url: '/category-details' },
+          { title: 'AMD PC', url: '/category-details' },
         ],
       },
       {
         title: 'Gaming PC',
         subMenus: [
-          { title: 'Intel PC', url: '/products/intel-pc' },
-          { title: 'AMD PC', url: '/products/amd-pc' },
+          { title: 'Intel PC', url: '/category-details' },
+          { title: 'AMD PC', url: '/category-details' },
         ],
       },
     ],
@@ -58,15 +58,15 @@ export const navMenuData = [
       {
         title: 'All Laptop',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'Gaming PC',
         subMenus: [
-          { title: 'Intel PC', url: '/products/intel-pc' },
-          { title: 'AMD PC', url: '/products/amd-pc' },
+          { title: 'Intel PC', url: '/category-details' },
+          { title: 'AMD PC', url: '/category-details' },
         ],
       },
     ],
@@ -77,15 +77,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -96,15 +96,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -115,15 +115,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -134,15 +134,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -153,15 +153,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -172,15 +172,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -191,15 +191,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
@@ -210,15 +210,15 @@ export const navMenuData = [
       {
         title: 'Processors',
         subMenus: [
-          { title: 'Lenovo', url: '/products/lenovo' },
-          { title: 'HP', url: '/products/hp' },
+          { title: 'Lenovo', url: '/category-details' },
+          { title: 'HP', url: '/category-details' },
         ],
       },
       {
         title: 'CPU',
         subMenus: [
-          { title: 'Intel', url: '/intel-cpu' },
-          { title: 'AMD', url: '/amd-ryzen' },
+          { title: 'Intel', url: '/category-details' },
+          { title: 'AMD', url: '/category-details' },
         ],
       },
     ],
