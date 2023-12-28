@@ -3,6 +3,8 @@ import { Radio } from '@/components/form-components/radio';
 import { CheckoutCard } from '../checkout-card';
 import { CustomerInfo } from './customer-info';
 import { Input } from '@/components/form-components/input';
+import { CheckoutTable } from './checkout-table';
+import { orders } from '@/data/orders';
 
 export const CheckoutForm = () => {
   return (
@@ -73,11 +75,9 @@ export const CheckoutForm = () => {
           </div>
 
           {/* ------- Order Review ------- */}
-          <CheckoutCard
-            className='col-span-2'
-            count={4}
-            title='Order Review'
-          ></CheckoutCard>
+          <CheckoutCard className='col-span-2' count={4} title='Order Review'>
+            <CheckoutTable products={orders} />
+          </CheckoutCard>
         </div>
       </div>
     </form>
