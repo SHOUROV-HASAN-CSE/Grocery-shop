@@ -1,7 +1,8 @@
 'use client';
-import { ImCross } from "react-icons/im";
 
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { FaBangladeshiTakaSign } from 'react-icons/fa6';
+import TableRow from './table/tableRow';
+import Thead from './table/thead';
 
 const CartPage = () => {
   const products = [
@@ -9,7 +10,8 @@ const CartPage = () => {
       id: 1,
       image:
         'https://www.startech.com.bd/image/cache/catalog/motherboard/asrock/h81m-vg4-r4-0/h81m-vg4-r4-0-01-500x500.jpg',
-      productName: 'Product A',
+      productName: 'Honor X6a Smartphone (4/128GB)',
+      details: 'Reward Points: 150',
       model: 'Model X',
       quantity: 2,
       price: 25.99,
@@ -18,7 +20,8 @@ const CartPage = () => {
       id: 2,
       image:
         'https://www.startech.com.bd/image/cache/catalog/motherboard/asrock/h81m-vg4-r4-0/h81m-vg4-r4-0-01-500x500.jpg',
-      productName: 'Product B',
+      productName: 'Honor X5 Plus Smartphone (4/64GB)',
+      details: 'Reward Points: 150',
       model: 'Model Y',
       quantity: 1,
       price: 39.99,
@@ -43,103 +46,84 @@ const CartPage = () => {
       </div>
       <div className='overflow-x-auto'>
         <table className='table-xs min-w-full table-auto sm:table-sm'>
-          <thead className='bg-gray-200'>
-            <tr className='border-x text-gray-600 '>
-              <th className='hidden border-x border-white px-4 py-2 text-left md:table-cell'>
-                Image
-              </th>
-              <th className='border-x border-white px-4 py-2 text-left  '>
-                Product Name
-              </th>
-              <th className='hidden  border-x border-white px-4 py-2  text-left md:table-cell'>
-                Model
-              </th>
-              <th className='border-x  border-white px-4 py-2 text-center'>
-                Quantity
-              </th>
-              <th className='hidden  border-x border-white px-4 py-2  text-right md:table-cell'>
-                Price
-              </th>
-              <th className='border-x  border-white px-4 py-2 text-right'>
-                Total
-              </th>
-            </tr>
-          </thead>
+          <Thead />
           <tbody className='bg-white'>
             {products.map((product) => (
-              <tr key={product.id} className='border-b-2'>
-                <td className='hidden border-gray-400 px-4  py-2 md:table-cell'>
-                  <img
-                    src={product.image}
-                    alt={product.productName}
-                    className='h-20 object-cover'
-                  />
-                </td>
-                <td className='row-span-6 border-gray-400 px-4 py-2 md:w-6/12'>
-                  {product.productName}
-                </td>
-                <td className='hidden border-gray-400 px-4  py-2 md:table-cell'>
-                  {product.model}
-                </td>
-                <td className='border-gray-400 py-2 '>
-                  <div
-                    className='input-group flex items-center justify-center gap-2 mx-auto'
-                    style={{ maxWidth: '120px' }}
-                  >
-                    <input
-                      type='number'
-                      name={`quantity${product.id}`}
-                      defaultValue={product.quantity}
-                      size='1'
-                      className='form-input w-16 rounded-sm border-gray-200 text-center  appearance-none  border  text-gray-700 leading-tight focus:outline-none focus:border-blue-500'
-                      onChange={(e) => handleQuantityChange(product.id, e)}
-                    />
-                    <span className='input-group-btn flex items-center justify-center gap-2'>
-                      <button
-                        type='submit'
-                        data-toggle='tooltip'
-                        title='Update'
-                        className='btn btn-circle btn-ghost btn-sm'
-                        onClick={() => handleUpdateClick(product.id)}
-                      >
-                        
-                        <AiOutlineLoading3Quarters />
-                      </button>
-                      <button
-                        type='button'
-                        data-toggle='tooltip'
-                        title='Remove'
-                        className='btn btn-circle btn-ghost btn-sm'
-                        onClick={() => handleRemoveClick(product.id)}
-                      >
-                        
-                        <ImCross />
-                      </button>
-                    </span>
-                  </div>
-                </td>
-                <td className='hidden border-gray-400 px-4 py-2  text-right md:table-cell'>
-                  {product.price}
-                </td>
-                <td className='border-gray-400 px-4 py-2 text-right'>
-                  {(product.quantity * product.price).toFixed(2)}
-                </td>
-              </tr>
+              <TableRow key={product.id} product={product} />
             ))}
+            {/* total and sub-total */}
+            <tr className='h-16'>
+              <td className='hidden md:table-cell' colSpan={3}></td>
+              <td colSpan={2} className='border-b-2'>
+                <h5 className='text-right font-semibold '>Sub-total:</h5>
+              </td>
+              <td className='border-b-2 text-right font-bold text-red-500'>
+                <h5 className='flex items-center justify-end'>
+                  5000
+                  <FaBangladeshiTakaSign className='inline-flex items-center' />
+                </h5>
+              </td>
+            </tr>
+            <tr className='h-16'>
+              <td className='hidden md:table-cell' colSpan={3}></td>
+              <td colSpan={2} className='border-b-2'>
+                <h5 className='text-right font-semibold '>Total:</h5>
+              </td>
+              <td className='border-b-2 text-right font-bold text-red-500'>
+                <h5 className='flex items-center justify-end'>
+                  6000
+                  <FaBangladeshiTakaSign className='inline-flex items-center' />
+                </h5>
+              </td>
+            </tr>
           </tbody>
         </table>
-        <table>
-            <tbody className="">
-                <tr className="ml-auto">
-                    <th>Sub-total</th>
-                    <td>6000</td>
-                </tr>
-                <tr className="ml-auto">
-                    <th>Total</th>
-                    <td>6000</td>
-                </tr>
-            </tbody>
-        </table>
+      </div>
+      {/* section dailog */}
+      <div className='sm:px-2'>
+        <div className='my-5'>
+        <h2 className='text-base md:text-2xl font-semibold'>What would you like to do next?</h2>
+        <p className='text-sm sm:text-base'>
+          Choose if you have a discount code or reward points you want to use or
+          would like to estimate your delivery cost.
+        </p>
+        </div>
+        <div className='page-section ws-box coupon-voucher-cart'>
+          <div className='rounded-md bg-[#f1f5f9] p-5 '>
+            <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
+              <div className='input-group flex w-1/2 items-center justify-center gap-3'>
+                <input
+                  type='text'
+                  name='coupon'
+                  placeholder='Promo / Coupon Code'
+                  className='rounded-sm  md:w-3/4'
+                />
+                <span className='input-group-btn'>
+                  <button type='button' className='outlinedButton '>
+                    Apply Coupon
+                  </button>
+                </span>
+              </div>
+              <div className='input-group flex w-1/2 items-center justify-center gap-3'>
+                <input
+                  type='text'
+                  name='coupon'
+                  placeholder='Promo / Coupon Code'
+                  className='rounded-sm md:w-3/4'
+                />
+                <span className='input-group-btn'>
+                  <button type='button' className='outlinedButton'>
+                    Apply Coupon
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className='my-5 md:mt-8 md:mb-10 flex justify-between items-center'>
+            <button className='blueButton'>Continue Shopping</button>
+            <button className='blueButton'>Confirm Order</button>
+          </div>
+        </div>
       </div>
     </div>
   );
