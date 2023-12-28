@@ -18,6 +18,7 @@ export const FlashProducts = () => {
             rating={product.rating}
             discount={product.discount}
             reviewsCount={product.reviewsCount}
+            url={product.url}
           />
         ))}
       </div>

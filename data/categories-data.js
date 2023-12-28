@@ -6,11 +6,27 @@ import { AiTwotoneMobile } from 'react-icons/ai';
 import { IoGameControllerOutline } from 'react-icons/io5';
 
 export const categories = [
-  { url: '/', icon: <MdOutlineMapsHomeWork />, title: 'Home Appliances' },
-  { url: '/', icon: <GiDeliveryDrone />, title: 'Drone' },
-  { url: '/', icon: <MdOutlineLinkedCamera />, title: 'Digital Camera' },
-  { url: '/', icon: <TbBatteryAutomotive />, title: 'Battery' },
-  { url: '/', icon: <PiTelevisionDuotone />, title: 'TV' },
-  { url: '/', icon: <AiTwotoneMobile />, title: 'Mobile Phone' },
-  { url: '/', icon: <IoGameControllerOutline />, title: 'Game Console' },
+  {
+    url: '/category-details',
+    icon: <MdOutlineMapsHomeWork />,
+    title: 'Home Appliances',
+  },
+  { url: '/category-details', icon: <GiDeliveryDrone />, title: 'Drone' },
+  {
+    url: '/category-details',
+    icon: <MdOutlineLinkedCamera />,
+    title: 'Digital Camera',
+  },
+  { url: '/category-details', icon: <TbBatteryAutomotive />, title: 'Battery' },
+  { url: '/category-details', icon: <PiTelevisionDuotone />, title: 'TV' },
+  {
+    url: '/category-details',
+    icon: <AiTwotoneMobile />,
+    title: 'Mobile Phone',
+  },
+  {
+    url: '/category-details',
+    icon: <IoGameControllerOutline />,
+    title: 'Game Console',
+  },
 ];

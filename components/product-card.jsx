@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import {
   MdOutlineStar,
   MdOutlineStarHalf,
@@ -13,7 +14,9 @@ export const ProductCard = ({
   discount,
   rating,
   reviewsCount,
+  url,
 }) => {
+  const router = useRouter();
   const starCount = {
     fullStar: Math.floor(rating),
     halfStar: Math.ceil(rating) > Math.floor(rating),
@@ -21,7 +24,10 @@ export const ProductCard = ({
   };
 
   return (
-    <div className='overflow-hidden rounded-lg bg-white py-3'>
+    <div
+      onClick={() => router.push(url)}
+      className='cursor-pointer overflow-hidden rounded-lg bg-white py-3'
+    >
       <div className='relative h-[250px]'>
         {discount ? (
           <div className='absolute top-0 z-10 space-y-1'>
