@@ -32,6 +32,13 @@ export const CustomerInfo = () => {
           required={true}
         />
         <Input
+          label='Email'
+          placeholder='Email'
+          name='email'
+          type='email'
+          required={true}
+        />
+        <Input
           label='Mobile'
           placeholder='Phone Number'
           name='mobile'

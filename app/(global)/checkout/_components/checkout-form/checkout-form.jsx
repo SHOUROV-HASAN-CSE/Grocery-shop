@@ -5,6 +5,7 @@ import { CustomerInfo } from './customer-info';
 import { Input } from '@/components/form-components/input';
 import { CheckoutTable } from './checkout-table';
 import { orders } from '@/data/orders';
+import { twMerge } from 'tailwind-merge';
 
 export const CheckoutForm = () => {
   return (
@@ -77,6 +78,9 @@ export const CheckoutForm = () => {
           {/* ------- Order Review ------- */}
           <CheckoutCard className='col-span-2' count={4} title='Order Review'>
             <CheckoutTable products={orders} />
+            <button className={twMerge('blueButton', 'ml-auto mt-5 block')}>
+              Place Order
+            </button>
           </CheckoutCard>
         </div>
       </div>
