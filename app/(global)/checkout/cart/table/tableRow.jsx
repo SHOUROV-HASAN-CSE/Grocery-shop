@@ -13,9 +13,9 @@ const TableRow = ({ product }) => {
           className='h-20 object-cover'
         />
       </td>
-      <td className='row-span-6 border-gray-400 px-4 py-2 md:w-6/12'>
+      <td className='row-span-4 border-gray-400 px-4 py-2 md:w-6/12'>
         <div>
-          <h4 className='font-semibold'>{product.productName}</h4>
+          <h5 className='font-semibold'>{product.productName}</h5>
           <p>{product.details}</p>
         </div>
       </td>
