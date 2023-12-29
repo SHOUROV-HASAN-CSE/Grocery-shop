@@ -9,7 +9,7 @@ export const Card = ({ children, title, className }) => {
   return (
     <div className={twMerge('w-full rounded bg-white shadow', className)}>
       <div className='flex items-center justify-between border-b p-4'>
-        <h3 className='capitalize'>{title}</h3>
+        <h4 className='font-semibold capitalize'>{title}</h4>
         <div
           onClick={() => setExpandChildren(!expandChildren)}
           className='cursor-pointer text-xl'

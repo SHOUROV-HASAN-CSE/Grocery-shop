@@ -11,14 +11,13 @@ export const FilterOptions = () => {
   const max = 5000;
   const [range, setRange] = useState([min, max]);
   return (
-    <div className='w-fit min-w-[250px] space-y-3'>
+    <div className='w-fit min-w-[250px] space-y-4'>
       <DoubleRangedSlider
         min={min}
         max={max}
         range={range}
         setRange={setRange}
       />
-      {/* Availability */}
       {Object.keys(storData).map((key) => (
         <Card title={key} key={key}>
           {storData[key].map(({ name, label }, index) => (
