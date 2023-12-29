@@ -1,7 +1,7 @@
 export const featuredProductData = [
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
 
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
@@ -11,7 +11,7 @@ export const featuredProductData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
 
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
@@ -21,7 +21,7 @@ export const featuredProductData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
     rating: 3.9,
@@ -30,7 +30,7 @@ export const featuredProductData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
     rating: 4,
@@ -42,7 +42,7 @@ export const featuredProductData = [
 export const flashProductsData = [
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
 
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 1800,
@@ -53,7 +53,7 @@ export const flashProductsData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
 
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
@@ -64,7 +64,7 @@ export const flashProductsData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 10200,
     rating: 3.9,
@@ -74,7 +74,7 @@ export const flashProductsData = [
   },
   {
     image:
-      'https://castle.com.bd/sylhet/2022/10/HP-monitor-showroom-in-Sylhet.jpg',
+      'https://www.startech.com.bd/image/cache/catalog/cpu-cooler/antec/a30/a30-01-500x500.webp',
     title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
     price: 5800,
     rating: 4,
