@@ -4,6 +4,7 @@ import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
 import { FlashProducts } from './flash-products/flash-products';
 import { Banner } from './hero/banner';
+import { ComboProducts } from './combo-products/combo-products';
 
 export const Home = () => {
   return (
@@ -65,6 +66,7 @@ export const Home = () => {
 
       <FeaturedProducts />
       <FlashProducts />
+      <ComboProducts />
     </>
   );
 };
