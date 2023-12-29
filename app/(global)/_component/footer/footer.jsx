@@ -7,16 +7,16 @@ const Footer = () => {
   return (
     <footer className='bg-[#081621]'>
       <div className='container whitespace-nowrap'>
-        <div className='grid grid-cols-1 gap-8 py-16 md:grid-cols-4 '>
+        <div className='grid grid-cols-1 gap-3 md:gap-7 py-16 xl:grid-cols-4 '>
           <Support />
           <Aboutus />
           <StayConected />
         </div>
 
-        <div className='flex flex-col md:flex-row items-center justify-between gap-5 text-gray-300 border-y py-3 border-gray-400'>
-          <div className='flex sm:flex-row flex-col items-center justify-center gap-5'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-3 text-gray-300 border-y py-3 border-gray-400'>
+          <div className='flex sm:flex-row flex-col items-center justify-center gap-3'>
             <p>Experience Star Tech App on your mobile:</p>
-            <div className='flex justify-center items-center gap-5'>
+            <div className='flex justify-center items-center gap-3'>
               <Link href='/download/play'>
                 <div className='flex w-[135px] items-center justify-center rounded-lg border-2 border-slate-500 px-2 py-1 hover:border-white'>
                   <FaGooglePlay className='mx-2 ' />
