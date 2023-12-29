@@ -18,8 +18,8 @@ const Aboutus = () => {
   ];
   return (
     <div className='md:col-span-2'>
-      <h3 className='text-white text-center sm:text-left text-lg py-6 tracking-wider'>ABOUT US</h3>
-      <div className='flex flex-wrap justify-center sm:grid gap-5 sm:grid-cols-2 md:grid-cols-3'>
+      <h3 className='text-white text-center md:text-left text-lg py-6 tracking-wider'>ABOUT US</h3>
+      <div className='flex flex-wrap justify-center md:grid gap-5 md:grid-cols-3'>
         {navLinks?.map((element, i) => (
           <div className='text-gray-300' key={i}>
             <Link  href={element.pathname}>
