@@ -26,7 +26,7 @@ export const ProductCard = ({
   return (
     <div
       onClick={() => router.push(url)}
-      className='cursor-pointer overflow-hidden rounded-lg bg-white py-3'
+      className='cursor-pointer overflow-hidden rounded-lg bg-white py-4'
     >
       <div className='relative h-[250px]'>
         {discount ? (
@@ -43,7 +43,7 @@ export const ProductCard = ({
           alt={title}
         />
       </div>
-      <div className='mt-3 px-6 text-justify'>
+      <div className='mt-6 px-6 text-justify'>
         <h3 className='text-sm font-semibold'>{title}</h3>
         <p className='mt-5 text-xl font-bold text-orange-600'>
           ${discount ? price - (price * discount) / 100 : price}
