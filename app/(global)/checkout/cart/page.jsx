@@ -1,12 +1,17 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+import { Suspense, useState } from 'react';
 import { FaBangladeshiTakaSign } from 'react-icons/fa6';
+import Loading from '../../loading';
 import Breadcrumbs from './table/breadcrumbs';
+import BtnComponent from './table/btnCmponent';
+import Promo from './table/promo';
 import TableRow from './table/tableRow';
 import Thead from './table/thead';
 
 const CartPage = () => {
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
       image:
@@ -28,23 +33,36 @@ const CartPage = () => {
       price: 39.99,
     },
     // Add more products as needed
-  ];
-  const handleQuantityChange = (productId, event) => {
-    // Handle quantity change logic here
-  };
+  ]);
 
-  const handleUpdateClick = (productId) => {
-    // Handle update click logic here
+  const handleQuantityChange = (productId, event) => {
+    const updatedProducts = products.map((product) => {
+      if (product.id === productId) {
+        return { ...product, quantity: parseInt(event.target.value, 10) || 0 };
+      }
+      return product;
+    });
+    setProducts(updatedProducts);
   };
 
   const handleRemoveClick = (productId) => {
-    // Handle remove click logic here
+    const updatedProducts = products.filter(
+      (product) => product.id !== productId,
+    );
+    setProducts(updatedProducts);
   };
+  const totalPrice = products.reduce((total, product) => {
+    return total + product.price * product.quantity;
+  }, 0);
+  const router = useRouter();
+  if (!products.length) {
+    router.push('/');
+  }
   return (
     <div className='container '>
-      <Breadcrumbs/>
+      <Breadcrumbs />
       {/* main section */}
-      <div className='rounded-md bg-white p-3 mt-2'>
+      <div className='mt-2 rounded-md bg-white p-3'>
         <div>
           <h3 className='my-6 font-semibold'>Shopping Cart</h3>
         </div>
@@ -52,9 +70,16 @@ const CartPage = () => {
           <table className='table-xs min-w-full table-auto sm:table-sm'>
             <Thead />
             <tbody className='bg-white'>
-              {products.map((product) => (
-                <TableRow key={product.id} product={product} />
-              ))}
+              <Suspense fallback={Loading}>
+                {products.map((product) => (
+                  <TableRow
+                    key={product.id}
+                    product={product}
+                    handleRemoveClick={handleRemoveClick}
+                    handleQuantityChange={handleQuantityChange}
+                  />
+                ))}
+              </Suspense>
               {/* total and sub-total */}
               <tr className='h-16'>
                 <td className='hidden md:table-cell' colSpan={3}></td>
@@ -63,7 +88,7 @@ const CartPage = () => {
                 </td>
                 <td className='border-b-2 text-right font-bold text-red-500'>
                   <h5 className='flex items-center justify-end'>
-                    5000
+                    {totalPrice.toFixed(2)}
                     <FaBangladeshiTakaSign className='inline-flex items-center' />
                   </h5>
                 </td>
@@ -75,7 +100,7 @@ const CartPage = () => {
                 </td>
                 <td className='border-b-2 text-right font-bold text-red-500'>
                   <h5 className='flex items-center justify-end'>
-                    6000
+                    {totalPrice.toFixed(2)}
                     <FaBangladeshiTakaSign className='inline-flex items-center' />
                   </h5>
                 </td>
@@ -96,7 +121,7 @@ const CartPage = () => {
           </div>
           <div className='page-section ws-box coupon-voucher-cart'>
             <div className='rounded-md bg-[#f1f5f9] p-5 '>
-              <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
+              {/* <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
                 <div className='input-group flex w-1/2 items-center justify-center gap-3'>
                   <input
                     type='text'
@@ -123,13 +148,11 @@ const CartPage = () => {
                     </button>
                   </span>
                 </div>
-              </div>
-            </div>
-            <div className='my-5 flex items-center justify-between md:mb-10 md:mt-8'>
-              <button className='blueButton'>Continue Shopping</button>
-              <button className='blueButton'>Confirm Order</button>
+              </div> */}
+              <Promo />
             </div>
           </div>
+          <BtnComponent />
         </div>
       </div>
     </div>
