@@ -5,7 +5,7 @@ export default function GlobalLayout({ children }) {
   return (
     <div className='relative'>
       <Navbar />
-      <main className='py-6'>{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
