@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+<<<<<<< HEAD
   h1 {
     @apply text-3xl;
   }
@@ -15,6 +16,8 @@
   h4 {
     @apply text-lg;
   }
+=======
+>>>>>>> parent of 0527def (sheets)
   .navButton {
     @apply bg-gradient-to-tr from-blue-400 via-blue-600 to-blue-700 text-white;
   }
@@ -27,6 +30,7 @@
   .outlinedButton {
     @apply w-full rounded border-2 border-blue-900 px-5 py-2 text-sm font-semibold text-blue-900 transition duration-300 ease-in-out hover:bg-blue-900 hover:text-white;
   }
+<<<<<<< HEAD
   .slider {
     @apply h-2 w-full rounded bg-gray-300;
   }
@@ -35,6 +39,20 @@
   }
   .slider .track-1 {
     @apply h-2 bg-orange-500;
+=======
+
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
+  }
+  h4 {
+    @apply text-lg;
+>>>>>>> parent of 0527def (sheets)
   }
 }
 
