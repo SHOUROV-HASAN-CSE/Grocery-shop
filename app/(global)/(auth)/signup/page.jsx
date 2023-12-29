@@ -7,7 +7,7 @@ import { FaEyeSlash } from 'react-icons/fa6';
 import AuthBreadcrumbs from '../_login_Components/login-bradcamb';
 
 const LoginPage = () => {
-    const router = useRouter()
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const onSubmit = (event) => {
     event.preventDefault();
@@ -16,7 +16,7 @@ const LoginPage = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <div className='container mt-4'>
+    <div className='container my-4'>
       <AuthBreadcrumbs path={'login'} />
       <div className='mt-6 bg-white'>
         <div className='mx-auto w-full max-w-md p-4'>
@@ -63,55 +63,48 @@ const LoginPage = () => {
                   </label>
                 </span>
 
-                <input
-                  type='password'
-                  name='password'
-                  value=''
-                  placeholder='Telephone'
-                  id='input-password'
-                  className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
-                />
-              </div>
-              <div className='relative'>
-                <input
-                  type={showPassword ? 'text' : 'password'}
-                  name='password'
-                  //   value={password}
-                  placeholder='Password'
-                  id='input-password'
-                  className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
-                />
-                <button
-                  type='button'
-                  onClick={handleTogglePassword}
-                  className='absolute inset-y-0 right-0 flex items-center px-4 text-gray-700 focus:outline-none'
-                >
-                  {showPassword ? (
-                    
-                    <FaEyeSlash className='text-xl' />
-                  ) : (
-                    <FaEye className='text-xl'  />
-                  )}
-                </button>
+                <div className='relative'>
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    name='password'
+                    //   value={password}
+                    placeholder='Password'
+                    id='input-password'
+                    className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
+                  />
+                  <button
+                    type='button'
+                    onClick={handleTogglePassword}
+                    className='absolute inset-y-0 right-0 flex items-center px-4 text-gray-700 focus:outline-none'
+                  >
+                    {showPassword ? (
+                      <FaEyeSlash className='text-xl' />
+                    ) : (
+                      <FaEye className='text-xl' />
+                    )}
+                  </button>
+                </div>
               </div>
 
               <br />
 
-              <button
-                type='submit'
-                className='blueButton w-full'
-              >
+              <button type='submit' className='blueButton w-full'>
                 Continue
               </button>
-              <p className=' my-8 text-center'>
+              <div className=' my-8 text-center'>
                 <div className='divider'>
                   <span className=' text-gray-600'>
                     Already have an account?
                   </span>
                 </div>
-              </p>
+              </div>
               <div>
-                <button onClick={()=>router.push("/register")}  className='outlinedButton w-full'>Create Your Account</button>
+                <button
+                  onClick={() => router.push('/register')}
+                  className='outlinedButton w-full'
+                >
+                  Create Your Account
+                </button>
               </div>
             </form>
           </div>

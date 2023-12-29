@@ -35,16 +35,30 @@ const CartPage = () => {
     // Add more products as needed
   ]);
 
-  const handleQuantityChange = (productId, event) => {
+  // const handleQuantityChange = (productId, event) => {
+  //   const updatedProducts = products.map((product) => {
+  //     if (product.id === productId) {
+  //       return { ...product, quantity: parseInt(event.target.value, 10) || 0 };
+  //     }
+  //     return product;
+  //   });
+  //   setProducts(updatedProducts);
+  // };
+  const handleQuantityChange = (productId, action) => {
     const updatedProducts = products.map((product) => {
       if (product.id === productId) {
-        return { ...product, quantity: parseInt(event.target.value, 10) || 0 };
+        return {
+          ...product,
+          quantity:
+            action === 'increment'
+              ? product.quantity + 1
+              : Math.max(product.quantity - 1, 1),
+        };
       }
       return product;
     });
     setProducts(updatedProducts);
   };
-
   const handleRemoveClick = (productId) => {
     const updatedProducts = products.filter(
       (product) => product.id !== productId,

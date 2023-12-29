@@ -9,7 +9,7 @@ const RegisterPage = () => {
     // Add your form submission logic here
   };
   return (
-    <div className='container mt-4'>
+    <div className='container my-4'>
       <AuthBreadcrumbs path={'register'} />
       <div className='mt-6 bg-white'>
         <div className='mx-auto w-full max-w-md p-4'>
@@ -102,17 +102,17 @@ const RegisterPage = () => {
                   type='password'
                   name='password'
                   value=''
-                  placeholder='Telephone'
+                  placeholder='password'
                   id='input-password'
                   className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
                 />
               </div>
               <div className='mb-4'>
                 <label
-                  htmlFor='input-conpirm-password'
+                  htmlFor='input-confirm-password'
                   className='mb-2 block text-sm font-bold text-gray-700'
                 >
-                  Telephone
+                  Confirm Password
                 </label>
                 <input
                   type='password'
@@ -123,26 +123,22 @@ const RegisterPage = () => {
                   className='focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none'
                 />
               </div>
-             
 
               <br />
 
-              <button
-                type='submit'
-                className='blueButton w-full'
-              >
+              <button type='submit' className='blueButton w-full'>
                 Continue
               </button>
-              <p className=' my-8 text-center'>
-                <div className='divider'>
-                  <span className=' text-gray-600'>
-                    Already have an account?
-                  </span>
-                </div>
-              </p>
+              <div className=' divider my-8 text-center'>
+                <span className=' text-gray-600'>Already have an account?</span>
+              </div>
               <p className='text-center'>
-                If you already have an account with us, <br />please login at the 
-                <Link href='/signup' className='text-blue-500 ms-1 font-semibold'>
+                If you already have an account with us, <br />
+                please login at the
+                <Link
+                  href='/signup'
+                  className='ms-1 font-semibold text-blue-500'
+                >
                   Login page
                 </Link>
                 .
