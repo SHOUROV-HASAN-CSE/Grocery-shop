@@ -1,9 +1,9 @@
 import { ImCross } from 'react-icons/im';
 
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { FaBangladeshiTakaSign } from 'react-icons/fa6';
 
-const TableRow = ({ product }) => {
+const TableRow = ({ product, handleRemoveClick, handleQuantityChange }) => {
+  
   return (
     <tr key={product.id} className='border-b-2'>
       <td className='hidden border-gray-400 px-4  py-2 md:table-cell'>
@@ -36,7 +36,7 @@ const TableRow = ({ product }) => {
             onChange={(e) => handleQuantityChange(product.id, e)}
           />
           <span className='input-group-btn flex items-center justify-center gap-1 sm:gap-1'>
-            <button
+            {/* <button
               type='submit'
               data-toggle='tooltip'
               title='Update'
@@ -44,7 +44,7 @@ const TableRow = ({ product }) => {
               onClick={() => handleUpdateClick(product.id)}
             >
               <AiOutlineLoading3Quarters />
-            </button>
+            </button> */}
             <button
               type='button'
               data-toggle='tooltip'
