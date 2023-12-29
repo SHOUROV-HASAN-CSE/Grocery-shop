@@ -1,10 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { FaBangladeshiTakaSign } from 'react-icons/fa6';
+import Loading from '../../loading';
 import Breadcrumbs from './table/breadcrumbs';
 import BtnComponent from './table/btnCmponent';
+import Promo from './table/promo';
 import TableRow from './table/tableRow';
 import Thead from './table/thead';
 
@@ -68,15 +70,16 @@ const CartPage = () => {
           <table className='table-xs min-w-full table-auto sm:table-sm'>
             <Thead />
             <tbody className='bg-white'>
-              {products.map((product) => (
-                <TableRow
-                  key={product.id}
-                  product={product}
-                  handleRemoveClick={handleRemoveClick}
-                  handleQuantityChange={handleQuantityChange}
-                />
-              ))}
-
+              <Suspense fallback={Loading}>
+                {products.map((product) => (
+                  <TableRow
+                    key={product.id}
+                    product={product}
+                    handleRemoveClick={handleRemoveClick}
+                    handleQuantityChange={handleQuantityChange}
+                  />
+                ))}
+              </Suspense>
               {/* total and sub-total */}
               <tr className='h-16'>
                 <td className='hidden md:table-cell' colSpan={3}></td>
@@ -118,7 +121,7 @@ const CartPage = () => {
           </div>
           <div className='page-section ws-box coupon-voucher-cart'>
             <div className='rounded-md bg-[#f1f5f9] p-5 '>
-              <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
+              {/* <div className='flex flex-col items-center justify-between gap-8 md:flex-row'>
                 <div className='input-group flex w-1/2 items-center justify-center gap-3'>
                   <input
                     type='text'
@@ -145,7 +148,8 @@ const CartPage = () => {
                     </button>
                   </span>
                 </div>
-              </div>
+              </div> */}
+              <Promo />
             </div>
           </div>
           <BtnComponent />
