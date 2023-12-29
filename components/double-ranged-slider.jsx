@@ -7,7 +7,7 @@ export const DoubleRangedSlider = ({ range, setRange, min, max }) => {
   const minRef = useRef();
   const maxRef = useRef();
 
-  const inputClass = `w-full max-w-[100px] border-gray-400 rounded border text-center outline-none`;
+  const inputClass = `w-full max-w-[80px] border-gray-400 rounded border text-center outline-none`;
 
   const updateMin = (e) => {
     const val = Number(e.target.value);

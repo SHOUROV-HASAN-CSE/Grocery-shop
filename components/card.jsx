@@ -1,5 +1,4 @@
 'use client';
-
 import { twMerge } from 'tailwind-merge';
 import { IoIosArrowDown } from 'react-icons/io';
 import { IoIosArrowUp } from 'react-icons/io';
@@ -10,7 +9,7 @@ export const Card = ({ children, title, className }) => {
   return (
     <div className={twMerge('w-full rounded bg-white shadow', className)}>
       <div className='flex items-center justify-between border-b p-4'>
-        <h3>{title}</h3>
+        <h3 className='capitalize'>{title}</h3>
         <div
           onClick={() => setExpandChildren(!expandChildren)}
           className='cursor-pointer text-xl'
