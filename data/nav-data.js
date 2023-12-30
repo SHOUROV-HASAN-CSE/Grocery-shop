@@ -11,12 +11,12 @@ export const navData = [
     title: 'Winter Fest',
     subtitle: 'Latest Offers',
   },
-  {
-    url: '/',
-    icon: <BsLightningFill />,
-    title: 'Mobile Deals',
-    subtitle: 'Special Deals',
-  },
+  // {
+  //   url: '/',
+  //   icon: <BsLightningFill />,
+  //   title: 'Mobile Deals',
+  //   subtitle: 'Special Deals',
+  // },
   {
     icon: <FaUser />,
     title: 'Account',

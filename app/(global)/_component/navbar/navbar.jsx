@@ -28,7 +28,7 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <button className='navButton btn'>PC Builder</button>
+          <button className='navButton btn'>Whish List</button>
         </div>
       </nav>
       <div className='sticky top-0 z-10 w-full bg-white py-3 text-sm shadow-md'>

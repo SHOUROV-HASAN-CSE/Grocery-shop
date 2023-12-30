@@ -30,7 +30,7 @@ export const ComboCard = ({
       className='rounded bg-white p-5 text-justify'
     >
       <Image
-        className='object-cover'
+        className='mx-auto w-fit object-contain'
         width={500}
         height={500}
         src={image}

@@ -37,6 +37,51 @@ export const featuredProductData = [
     reviewsCount: 16,
     url: '/products/MSI',
   },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
 ];
 
 export const flashProductsData = [
@@ -70,6 +115,66 @@ export const flashProductsData = [
     rating: 3.9,
     reviewsCount: 150,
     discount: 75,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
     url: '/products/MSI',
   },
   {
