@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FaArrowRightLong } from 'react-icons/fa6';
 import { MdOutlineLibraryAdd } from 'react-icons/md';
 
 const SimilarProducts = ({ title }) => {
@@ -14,13 +15,13 @@ const SimilarProducts = ({ title }) => {
       id: '1',
       title: 'LG 19M38A 18.5 Inch Monitor',
       price: '9,500৳',
-      img: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/g244f-e2/g244f-e2-01-500x500.webp',
+      img: 'https://www.startech.com.bd/image/cache/catalog/television/sony/kd-50x75/kd-50x75-02-500x500.jpg',
     },
     {
       id: '1',
       title: 'LG 19M38A 18.5 Inch Monitor',
       price: '9,500৳',
-      img: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/g244f-e2/g244f-e2-01-500x500.webp',
+      img: 'https://www.startech.com.bd/image/cache/catalog/smartwatch/amazfit/pop-3r/pop-3r-01-500x500.webp',
     },
   ];
   return (
@@ -31,13 +32,13 @@ const SimilarProducts = ({ title }) => {
 
       <div className='mt-5 px-4 '>
         {products.map((product, i) => (
-          <div key={i} className='  flex gap-3 border-t py-6'>
+          <div key={i} className='  flex  gap-3 border-t py-3'>
             <div>
               <Link href={product?.id}>
-                <Image src={product?.img} alt='' width={100} height={100} />
+                <Image src={product?.img} alt='' width={140} height={140} />
               </Link>
             </div>
-            <div className='flex flex-col gap-3'>
+            <div className='mt-3 flex flex-col gap-2'>
               <Link
                 href={product?.id}
                 className='hover:text-[#EF4A23] hover:underline'
@@ -46,10 +47,14 @@ const SimilarProducts = ({ title }) => {
               </Link>
 
               <p className='font-semibold text-[#EF4A23]'>{product?.price}</p>
-              <button className='flex items-center gap-2 text-sm font-medium text-gray-600 duration-200 hover:text-black'>
-                <MdOutlineLibraryAdd className='text-lg' />
-                Add to Compare{' '}
-              </button>
+              <Link
+                href={`/products/${product?.id}`}
+                className='flex items-center gap-2 text-sm font-medium text-gray-600 duration-200 hover:text-black'
+              >
+                <p className='rounded border p-2 duration-200 hover:border-black '>
+                  View Details
+                </p>
+              </Link>
             </div>
           </div>
         ))}

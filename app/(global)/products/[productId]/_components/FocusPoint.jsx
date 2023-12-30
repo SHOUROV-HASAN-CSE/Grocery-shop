@@ -3,8 +3,6 @@ import { useState } from 'react';
 import Info from './focusPoint/Info';
 import ImageView from './focusPoint/Image';
 
-import { MdOutlineStar } from 'react-icons/md';
-
 import Quantity from './focusPoint/Quantity';
 import PayOption from './focusPoint/PayOption';
 import Link from 'next/link';
@@ -59,13 +57,6 @@ const FocusPoint = ({ product }) => {
               </Link>
             </p>
           </div>
-
-          <button className='mt-10 flex w-full cursor-default items-center justify-center gap-5  rounded-full bg-red-100 p-5 md:w-[unset]'>
-            <MdOutlineStar className='rounded-full bg-red-500 p-[2px] text-3xl text-white' />
-            <p>
-              <span className='text-xl font-semibold'>100</span> Star Points
-            </p>
-          </button>
 
           <PayOption />
 

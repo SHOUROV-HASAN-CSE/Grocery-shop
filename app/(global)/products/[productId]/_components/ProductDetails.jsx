@@ -85,6 +85,7 @@ const product = {
     },
   ],
   vendorInfo: {
+    id: '12',
     store: 'Kyc Limited Store',
     verified: true,
   },

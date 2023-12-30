@@ -11,6 +11,8 @@ const Questions = ({ questions }) => {
   const totalPages = 5;
   const [currentPage, setCurrentPage] = useState(1);
 
+  const [open, setOpen] = useState(false);
+
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
@@ -28,6 +30,7 @@ const Questions = ({ questions }) => {
         </div>
         <div className='  flex justify-end lg:w-[25%] xl:w-[unset]'>
           <label
+            onClick={() => setOpen(true)}
             htmlFor='q-modal'
             className='cursor-pointer rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white '
           >
@@ -63,7 +66,8 @@ const Questions = ({ questions }) => {
           </>
         )}
       </div>
-      <QModal />
+
+      {open && <QModal open={open} setOpen={setOpen} />}
     </div>
   );
 };
