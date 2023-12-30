@@ -31,6 +31,7 @@ export const Navbar = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [prevScrollPos]);
+
   return (
     <>
       <nav className='navbar bg-primary py-3 text-white'>
