@@ -1,4 +1,5 @@
-import { Description } from '@radix-ui/react-dialog';
+import { Description, Close } from '@radix-ui/react-dialog';
+import Link from 'next/link';
 
 const CheckoutBtn = ({ cart }) => {
   // calculate total
@@ -19,9 +20,13 @@ const CheckoutBtn = ({ cart }) => {
           <p className='w-1/2 text-end'>{totalValue}৳</p>
         </div>
       </div>
-      <button className='w-full bg-[#EF4A23] py-3 text-sm font-semibold text-white'>
-        Checkout
-      </button>
+      <Link href={'/checkout/cart'}>
+        <Close asChild>
+          <button className='w-full bg-[#EF4A23] py-3 text-sm font-semibold text-white'>
+            Checkout
+          </button>
+        </Close>
+      </Link>
     </Description>
   );
 };

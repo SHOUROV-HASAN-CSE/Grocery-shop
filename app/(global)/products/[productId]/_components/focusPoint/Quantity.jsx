@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FiMinus, FiPlus } from 'react-icons/fi';
+import { useRouter } from 'next/navigation';
 
 import { MdOutlineFavorite, MdFavoriteBorder } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,6 +24,7 @@ const Quantity = ({ product }) => {
 
   const dispatch = useDispatch();
 
+  // add to cart
   const handleAddToCart = async (product) => {
     const existingProductIndex = cart.findIndex(
       (item) => item?.id === product?.id,
@@ -46,6 +48,7 @@ const Quantity = ({ product }) => {
     }
   };
 
+  // add to wishlist
   const handleAddToWishlist = async (product) => {
     const exist = wishlist.find((item) => item.id === product.id);
 
@@ -55,12 +58,22 @@ const Quantity = ({ product }) => {
     setBookmarked(true);
   };
 
+  // remove from wishlist
+
   const removeItemFromWishlist = async (product) => {
     const newWishlist = wishlist.filter((item) => item.id !== product.id);
 
     await dispatch(removeFromWishlist(newWishlist));
     toast.success('Product removed from wishlist');
     setBookmarked(false);
+  };
+
+  const router = useRouter();
+
+  // handle buy now
+  const handleBuyNow = (product) => {
+    handleAddToCart(product);
+    router.push('/checkout');
   };
 
   return (
@@ -117,7 +130,11 @@ const Quantity = ({ product }) => {
         >
           Add To Cart
         </button>
-        <button className=' flex-grow rounded-sm bg-blue-700 px-8 py-2 text-[15px]  font-semibold text-white duration-500  hover:bg-blue-800 md:flex-[unset] lg:px-16'>
+
+        <button
+          onClick={() => handleBuyNow(product)}
+          className=' flex-grow rounded-sm bg-blue-700 px-8 py-2 text-[15px]  font-semibold text-white duration-500  hover:bg-blue-800 md:flex-[unset] lg:px-16'
+        >
           Buy Now
         </button>
       </div>
