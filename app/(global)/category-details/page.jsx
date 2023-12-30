@@ -1,7 +1,16 @@
+'use client'
 import { ProductCard } from '@/components/product-card';
-import { flashProductsData } from '@/data/products-data';
+import { featuredProductData } from '@/data/products-data';
+import { useState } from 'react';
+import ResponsivePagination from 'react-responsive-pagination';
+import { FilterOptions } from '../stores/[storeId]/_components/store-details/filter-options';
 
 const CategoryPage = () => {
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
   return (
     <div className='container bg-[#f2f4f8]'>
       {/* Header section with breadcrumbs */}
@@ -33,103 +42,68 @@ const CategoryPage = () => {
       </div>
 
       {/* main section */}
-      <div className='grid grid-cols-12 gap-4'>
-        <div className='col-span-3'>
-          {/* section 1 */}
-          <div className='mb-2 rounded-md bg-[#fff] p-6'>
-            <p className='pb-20'>Price Range</p>
-            <div>
-              <input
-                type='range'
-                min={0}
-                max='100'
-                value='10'
-                className='range range-error'
+      <section className='container mt-6 flex gap-6'>
+        <FilterOptions />
+        <div className='flex-grow'>
+          {/* header */}
+          <div className='flex items-center gap-5 rounded bg-white p-4 shadow'>
+            <h4 className='font-semibold'>Printer</h4>
+            <div className='ml-auto flex items-center gap-2'>
+              <label className='font-semibold text-gray-600' htmlFor='show'>
+                Show :
+              </label>
+              <select
+                className='w-fit rounded border border-gray-300 bg-gray-200 py-0 pl-4 outline-none placeholder:text-gray-500'
+                name='show'
+                id='show'
+              >
+                <option value='20'>20</option>
+                <option value='30'>30</option>
+              </select>
+            </div>
+            <div className='flex items-center gap-2'>
+              <label className='font-semibold text-gray-600' htmlFor='show'>
+                Sort By :
+              </label>
+              <select
+                className='w-fit rounded border border-gray-300 bg-gray-200 py-0 pl-4  outline-none placeholder:text-gray-500'
+                name='show'
+                id='show'
+              >
+                <option value='default'>Default</option>
+                <option value='lowPrice'>{`Price (Low > High )`}</option>
+                <option value='maxPrice'>{`Price (High > Low )`}</option>
+              </select>
+            </div>
+          </div>
+          {/* products */}
+
+          <div className='mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
+            {featuredProductData?.slice(0, 8).map((product, index) => (
+              <ProductCard
+                key={index}
+                image={product.image}
+                price={product.price}
+                title={product.title}
+                rating={product.rating}
+                reviewsCount={product.reviewsCount}
+                url={product.url}
               />
-            </div>
+            ))}
           </div>
-          {/* section 2 */}
-          <div className='mb-2 rounded-md bg-[#fff] p-6'>
-            <p className='pb-6'>Availabilty</p>
-            <div className='form-control'>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>In Stock</span>
-              </label>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Pre Order</span>
-              </label>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Up Coming</span>
-              </label>
-            </div>
-          </div>
-          {/* section 3 */}
-          <div className='mb-2 rounded-md bg-[#fff] p-6'>
-            <p className='pb-6'>Printer Type</p>
-            <div className='form-control'>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Inkjet</span>
-              </label>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Ink Tank</span>
-              </label>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Laser</span>
-              </label>
-              <label className='label cursor-pointer'>
-                <input type='checkbox' checked='checked' className='checkbox' />
-                <span className='label-text'>Dotmatrix</span>
-              </label>
-            </div>
+          <div className='my-4 flex items-center justify-between border-y-2 border-gray-300 py-5'>
+            <ResponsivePagination
+              total={totalPages}
+              current={currentPage}
+              onPageChange={(page) => handlePageChange(page)}
+            />
+            <p className='hidden md:block'>
+              Showing {currentPage} to {totalPages} of 4416 ({currentPage}{' '}
+              Pages)
+            </p>
           </div>
         </div>
-        {/* Second Section */}
-
-        <div className='col-span-9'>
-          {/* section 1 */}
-          <div className='mb-2 rounded-md bg-[#fff] p-2'>
-            <h2 className='ps-2'>Brother</h2>
-            <div></div>
-          </div>
-          {/* section 2     Product Section */}
-
-          <div className='text-center'>
-            <div className='grid grid-cols-4 gap-6'>
-              {flashProductsData?.map((product, index) => (
-                <ProductCard
-                  key={index}
-                  image={product.image}
-                  price={product.price}
-                  title={product.title}
-                  rating={product.rating}
-                  discount={product.discount}
-                  reviewsCount={product.reviewsCount}
-                  url={product.url}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* section 3 */}
-          <div className='mt-6'>
-            <div className='flex items-center justify-between'>
-              <div className='join'>
-                <button className='btn join-item'>PREV</button>
-                <button className='btn join-item btn-active'>1</button>
-                <button className='btn join-item'>2</button>
-                <button className='btn join-item'>NEXT</button>
-              </div>
-              <p>Showing 1 to 20 of 31 (2 Pages)</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
     </div>
   );
 };
