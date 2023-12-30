@@ -14,7 +14,7 @@ export const ComboProducts = () => {
       <Swiper
         modules={[Pagination]}
         pagination={{ clickable: true }}
-        slidesPerView={2}
+        slidesPerView={5}
         spaceBetween={20}
         className='mt-8 w-full'
       >

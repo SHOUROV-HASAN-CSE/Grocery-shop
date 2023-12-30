@@ -22,7 +22,8 @@ export const navData = [
     title: 'Account',
     subtitle: (
       <>
-        <Link href={'/login'}>Register</Link> or <Link href={'/'}>Login</Link>
+        <Link href={'/register'}>Register</Link> or{' '}
+        <Link href={'/login'}>Login</Link>
       </>
     ),
   },

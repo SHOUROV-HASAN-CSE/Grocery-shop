@@ -86,10 +86,31 @@ export const flashProductsData = [
 
 export const comboProducts = [
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 1',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 2',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 3',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
@@ -97,26 +118,39 @@ export const comboProducts = [
   {
     title: 'Combo Pack - 4',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
   },
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 5',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
   },
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 6',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 7',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
