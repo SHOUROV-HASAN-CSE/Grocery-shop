@@ -5,7 +5,7 @@ import { MdVerified } from 'react-icons/md';
 import { FaArrowRightLong } from 'react-icons/fa6';
 
 const VendorInfo = ({ vendorInfo }) => {
-  const { store, verified } = vendorInfo;
+  const { store, verified, id } = vendorInfo;
   return (
     <div className='flex flex-col gap-5 p-5 shadow-md' id='vendor'>
       <h4 className='text-xl font-semibold'>vendor Info</h4>
@@ -36,7 +36,7 @@ const VendorInfo = ({ vendorInfo }) => {
               <span className='text-lg font-medium'>(90%)</span>
             </p>
             <Link
-              href={`/store/${store}}`}
+              href={`/stores/${id}`}
               className='flex  items-center justify-end '
             >
               <button className='flex  items-center gap-1 rounded-[4px] border-2 border-[#3749BB] px-3 py-2 text-sm font-semibold duration-500 hover:bg-[#3749BB] hover:text-white '>

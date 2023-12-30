@@ -4,8 +4,34 @@ import { Search } from './search';
 import { navData } from '../../../../data/nav-data';
 import { NavMenubar } from './nav-menubar/nav-menubar';
 import { NavIconContainer } from './nav-icon-container';
+import { useEffect, useState } from 'react';
 
 export const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  const headerStyle = {
+    transition: 'transform 0.3s ease',
+    transform: isScrolled ? 'translateY(0)' : 'translateY(-100%)',
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const shouldShow =
+        currentScrollPos < prevScrollPos || currentScrollPos < 100;
+
+      setIsScrolled(shouldShow);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
     <>
       <nav className='navbar bg-primary py-3 text-white'>
@@ -28,10 +54,13 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <button className='navButton btn'>PC Builder</button>
+          <button className='navButton btn'>Whish List</button>
         </div>
       </nav>
-      <div className='sticky top-0 z-10 w-full bg-white py-3 text-sm shadow-md'>
+      <div
+        className='sticky top-0 z-20 w-full bg-white py-3 text-sm shadow-md'
+        style={headerStyle}
+      >
         <NavMenubar />
       </div>
     </>

@@ -11,18 +11,19 @@ export const navData = [
     title: 'Winter Fest',
     subtitle: 'Latest Offers',
   },
-  {
-    url: '/',
-    icon: <BsLightningFill />,
-    title: 'Mobile Deals',
-    subtitle: 'Special Deals',
-  },
+  // {
+  //   url: '/',
+  //   icon: <BsLightningFill />,
+  //   title: 'Mobile Deals',
+  //   subtitle: 'Special Deals',
+  // },
   {
     icon: <FaUser />,
     title: 'Account',
     subtitle: (
       <>
-        <Link href={'/login'}>Register</Link> or <Link href={'/'}>Login</Link>
+        <Link href={'/register'}>Register</Link> or{' '}
+        <Link href={'/login'}>Login</Link>
       </>
     ),
   },
