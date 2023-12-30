@@ -18,7 +18,6 @@ import { removeFromCart } from '../../../../redux/slices/cartSlice';
 
 const FloatingCart = () => {
   const { cart } = useSelector((state) => state.cart);
-  console.log(cart[0]);
   const dispatch = useDispatch();
 
   const handleRemoveFromCart = async (item) => {
@@ -45,7 +44,7 @@ const FloatingCart = () => {
         <Portal>
           <Overlay className='bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0' />
 
-          <Content className='data-[state=open]:animate-contentShow bg-red-100focus:outline-none fixed right-[0%] top-[50%] z-[1001] mt-10 h-full w-full translate-x-[-50%] translate-y-[-50%] rounded-[6px] bg-white  lg:mt-[unset] lg:w-96'>
+          <Content className='data-[state=open]:animate-contentShow bg-red-100focus:outline-none fixed right-[0%] top-[50%] z-[1001]  h-full w-full translate-y-[-50%] rounded-[6px] bg-white  md:w-96 '>
             <div className='flex items-center justify-between bg-gray-800 px-5 py-3 text-white'>
               <Title className='text-mauve12 m-0 text-[17px] font-medium'>
                 Your Cart

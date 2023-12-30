@@ -27,19 +27,17 @@ const Quantity = ({ product }) => {
       quantity,
     };
 
-    await dispatch(addToCart(productWithQuantity));
+    if (existingProductIndex !== -1) {
+      const updatedCart = [...cart];
 
-    // if (existingProductIndex !== -1) {
-    //   const updatedCart = [...cart];
+      updatedCart[existingProductIndex] = productWithQuantity;
 
-    //   updatedCart[existingProductIndex] = productWithQuantity;
-
-    //   await dispatch(replaceProduct(updatedCart));
-    //   toast.success('Product added to cart');
-    // } else {
-    //   await dispatch(addToCart(productWithQuantity));
-    //   toast.success('Product added to cart');
-    // }
+      await dispatch(replaceProduct(updatedCart));
+      toast.success('Product added to cart');
+    } else {
+      await dispatch(addToCart(productWithQuantity));
+      toast.success('Product added to cart');
+    }
   };
 
   return (
@@ -55,8 +53,6 @@ const Quantity = ({ product }) => {
         >
           <FiMinus className='cursor-pointer text-xl font-medium ' />
         </button>
-
-        {/* <span className='w-6 text-center text-xl font-medium'>{quantity}</span> */}
 
         <input
           type='number'
