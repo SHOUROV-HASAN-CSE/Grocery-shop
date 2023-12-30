@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import {
   MdOutlineStar,
   MdOutlineStarBorder,
@@ -15,13 +17,18 @@ export const ComboCard = ({
   reviewsCount,
   url,
 }) => {
+  const router = useRouter();
+
   const starCount = {
     fullStar: Math.floor(rating),
     halfStar: Math.ceil(rating) > Math.floor(rating),
     emptyStar: 5 - Math.ceil(rating),
   };
   return (
-    <div className='rounded bg-white p-5 text-justify'>
+    <div
+      onClick={() => router.push(url)}
+      className='rounded bg-white p-5 text-justify'
+    >
       <Image
         className='object-cover'
         width={500}
@@ -33,7 +40,7 @@ export const ComboCard = ({
       <h3 className='mt-5 font-semibold'>{title}</h3>
       <div className='flex items-center gap-3'>
         <p className='mt-1 font-bold text-orange-600'>${price}</p>
-        <p className='mt-1 text-gray-500 line-through'>${price}</p>
+        <p className='mt-1 text-gray-500 line-through'>${regularPrice}</p>
       </div>
 
       <div className='mt-2 flex items-center'>
