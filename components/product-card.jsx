@@ -6,6 +6,7 @@ import {
   MdOutlineStarHalf,
   MdOutlineStarBorder,
 } from 'react-icons/md';
+import { twMerge } from 'tailwind-merge';
 
 export const ProductCard = ({
   image,
@@ -37,7 +38,7 @@ export const ProductCard = ({
           </div>
         ) : null}
         <Image
-          className='object-cover object-center'
+          className='object-contain object-center'
           src={image}
           fill
           alt={title}
@@ -76,6 +77,12 @@ export const ProductCard = ({
           <span className='ml-3 text-gray-500'>({reviewsCount})</span>
         </div>
       </div>
+      <button
+        onClick={(e) => e.stopPropagation()}
+        className={twMerge('blueButton', 'mt-5 w-full text-sm capitalize')}
+      >
+        Add to whish-list
+      </button>
     </div>
   );
 };
