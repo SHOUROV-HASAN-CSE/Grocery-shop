@@ -1,13 +1,19 @@
+'use client';
 import { ProductCard } from '@/components/product-card';
-
 import { featuredProductData } from '@/data/products-data';
+import { useState } from 'react';
+import ResponsivePagination from 'react-responsive-pagination';
 import { FilterOptions } from '../stores/[storeId]/_components/store-details/filter-options';
 import Allshop from './_shop-components/Allshop';
-
 const ShopPage = () => {
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
   return (
-    <div className='mb-10' >
-      <Allshop/>
+    <div className='mb-10'>
+      <Allshop />
       <section className='container mt-6 flex gap-6'>
         <FilterOptions />
         <div className='flex-grow'>
@@ -56,6 +62,14 @@ const ShopPage = () => {
                 url={product.url}
               />
             ))}
+          </div>
+          <div className='my-4 border-y-2 border-gray-300 py-5 flex justify-between items-center'>
+            <ResponsivePagination
+              total={totalPages}
+              current={currentPage}
+              onPageChange={(page) => handlePageChange(page)}
+            />
+            <p className='hidden md:block'>Showing {currentPage} to {totalPages} of 4416 ({currentPage} Pages)</p>
           </div>
         </div>
       </section>

@@ -1,8 +1,16 @@
+'use client'
 import { ProductCard } from '@/components/product-card';
 import { featuredProductData } from '@/data/products-data';
+import { useState } from 'react';
+import ResponsivePagination from 'react-responsive-pagination';
 import { FilterOptions } from '../stores/[storeId]/_components/store-details/filter-options';
 
 const CategoryPage = () => {
+  const totalPages = 5;
+  const [currentPage, setCurrentPage] = useState(1);
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
   return (
     <div className='container bg-[#f2f4f8]'>
       {/* Header section with breadcrumbs */}
@@ -71,7 +79,7 @@ const CategoryPage = () => {
           {/* products */}
 
           <div className='mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
-            {featuredProductData?.slice(0,8).map((product, index) => (
+            {featuredProductData?.slice(0, 8).map((product, index) => (
               <ProductCard
                 key={index}
                 image={product.image}
@@ -83,9 +91,19 @@ const CategoryPage = () => {
               />
             ))}
           </div>
+          <div className='my-4 flex items-center justify-between border-y-2 border-gray-300 py-5'>
+            <ResponsivePagination
+              total={totalPages}
+              current={currentPage}
+              onPageChange={(page) => handlePageChange(page)}
+            />
+            <p className='hidden md:block'>
+              Showing {currentPage} to {totalPages} of 4416 ({currentPage}{' '}
+              Pages)
+            </p>
+          </div>
         </div>
       </section>
-   
     </div>
   );
 };
