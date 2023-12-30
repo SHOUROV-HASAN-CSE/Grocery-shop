@@ -136,10 +136,10 @@ const RegisterPage = () => {
                 If you already have an account with us, <br />
                 please login at the
                 <Link
-                  href='/signup'
+                  href='/login'
                   className='ms-1 font-semibold text-blue-500'
                 >
-                  Login page
+                  Login
                 </Link>
                 .
               </p>
