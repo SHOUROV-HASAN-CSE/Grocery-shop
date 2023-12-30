@@ -9,12 +9,18 @@ import {
 } from '../../../../../../redux/slices/cartSlice';
 
 import toast from 'react-hot-toast';
+import {
+  addToWishlist,
+  removeFromWishlist,
+} from '../../../../../../redux/slices/wishListSlice';
 
 const Quantity = ({ product }) => {
   const [quantity, setQuantity] = useState(1);
   const [bookmarked, setBookmarked] = useState(false);
 
   const { cart } = useSelector((state) => state.cart);
+  const { wishlist } = useSelector((state) => state.wishlist);
+
   const dispatch = useDispatch();
 
   const handleAddToCart = async (product) => {
@@ -38,6 +44,23 @@ const Quantity = ({ product }) => {
       await dispatch(addToCart(productWithQuantity));
       toast.success('Product added to cart');
     }
+  };
+
+  const handleAddToWishlist = async (product) => {
+    const exist = wishlist.find((item) => item.id === product.id);
+
+    if (exist) return toast.error('Product already in wishlist');
+    await dispatch(addToWishlist(product));
+    toast.success('Product added to wishlist');
+    setBookmarked(true);
+  };
+
+  const removeItemFromWishlist = async (product) => {
+    const newWishlist = wishlist.filter((item) => item.id !== product.id);
+
+    await dispatch(removeFromWishlist(newWishlist));
+    toast.success('Product removed from wishlist');
+    setBookmarked(false);
   };
 
   return (
@@ -68,18 +91,25 @@ const Quantity = ({ product }) => {
           <FiPlus className='cursor-pointer text-xl   font-medium ' />
         </button>
 
-        <button
-          title='Add to Wishlist'
-          className='  rounded-sm bg-gray-200 px-3 py-2 duration-200 hover:bg-gray-300'
-          onClick={() => setBookmarked(!bookmarked)}
-        >
-          {bookmarked ? (
+        {bookmarked ? (
+          <button
+            title=' Remove from Wishlist'
+            className='  rounded-sm bg-gray-200 px-3 py-2 duration-200 hover:bg-gray-300'
+            onClick={() => removeItemFromWishlist(product)}
+          >
             <MdOutlineFavorite className='cursor-pointer text-2xl font-medium   text-blue-700 ' />
-          ) : (
+          </button>
+        ) : (
+          <button
+            title='Add to Wishlist'
+            className='  rounded-sm bg-gray-200 px-3 py-2 duration-200 hover:bg-gray-300'
+            onClick={() => handleAddToWishlist(product)}
+          >
             <MdFavoriteBorder className='cursor-pointer text-2xl   font-medium ' />
-          )}
-        </button>
+          </button>
+        )}
       </div>
+
       <div className='mt-5 flex gap-3'>
         <button
           onClick={() => handleAddToCart(product)}

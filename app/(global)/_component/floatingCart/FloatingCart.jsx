@@ -20,8 +20,6 @@ const FloatingCart = () => {
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  console.log(cart[0]);
-
   const handleRemoveFromCart = async (item) => {
     const newCart = cart.filter((cartItem) => cartItem?.id !== item?.id);
 
@@ -36,7 +34,7 @@ const FloatingCart = () => {
             <BsFillHandbagFill className='text-lg' />
             <span className='text-[12px] font-semibold'>CART</span>
             <div className='absolute -right-2 -top-2  h-5 w-6  rounded-full bg-[#EA580C]   text-center text-sm font-semibold'>
-              {cart.length}
+              {cart?.length}
             </div>
           </div>
         </Trigger>
@@ -60,11 +58,11 @@ const FloatingCart = () => {
               </Close>
             </div>
 
-            {cart.length === 0 ? (
+            {cart?.length === 0 ? (
               <p className='py-20 text-center'>Your shopping cart is empty!</p>
             ) : (
               <div className='flex h-[75vh] flex-col gap-2 overflow-y-auto '>
-                {cart.map((item, i) => (
+                {cart?.map((item, i) => (
                   <CartProduct
                     item={item}
                     key={i}
@@ -74,7 +72,7 @@ const FloatingCart = () => {
               </div>
             )}
 
-            {cart.length !== 0 && <CheckoutBtn cart={cart} />}
+            {cart?.length !== 0 && <CheckoutBtn cart={cart} />}
           </Content>
         </Portal>
       </Root>
