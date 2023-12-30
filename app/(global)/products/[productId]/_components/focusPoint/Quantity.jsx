@@ -19,11 +19,11 @@ const Quantity = ({ product }) => {
 
   const handleAddToCart = async (product) => {
     const existingProductIndex = cart.findIndex(
-      (item) => item?.product?.id === product?.id,
+      (item) => item?.id === product?.id,
     );
 
     const productWithQuantity = {
-      product,
+      ...product,
       quantity,
     };
 

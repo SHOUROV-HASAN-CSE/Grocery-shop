@@ -20,10 +20,10 @@ const FloatingCart = () => {
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
+  console.log(cart[0]);
+
   const handleRemoveFromCart = async (item) => {
-    const newCart = cart.filter(
-      (cartItem) => cartItem?.product?.id !== item?.product.id,
-    );
+    const newCart = cart.filter((cartItem) => cartItem?.id !== item?.id);
 
     await dispatch(removeFromCart(newCart));
   };
@@ -74,7 +74,7 @@ const FloatingCart = () => {
               </div>
             )}
 
-            {cart.length !== 0 && <CheckoutBtn />}
+            {cart.length !== 0 && <CheckoutBtn cart={cart} />}
           </Content>
         </Portal>
       </Root>

@@ -5,15 +5,14 @@ const CartProduct = ({ item, handleRemoveFromCart }) => {
   return (
     <div className='flex  items-center gap-3 border-b p-5 py-3 '>
       <div className=''>
-        <Image src={item?.product?.images[0]} alt='' width={80} height={80} />
+        <Image src={item?.images[0]} alt='' width={80} height={80} />
       </div>
       <div className=' flex flex-col gap-2'>
-        <p className='text-sm '>{item?.product?.title}</p>
+        <p className='text-sm '>{item?.title}</p>
 
         <div className='flex items-center justify-between'>
           <p className='font-semibold '>
-            {item?.product?.price} x {item?.quantity} ={' '}
-            {item?.product?.price * item?.quantity}৳
+            {item?.price} x {item?.quantity} = {item?.price * item?.quantity}৳
           </p>
           <MdDelete
             onClick={() => handleRemoveFromCart(item)}
