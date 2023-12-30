@@ -66,12 +66,12 @@ export const ComboCard = ({
         ))}
         <span className='ml-3 text-gray-500'>({reviewsCount})</span>
       </div>
-      <button
+      {/* <button
         onClick={(e) => e.stopPropagation()}
         className={twMerge('blueButton', 'mt-4 w-full text-sm capitalize')}
       >
         Add to whish-list
-      </button>
+      </button> */}
     </div>
   );
 };

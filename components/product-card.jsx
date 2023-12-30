@@ -77,12 +77,12 @@ export const ProductCard = ({
           <span className='ml-3 text-gray-500'>({reviewsCount})</span>
         </div>
       </div>
-      <button
+      {/* <button
         onClick={(e) => e.stopPropagation()}
         className={twMerge('blueButton', 'mt-5 w-full text-sm capitalize')}
       >
         Add to whish-list
-      </button>
+      </button> */}
     </div>
   );
 };

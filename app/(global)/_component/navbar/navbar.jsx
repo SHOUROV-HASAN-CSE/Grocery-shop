@@ -45,6 +45,7 @@ export const Navbar = () => {
           <div className='hidden items-center gap-5 xl:flex'>
             {navData.map((el, index) => (
               <NavIconContainer
+                url={el.url}
                 key={index}
                 className={el.className}
                 icon={el.icon}
@@ -53,8 +54,6 @@ export const Navbar = () => {
               />
             ))}
           </div>
-
-          <button className='navButton btn'>Whish List</button>
         </div>
       </nav>
       <div

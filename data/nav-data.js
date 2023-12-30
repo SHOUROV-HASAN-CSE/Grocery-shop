@@ -6,10 +6,10 @@ import { IoGiftSharp } from 'react-icons/io5';
 export const navData = [
   {
     className: 'ml-auto',
-    url: '/',
+    url: '/shop',
     icon: <IoGiftSharp />,
-    title: 'Winter Fest',
-    subtitle: 'Latest Offers',
+    title: 'Shop',
+    subtitle: <Link href={'/shop'}> All Products</Link>,
   },
   // {
   //   url: '/',
@@ -19,6 +19,7 @@ export const navData = [
   // },
   {
     icon: <FaUser />,
+    url: '/login',
     title: 'Account',
     subtitle: (
       <>
