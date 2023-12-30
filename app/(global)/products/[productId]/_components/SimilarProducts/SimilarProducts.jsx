@@ -12,13 +12,13 @@ const SimilarProducts = ({ title }) => {
       img: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/g244f-e2/g244f-e2-01-500x500.webp',
     },
     {
-      id: '1',
+      id: '2',
       title: 'LG 19M38A 18.5 Inch Monitor',
       price: '9,500৳',
       img: 'https://www.startech.com.bd/image/cache/catalog/television/sony/kd-50x75/kd-50x75-02-500x500.jpg',
     },
     {
-      id: '1',
+      id: '3',
       title: 'LG 19M38A 18.5 Inch Monitor',
       price: '9,500৳',
       img: 'https://www.startech.com.bd/image/cache/catalog/smartwatch/amazfit/pop-3r/pop-3r-01-500x500.webp',

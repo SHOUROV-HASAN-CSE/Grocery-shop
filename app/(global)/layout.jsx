@@ -1,4 +1,4 @@
-import FloatingCart from './FloatingCart';
+import FloatingCart from './_component/floatingCart/FloatingCart';
 import Footer from './_component/footer/footer';
 import { Navbar } from './_component/navbar/navbar';
 

@@ -6,7 +6,6 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 
 const VendorInfo = ({ vendorInfo }) => {
   const { store, verified, id } = vendorInfo;
-  console.log(id);
   return (
     <div className='flex flex-col gap-5 p-5 shadow-md' id='vendor'>
       <h4 className='text-xl font-semibold'>vendor Info</h4>

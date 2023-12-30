@@ -27,17 +27,19 @@ const Quantity = ({ product }) => {
       quantity,
     };
 
-    if (existingProductIndex !== -1) {
-      const updatedCart = [...cart];
+    await dispatch(addToCart(productWithQuantity));
 
-      updatedCart[existingProductIndex] = productWithQuantity;
+    // if (existingProductIndex !== -1) {
+    //   const updatedCart = [...cart];
 
-      await dispatch(replaceProduct(updatedCart));
-      toast.success('Product added to cart');
-    } else {
-      await dispatch(addToCart([...cart, productWithQuantity]));
-      toast.success('Product added to cart');
-    }
+    //   updatedCart[existingProductIndex] = productWithQuantity;
+
+    //   await dispatch(replaceProduct(updatedCart));
+    //   toast.success('Product added to cart');
+    // } else {
+    //   await dispatch(addToCart(productWithQuantity));
+    //   toast.success('Product added to cart');
+    // }
   };
 
   return (
@@ -83,13 +85,13 @@ const Quantity = ({ product }) => {
         </button>
       </div>
       <div className='mt-5 flex gap-3'>
-        <button className=' rounded-sm border-2 px-3 py-2 text-[15px] font-semibold text-black    duration-500  hover:border-blue-700 hover:text-blue-800 '>
-          Add To Cart
-        </button>
         <button
           onClick={() => handleAddToCart(product)}
-          className=' flex-grow rounded-sm bg-blue-700 px-8 py-2 text-[15px]  font-semibold text-white duration-500  hover:bg-blue-800 md:flex-[unset] lg:px-16'
+          className=' rounded-sm border-2 px-3 py-2 text-[15px] font-semibold text-black    duration-500  hover:border-blue-700 hover:text-blue-800 '
         >
+          Add To Cart
+        </button>
+        <button className=' flex-grow rounded-sm bg-blue-700 px-8 py-2 text-[15px]  font-semibold text-white duration-500  hover:bg-blue-800 md:flex-[unset] lg:px-16'>
           Buy Now
         </button>
       </div>
