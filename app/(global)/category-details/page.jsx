@@ -71,7 +71,7 @@ const CategoryPage = () => {
           {/* products */}
 
           <div className='mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4'>
-            {featuredProductData?.map((product, index) => (
+            {featuredProductData?.slice(0,8).map((product, index) => (
               <ProductCard
                 key={index}
                 image={product.image}
@@ -85,6 +85,7 @@ const CategoryPage = () => {
           </div>
         </div>
       </section>
+   
     </div>
   );
 };
