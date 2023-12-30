@@ -37,10 +37,12 @@ export const ComboCard = ({
         alt='image'
       />
 
-      <h3 className='mt-5 font-semibold'>{title}</h3>
+      <h4 className='mt-5 font-semibold'>{title}</h4>
       <div className='flex items-center gap-3'>
-        <p className='mt-1 font-bold text-orange-600'>${price}</p>
-        <p className='mt-1 text-gray-500 line-through'>${regularPrice}</p>
+        <p className='mt-1 text-sm font-bold text-orange-600'>${price}</p>
+        <p className='mt-1 text-sm text-gray-500 line-through'>
+          ${regularPrice}
+        </p>
       </div>
 
       <div className='mt-2 flex items-center'>
