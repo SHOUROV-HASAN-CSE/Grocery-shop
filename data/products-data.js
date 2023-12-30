@@ -37,6 +37,51 @@ export const featuredProductData = [
     reviewsCount: 16,
     url: '/products/MSI',
   },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 10200,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+  },
 ];
 
 export const flashProductsData = [
@@ -82,14 +127,95 @@ export const flashProductsData = [
     discount: 5,
     url: '/products/MSI',
   },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
+  {
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/27gn65r-b/27gn65r-b-05-500x500.webp',
+    title: 'MSI PRO MP223 21.45" Full HD Business Monitor',
+    price: 5800,
+    rating: 4,
+    reviewsCount: 16,
+    discount: 5,
+    url: '/products/MSI',
+  },
 ];
 
 export const comboProducts = [
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 1',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 2',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 3',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
@@ -97,26 +223,39 @@ export const comboProducts = [
   {
     title: 'Combo Pack - 4',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
   },
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 5',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',
   },
   {
-    title: 'Combo Pack - 4',
+    title: 'Combo Pack - 6',
     image:
-      'https://www.startech.com.bd/image/cache/catalog/mobile/apple/iphone-12-blue/iphone-12-blue-01-500x500.webp',
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
     price: 15300,
+    regularPrice: 16500,
+    rating: 4.3,
+    reviewsCount: 15,
+    url: '/',
+  },
+  {
+    title: 'Combo Pack - 7',
+    image:
+      'https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/p22-g4/p22-g4-01-500x500.webp',
+    price: 15300,
+    regularPrice: 16500,
     rating: 4.3,
     reviewsCount: 15,
     url: '/',

@@ -13,7 +13,7 @@ const Footer = () => {
           <StayConected />
         </div>
 
-        <div className='flex flex-col md:flex-row items-center justify-between gap-3 text-gray-300 border-y py-3 border-gray-400'>
+        <div className='flex flex-col lg:flex-row items-center justify-between gap-3 text-gray-300 border-y py-3 border-gray-400'>
           <div className='flex sm:flex-row flex-col items-center justify-center gap-3'>
             <p>Experience Star Tech App on your mobile:</p>
             <div className='flex justify-center items-center gap-3'>
