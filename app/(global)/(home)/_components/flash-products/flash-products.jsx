@@ -8,7 +8,7 @@ export const FlashProducts = () => {
       <p className='mt-1 text-xs font-semibold'>
         These are the flashed products
       </p>
-      <div className='mt-10 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
+      <div className='mt-10 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>
         {flashProductsData?.map((product, index) => (
           <ProductCard
             key={index}

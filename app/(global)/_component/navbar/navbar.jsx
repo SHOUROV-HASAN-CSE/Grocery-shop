@@ -58,7 +58,7 @@ export const Navbar = () => {
         </div>
       </nav>
       <div
-        className='sticky top-0 z-10 w-full bg-white py-3 text-sm shadow-md'
+        className='sticky top-0 z-20 w-full bg-white py-3 text-sm shadow-md'
         style={headerStyle}
       >
         <NavMenubar />

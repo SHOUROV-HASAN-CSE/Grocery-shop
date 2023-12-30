@@ -14,7 +14,7 @@ export const Home = () => {
       </div>
 
       {/* features */}
-      <div className='mt-6 grid grid-cols-2 gap-6 lg:grid-cols-4'>
+      <div className='mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4'>
         {featuresData.map((feature, index) => (
           <div
             key={index}
@@ -50,7 +50,7 @@ export const Home = () => {
         <p className='mt-1 text-xs font-semibold'>
           Get Your Desired Product from Featured Category!
         </p>
-        <div className='mt-6 grid grid-cols-3 gap-4 md:grid-cols-6'>
+        <div className='mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6'>
           {categories.map((category, index) => (
             <Link
               key={index}

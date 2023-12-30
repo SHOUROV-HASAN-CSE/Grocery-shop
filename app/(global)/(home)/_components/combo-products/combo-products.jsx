@@ -1,11 +1,10 @@
 'use client';
-import { comboProducts } from '@/data/products-data';
-import { ComboCard } from './combo-card';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
+import { ComboCard } from './combo-card';
+import { Autoplay } from 'swiper/modules';
+import { comboProducts } from '@/data/products-data';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const ComboProducts = () => {
   return (
