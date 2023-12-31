@@ -1,5 +1,5 @@
-'use client'
-import { ProductCard } from '@/components/product-card';
+'use client';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { featuredProductData } from '@/data/products-data';
 import { useState } from 'react';
 import ResponsivePagination from 'react-responsive-pagination';

@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { flashProductsData } from '@/data/products-data';
 
 export const FlashProducts = () => {
