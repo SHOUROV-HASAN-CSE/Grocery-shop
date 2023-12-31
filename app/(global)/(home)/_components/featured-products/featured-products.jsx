@@ -16,6 +16,7 @@ export const FeaturedProducts = () => {
             rating={product.rating}
             reviewsCount={product.reviewsCount}
             url={product.url}
+            details={product.details}
           />
         ))}
       </div>
