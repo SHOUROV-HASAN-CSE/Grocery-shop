@@ -8,13 +8,13 @@ export const ProductDetails = ({ image, title, details }) => {
     <Dialog.Root>
       <Dialog.Trigger>
         <span className='absolute -bottom-10 left-0 z-10 w-full bg-primary p-2 text-sm text-white transition-all duration-300 group-hover:bottom-0'>
-          View Details
+          Quick Overview
         </span>
       </Dialog.Trigger>
       <Dialog.DialogPortal>
-        <Dialog.Overlay className='data-[state=open]:animate-overlayShow fixed inset-0 z-[1010] flex items-center justify-center bg-gray-900/80'>
+        <Dialog.Overlay className='fixed inset-0 z-[1010] flex items-center justify-center bg-gray-900/80'>
           {/* modal body */}
-          <Dialog.Content className='data-[state=open]:animate-contentShow w-[95%] max-w-[560px] rounded bg-white'>
+          <Dialog.Content className='w-[95%] max-w-[560px] rounded bg-white'>
             {/* modal header */}
             <div className='flex items-center justify-between gap-4 p-2'>
               <h4 className='truncate font-semibold'>Product Details</h4>

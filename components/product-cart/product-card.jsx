@@ -29,14 +29,13 @@ export const ProductCard = ({
         <div className='absolute right-0 top-0 z-10 w-fit rounded-bl-lg bg-gray-900/50 px-2 py-1'>
           <RatingStar rating={rating} reviewsCount={reviewsCount} />
         </div>
-        <ProductDetails title={title} image={image} details={details} />
-
         <Image
           className='bg-center object-cover transition hover:scale-110'
           src={image}
           fill
           alt={title}
         />
+        <ProductDetails title={title} image={image} details={details} />
       </div>
 
       <div className='p-3 text-justify'>
