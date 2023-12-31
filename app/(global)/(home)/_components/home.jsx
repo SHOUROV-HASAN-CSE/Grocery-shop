@@ -6,13 +6,19 @@ import { FlashProducts } from './flash-products/flash-products';
 import { Banner } from './banner';
 import { ComboProducts } from './combo-products/combo-products';
 import { CategoriesMenu } from './categories-menu/categories-menu';
+import { heroHeight } from '@/data/style-data';
 
 export const Home = () => {
   return (
     <>
       <div className='flex gap-5'>
-        <CategoriesMenu />
         <Banner />
+        <div
+          className='no-scrollbar hidden w-full max-w-[320px] overflow-y-auto bg-white py-3 lg:block'
+          style={{ height: heroHeight }}
+        >
+          <CategoriesMenu />
+        </div>
       </div>
 
       {/* features */}

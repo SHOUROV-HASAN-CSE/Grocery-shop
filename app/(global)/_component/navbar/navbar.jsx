@@ -1,8 +1,11 @@
 'use client';
 import Link from 'next/link';
+import * as Dialog from '@radix-ui/react-dialog';
 import { Search } from './search';
 import { navData } from '../../../../data/nav-data';
 import { NavIconContainer } from './nav-icon-container';
+import { CgMenuRightAlt } from 'react-icons/cg';
+import { CategoriesMenu } from '../../(home)/_components/categories-menu/categories-menu';
 
 export const Navbar = () => {
   return (
@@ -27,6 +30,19 @@ export const Navbar = () => {
               />
             ))}
           </div>
+
+          <Dialog.Root>
+            <Dialog.Trigger asChild>
+              <CgMenuRightAlt className='block cursor-pointer text-4xl lg:hidden' />
+            </Dialog.Trigger>
+            <Dialog.Portal>
+              <Dialog.Overlay className='fixed inset-0 z-[1010] h-full w-full bg-gray-500/80'>
+                <Dialog.Content className='ml-auto h-full w-full max-w-[320px] border-0 bg-white'>
+                  <CategoriesMenu />
+                </Dialog.Content>
+              </Dialog.Overlay>
+            </Dialog.Portal>
+          </Dialog.Root>
         </div>
       </nav>
     </>

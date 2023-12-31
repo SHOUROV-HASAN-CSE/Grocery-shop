@@ -9,10 +9,7 @@ export const CategoriesMenu = () => {
   const updateActiveIndex = (index) => setActiveIndex(index);
 
   return (
-    <div
-      className='no-scrollbar w-full max-w-[320px] overflow-y-auto rounded bg-white py-3 shadow'
-      style={{ height: heroHeight }}
-    >
+    <div className='h-full w-full rounded'>
       {categoriesList.map((category, index) => (
         <AllMenus
           key={index}
