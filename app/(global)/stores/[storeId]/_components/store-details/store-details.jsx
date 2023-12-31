@@ -1,5 +1,5 @@
 import { FilterOptions } from './filter-options';
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { featuredProductData } from '@/data/products-data';
 
 export const StoreDetails = () => {

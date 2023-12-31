@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { flashProductsData } from '@/data/products-data';
 
 export const FlashProducts = () => {
@@ -19,6 +19,7 @@ export const FlashProducts = () => {
             discount={product.discount}
             reviewsCount={product.reviewsCount}
             url={product.url}
+            details={product.details}
           />
         ))}
       </div>

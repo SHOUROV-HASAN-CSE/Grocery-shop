@@ -1,4 +1,4 @@
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { featuredProductData } from '@/data/products-data';
 
 export const FeaturedProducts = () => {
@@ -16,6 +16,7 @@ export const FeaturedProducts = () => {
             rating={product.rating}
             reviewsCount={product.reviewsCount}
             url={product.url}
+            details={product.details}
           />
         ))}
       </div>

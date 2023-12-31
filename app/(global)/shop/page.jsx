@@ -1,5 +1,5 @@
 'use client';
-import { ProductCard } from '@/components/product-card';
+import { ProductCard } from '@/components/product-cart/product-card';
 import { featuredProductData } from '@/data/products-data';
 import { useState } from 'react';
 import ResponsivePagination from 'react-responsive-pagination';
@@ -63,13 +63,16 @@ const ShopPage = () => {
               />
             ))}
           </div>
-          <div className='my-4 border-y-2 border-gray-300 py-5 flex justify-between items-center'>
+          <div className='my-4 flex items-center justify-between border-y-2 border-gray-300 py-5'>
             <ResponsivePagination
               total={totalPages}
               current={currentPage}
               onPageChange={(page) => handlePageChange(page)}
             />
-            <p className='hidden md:block'>Showing {currentPage} to {totalPages} of 4416 ({currentPage} Pages)</p>
+            <p className='hidden md:block'>
+              Showing {currentPage} to {totalPages} of 4416 ({currentPage}{' '}
+              Pages)
+            </p>
           </div>
         </div>
       </section>
