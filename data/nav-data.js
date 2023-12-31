@@ -1,7 +1,17 @@
 import Link from 'next/link';
-import { BsLightningFill } from 'react-icons/bs';
 import { FaUser } from 'react-icons/fa';
 import { IoGiftSharp } from 'react-icons/io5';
+import { CiDesktop } from 'react-icons/ci';
+import { AiOutlineLaptop } from 'react-icons/ai';
+import { GiProcessor, GiClothes } from 'react-icons/gi';
+import {
+  MdOutlineElectricalServices,
+  MdOutlinePhotoCamera,
+} from 'react-icons/md';
+import { RiCustomerServiceLine } from 'react-icons/ri';
+import { TfiShoppingCartFull } from 'react-icons/tfi';
+import { SiPaloaltosoftware } from 'react-icons/si';
+import { PiOfficeChairBold } from 'react-icons/pi';
 
 export const navData = [
   {
@@ -11,12 +21,7 @@ export const navData = [
     title: 'Shop',
     subtitle: <Link href={'/shop'}> All Products</Link>,
   },
-  // {
-  //   url: '/',
-  //   icon: <BsLightningFill />,
-  //   title: 'Mobile Deals',
-  //   subtitle: 'Special Deals',
-  // },
+
   {
     icon: <FaUser />,
     url: '/login',
@@ -33,6 +38,7 @@ export const navData = [
 export const navMenuData = [
   {
     title: 'Desktop',
+    icon: <CiDesktop />,
     menus: [
       {
         title: 'Desktop Offer',
@@ -56,6 +62,7 @@ export const navMenuData = [
   },
   {
     title: 'Laptop',
+    icon: <AiOutlineLaptop />,
     menus: [
       {
         title: 'All Laptop',
@@ -75,6 +82,7 @@ export const navMenuData = [
   },
   {
     title: 'Components',
+    icon: <GiProcessor />,
     menus: [
       {
         title: 'Processors',
@@ -94,6 +102,7 @@ export const navMenuData = [
   },
   {
     title: 'Electronics',
+    icon: <MdOutlineElectricalServices />,
     menus: [
       {
         title: 'Processors',
@@ -113,6 +122,7 @@ export const navMenuData = [
   },
   {
     title: 'Clothing',
+    icon: <GiClothes />,
     menus: [
       {
         title: 'Processors',
@@ -132,6 +142,7 @@ export const navMenuData = [
   },
   {
     title: 'Business Services',
+    icon: <RiCustomerServiceLine />,
     menus: [
       {
         title: 'Processors',
@@ -151,6 +162,7 @@ export const navMenuData = [
   },
   {
     title: 'Groceries',
+    icon: <TfiShoppingCartFull />,
     menus: [
       {
         title: 'Processors',
@@ -170,6 +182,7 @@ export const navMenuData = [
   },
   {
     title: 'Camera',
+    icon: <MdOutlinePhotoCamera />,
     menus: [
       {
         title: 'Processors',
@@ -189,6 +202,7 @@ export const navMenuData = [
   },
   {
     title: 'Software',
+    icon: <SiPaloaltosoftware />,
     menus: [
       {
         title: 'Processors',
@@ -208,6 +222,7 @@ export const navMenuData = [
   },
   {
     title: 'Office Equipment',
+    icon: <PiOfficeChairBold />,
     menus: [
       {
         title: 'Processors',

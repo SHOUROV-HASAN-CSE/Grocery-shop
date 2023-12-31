@@ -1,13 +1,12 @@
 'use client';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { ComboCard } from './combo-card';
-
-import { comboProducts } from '@/data/products-data';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
+import { ComboCard } from './combo-card';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { comboProducts } from '@/data/products-data';
 
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 export const ComboProducts = () => {
   return (
     <section className='mt-10 text-center'>
