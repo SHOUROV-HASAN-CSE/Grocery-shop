@@ -35,7 +35,7 @@ const Table = () => {
               <th className='flex justify-center'>QUANTITY</th>
               <th>STATUS</th>
               <th className='flex justify-center'>PUBLISHED</th>
-              <th className=' text-center'>ACTIONS</th>
+              <th className=' text-right'>ACTIONS</th>
             </tr>
           </thead>
           <tbody>
@@ -104,7 +104,7 @@ const Table = () => {
 
                 {/* actions */}
                 <td>
-                  <div className=' flex items-center justify-center gap-5 text-xl'>
+                  <div className=' flex items-center justify-end gap-5 text-xl'>
                     <BiSolidEdit className='cursor-pointer duration-200 hover:text-[#F97316]' />
                     <MdDelete className='cursor-pointer duration-200 hover:text-red-500' />
                   </div>
