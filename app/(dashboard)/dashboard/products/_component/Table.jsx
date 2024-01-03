@@ -113,16 +113,15 @@ const Table = () => {
             ))}
           </tbody>
         </table>
-
-        <div className='flex justify-center border-t pt-5'>
-          {products.length >= 2 && (
-            <ResponsivePagination
-              total={totalPages}
-              current={currentPage}
-              onPageChange={(page) => handlePageChange(page)}
-            />
-          )}
-        </div>
+      </div>
+      <div className='flex justify-center border-t pt-5'>
+        {products.length >= 2 && (
+          <ResponsivePagination
+            total={totalPages}
+            current={currentPage}
+            onPageChange={(page) => handlePageChange(page)}
+          />
+        )}
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { MdDelete } from 'react-icons/md';
 const Filters = () => {
   return (
     <div className=' px-3'>
+      <p className='text-xl font-semibold'>All Products</p>
       <div className='flex justify-end gap-5'>
         <button className='flex items-center gap-2 rounded-md bg-red-500 p-2 font-medium text-white duration-200 hover:bg-red-600'>
           <MdDelete /> Delete
@@ -37,8 +38,8 @@ const Filters = () => {
           <option value={'dsc'}>Price High to Low</option>
         </select>
 
-        <div className='flex justify-between gap-5 '>
-          <button className='flex items-center gap-2 rounded-md bg-[#f97416dc]  p-2 px-10 font-medium text-white duration-200 hover:bg-red-600'>
+        <div className='flex justify-between  '>
+          <button className=' rounded-md bg-[#f97416dc]  p-2 px-10 font-medium text-white duration-200 hover:bg-red-600'>
             Filter
           </button>
           <button className=' rounded-md bg-gray-200 px-10 font-medium text-black duration-200 '>
