@@ -12,7 +12,6 @@ import {
   MdOutlineSupportAgent,
 } from 'react-icons/md';
 const Sidebar = ({ isVisible }) => {
-
   const path = usePathname();
 
   const menuItems = [
@@ -52,15 +51,12 @@ const Sidebar = ({ isVisible }) => {
     <aside
       className={`transition-width z-50 w-64 flex-shrink-0 overflow-y-auto bg-white shadow-sm duration-500 ease-in-out lg:block dark:bg-gray-800 `}
     >
-      <div className='h-16 py-4 text-gray-500 dark:text-gray-400'>
-        <Link href='/'>
-          <img
-            src='https://seeklogo.com/images/1/shop-logo-C0083F2CCF-seeklogo.com.png'
-            alt=''
-            className='mx-auto h-6 object-cover md:h-12'
-            srcset=''
-          />
+      <div className='  py-4 text-gray-500 dark:text-gray-400'>
+        <Link className='flex  justify-center  text-xl font-bold' href={'/'}>
+          <span className='text-orange-600'>LOGO </span>{' '}
+          <span className='text-sky-600'>HERE</span>
         </Link>
+
         <ul className='mt-6'>
           {menuItems.map((menuItem, index) => (
             <li className='relative px-6 py-3' key={index}>

@@ -1,63 +1,99 @@
-import React from 'react';
-
 const registration = () => {
-    return (
-       
-<div class="    bg-[url('https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?w=740&t=st=1703600703~exp=1703601303~hmac=70c29866dc8c4df6d181cb14362a69bb299b9c9dff54512ef72567c127dde05e')]   flex items-center justify-center h-screen ">
-    <div class="bg-white p-8 rounded-lg shadow-lg max-w-sm w-full ">
-        <div class="flex justify-center mb-6">
-            <span class="inline-block bg-gray-200 rounded-full p-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
-            </span>
+  return (
+    <div className="    flex   h-screen items-center justify-center bg-[url('https://img.freepik.com/free-photo/abstract-uv-ultraviolet-light-composition_23-2149243965.jpg?w=740&t=st=1703600703~exp=1703601303~hmac=70c29866dc8c4df6d181cb14362a69bb299b9c9dff54512ef72567c127dde05e')] ">
+      <div className='w-full max-w-sm rounded-lg bg-white p-8 shadow-lg '>
+        <div className='mb-6 flex justify-center'>
+          <span className='inline-block rounded-full bg-gray-200 p-3'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='24'
+              height='24'
+              viewBox='0 0 24 24'
+            >
+              <path
+                fill='currentColor'
+                d='M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4'
+              />
+            </svg>
+          </span>
         </div>
-        <h2 class="text-2xl font-semibold text-center mb-4">Create a new account</h2>
-        <p class="text-gray-600 text-center mb-6">Enter your details to register.</p>
+        <h2 className='mb-4 text-center text-2xl font-semibold'>
+          Create a new account
+        </h2>
+        <p className='mb-6 text-center text-gray-600'>
+          Enter your details to register.
+        </p>
         <form>
-        <div class="relative mt-4">
-                  <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Name</p>
-                  <input placeholder="Name" type="text" class="border placeholder-gray-400 focus:outline-none
-                   focus:border-b-cyan-900 w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
-                </div>
-        <div class="relative mt-4">
-                  <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Email</p>
-                  <input placeholder="123@ex.com" type="email" class="border placeholder-gray-400 focus:outline-none
-                   focus:border-b-cyan-900 w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
-                </div>
-        <div class="relative mt-5">
-                  <p class="bg-white pt-0 pr-2 pb-0 pl-2 -mt-3 mr-0 mb-0 ml-2 font-medium text-gray-600 absolute">Password</p>
-                  <input placeholder="Password" type="text" class="border placeholder-gray-400 focus:outline-none
-                   focus:border-b-cyan-900 w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white
-                  border-gray-300 rounded-md"/>
-                </div>
-
-
-            <button type="submit" class=" mt-4 w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Register</button>
-            <p class="text-gray-600 text-xs text-center mt-4">
-                By clicking Register, you agree to accept  Grocery Shop
-                <a href="#" class="text-blue-500 hover:underline">Terms and Conditions</a>.
+          <div className='relative mt-4'>
+            <p className='absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600'>
+              Name
             </p>
+            <input
+              placeholder='Name'
+              type='text'
+              className='mb-0 ml-0 mr-0
+                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
+                  focus:border-b-cyan-900 focus:outline-none'
+            />
+          </div>
+          <div className='relative mt-4'>
+            <p className='absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600'>
+              Email
+            </p>
+            <input
+              placeholder='123@ex.com'
+              type='email'
+              className='mb-0 ml-0 mr-0
+                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
+                  focus:border-b-cyan-900 focus:outline-none'
+            />
+          </div>
+          <div className='relative mt-5'>
+            <p className='absolute -mt-3 mb-0 ml-2 mr-0 bg-white pb-0 pl-2 pr-2 pt-0 font-medium text-gray-600'>
+              Password
+            </p>
+            <input
+              placeholder='Password'
+              type='text'
+              className='mb-0 ml-0 mr-0
+                   mt-2 block w-full rounded-md border border-gray-300 bg-white pb-4 pl-4 pr-4 pt-4 text-base placeholder-gray-400
+                  focus:border-b-cyan-900 focus:outline-none'
+            />
+          </div>
 
-            <div class="inline-flex items-center justify-center w-full">
-                  <hr class="w-64 h-px my-8 bg-neutral-200 border-0 white" />
-                  <span
-                    class="absolute px-3 font-medium text-black-200 -translate-x-1/2 left-1/2 bg-white"
-                  >Have you an account?</span>
+          <button
+            type='submit'
+            className=' mt-4 w-full rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50'
+          >
+            Register
+          </button>
+          <p className='mt-4 text-center text-xs text-gray-600'>
+            By clicking Register, you agree to accept Grocery Shop
+            <a href='#' className='text-blue-500 hover:underline'>
+              Terms and Conditions
+            </a>
+            .
+          </p>
 
-                </div>
+          <div className='inline-flex w-full items-center justify-center'>
+            <hr className='white my-8 h-px w-64 border-0 bg-neutral-200' />
+            <span className='text-black-200 absolute left-1/2 -translate-x-1/2 bg-white px-3 font-medium'>
+              Have you an account?
+            </span>
+          </div>
 
-
-                <div class="relative">
-                  <a class=" btn btn-outline btn-primary w-full inline-block pt-2 pr-5 pb-2 pl-5 text-base font-medium text-center text-indigo-500  
-                  rounded-lg transition duration-200 hover:bg-indigo-600 ease">Login your account</a>
-                </div>
-
-                
+          <div className='relative'>
+            <a
+              className=' ease btn btn-outline btn-primary inline-block w-full rounded-lg pb-2 pl-5 pr-5 pt-2 text-center text-base  
+                  font-medium text-indigo-500 transition duration-200 hover:bg-indigo-600'
+            >
+              Login your account
+            </a>
+          </div>
         </form>
+      </div>
     </div>
-</div>
-    );
+  );
 };
 
 export default registration;

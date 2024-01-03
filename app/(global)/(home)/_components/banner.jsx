@@ -23,8 +23,8 @@ export const Banner = () => {
       height={heroHeight}
       autoplay={{ delay: 5000, disableOnInteraction: true }}
     >
-      {images.map((image) => (
-        <SwiperSlide className='h-full' key={image}>
+      {images.map((image, i) => (
+        <SwiperSlide className='h-full' key={i}>
           <div className='relative' style={{ height: heroHeight }}>
             <Image className='rounded' src={image} fill alt={image} />
           </div>
