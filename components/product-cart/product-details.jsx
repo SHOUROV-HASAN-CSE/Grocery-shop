@@ -35,15 +35,17 @@ export const ProductDetails = ({ image, title, details }) => {
               <div className='p-4'>
                 <p className='text-justify font-semibold'>{title}</p>
                 <ul className='mt-3'>
-                  {Object.keys(details).map((key) => (
-                    <li className='flex items-center gap-3 text-sm' key={key}>
-                      <span className='flex items-center gap-2 font-semibold'>
-                        <VscDebugBreakpointFunction className='text-sm' /> {key}
-                        {' : '}
-                      </span>
-                      {details[key]}
-                    </li>
-                  ))}
+                  {details &&
+                    Object.keys(details).map((key) => (
+                      <li className='flex items-center gap-3 text-sm' key={key}>
+                        <span className='flex items-center gap-2 font-semibold'>
+                          <VscDebugBreakpointFunction className='text-sm' />{' '}
+                          {key}
+                          {' : '}
+                        </span>
+                        {details[key]}
+                      </li>
+                    ))}
                 </ul>
               </div>
             </section>

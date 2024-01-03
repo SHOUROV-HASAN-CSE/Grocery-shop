@@ -3,14 +3,22 @@ import { featuresData } from '../../../../data/features-data';
 import { categories } from '../../../../data/categories-data';
 import { FeaturedProducts } from './featured-products/featured-products';
 import { FlashProducts } from './flash-products/flash-products';
-import { Banner } from './hero/banner';
+import { Banner } from './banner';
 import { ComboProducts } from './combo-products/combo-products';
+import { CategoriesMenu } from './categories-menu/categories-menu';
+import { heroHeight } from '@/data/style-data';
 
 export const Home = () => {
   return (
     <>
-      <div className='flex'>
+      <div className='flex gap-5'>
         <Banner />
+        <div
+          className='no-scrollbar hidden w-full max-w-[320px] overflow-y-auto bg-white py-3 lg:block'
+          style={{ height: heroHeight }}
+        >
+          <CategoriesMenu />
+        </div>
       </div>
 
       {/* features */}
