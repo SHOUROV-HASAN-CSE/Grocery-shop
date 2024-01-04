@@ -1,5 +1,4 @@
 'use client';
-
 import { Logo } from '@/components/logo';
 import { userData } from '@/data/user-data';
 import * as Dialog from '@radix-ui/react-dialog';
@@ -15,7 +14,7 @@ export const Navbar = () => {
           <HiOutlineMenuAlt1 className='block cursor-pointer text-2xl md:hidden' />
         </Dialog.Trigger>
         <Dialog.Portal>
-          <Dialog.Overlay className='absolute top-0 z-40 h-screen w-screen bg-gray-500/60 transition delay-300 duration-500'>
+          <Dialog.Overlay className='fixed top-0 z-40 h-screen w-screen bg-gray-500/60 transition delay-300 duration-500'>
             <Dialog.Content className='w-fit border-none outline-none'>
               <Sidebar />
             </Dialog.Content>
