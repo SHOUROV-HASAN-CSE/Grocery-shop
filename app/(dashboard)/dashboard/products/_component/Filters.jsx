@@ -1,18 +1,23 @@
+'use client';
 import { products } from '@/data/allProducts';
+import { Root, Trigger } from '@radix-ui/react-dialog';
 import { FiPlus } from 'react-icons/fi';
 import { MdDelete } from 'react-icons/md';
+import AddProuct from './AddProucts';
 
 const Filters = () => {
   return (
-    <div className=' px-3'>
-      <p className='text-xl font-semibold'>All Products</p>
-      <div className='flex justify-end gap-5'>
+    <Root className=' px-3'>
+      <p className=' text-xl font-semibold'>All Products</p>
+      <div className='mt-5 flex justify-end gap-5'>
         <button className='flex items-center gap-2 rounded-md bg-red-500 p-2 font-medium text-white duration-200 hover:bg-red-600'>
           <MdDelete /> Delete
         </button>
-        <button className='flex items-center gap-2 rounded-md bg-[#f97416dc] p-2 font-medium text-white duration-200 hover:bg-[#f97416]'>
-          <FiPlus /> Add Product
-        </button>
+        {/* <Trigger>
+          <button className='flex items-center gap-2 rounded-md bg-[#f97416dc] p-2 font-medium text-white duration-200 hover:bg-[#f97416]'>
+            <FiPlus /> Add Product
+          </button>
+        </Trigger> */}
       </div>
 
       {/* filtering */}
@@ -47,7 +52,8 @@ const Filters = () => {
           </button>
         </div>
       </div>
-    </div>
+      <AddProuct />
+    </Root>
   );
 };
 

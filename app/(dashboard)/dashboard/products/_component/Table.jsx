@@ -8,6 +8,9 @@ import { FaEye } from 'react-icons/fa6';
 import ResponsivePagination from 'react-responsive-pagination';
 import Link from 'next/link';
 
+import { Root, Trigger } from '@radix-ui/react-dialog';
+import AddProuct from './AddProucts';
+
 const Table = () => {
   const totalPages = 5;
   const [currentPage, setCurrentPage] = useState(1);
@@ -16,14 +19,14 @@ const Table = () => {
     setCurrentPage(page);
   };
   return (
-    <div>
+    <Root>
       <div className='overflow-x-auto'>
         <table className='table'>
           {/* head */}
           <thead>
             <tr>
               <th></th>
-              <th>PRODUCT NAME</th>
+              <th className='  lg:w-72 '>PRODUCT NAME</th>
               <th>CATEGORY</th>
               <th>VENDOR</th>
               <th>PRICE</th>
@@ -49,7 +52,7 @@ const Table = () => {
 
                 {/* image and name */}
                 <td>
-                  <div className='flex items-center gap-3'>
+                  <div className='flex w-56 items-center gap-3  lg:w-72'>
                     <div className='avatar'>
                       <div className='mask mask-squircle h-12 w-12'>
                         <Image
@@ -61,7 +64,7 @@ const Table = () => {
                       </div>
                     </div>
                     <div>
-                      <div className='font-medium'>Hart Hagerty</div>
+                      <div className='font-medium'>{product.title}</div>
                     </div>
                   </div>
                 </td>
@@ -115,7 +118,9 @@ const Table = () => {
                 {/* actions */}
                 <td>
                   <div className=' flex items-center justify-end gap-5 text-xl'>
-                    <BiSolidEdit className='cursor-pointer duration-200 hover:text-[#F97316]' />
+                    <Trigger>
+                      <BiSolidEdit className='cursor-pointer duration-200 hover:text-[#F97316]' />
+                    </Trigger>
                     <MdDelete className='cursor-pointer duration-200 hover:text-red-500' />
                   </div>
                 </td>
@@ -133,7 +138,8 @@ const Table = () => {
           />
         )}
       </div>
-    </div>
+      <AddProuct />
+    </Root>
   );
 };
 
