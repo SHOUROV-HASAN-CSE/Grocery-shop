@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaUserSecret } from 'react-icons/fa';
 import { IoGiftSharp } from 'react-icons/io5';
 import { MdOutlineDashboard } from 'react-icons/md';
 import { TiShoppingCart } from 'react-icons/ti';
@@ -32,10 +32,11 @@ export const navData = [
 export const sidebarData = [
   { title: 'Dashboard', url: '/dashboard', icon: <MdOutlineDashboard /> },
   { title: 'Products', url: '/dashboard/products', icon: <TiShoppingCart /> },
+  { title: 'Vendors', url: '/dashboard/vendors', icon: <FaUserSecret /> },
   { title: 'Orders', url: '/dashboard/orders', icon: <BsHandbag /> },
   {
-    title: 'Brand',
-    url: '/dashboard/brand',
+    title: 'Brands',
+    url: '/dashboard/brands',
     icon: <MdOutlineBrandingWatermark />,
   },
   { title: 'Categories', url: '/dashboard/categories', icon: <LuLayoutList /> },
