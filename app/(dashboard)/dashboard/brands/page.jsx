@@ -9,7 +9,9 @@ export default function BrandsPage() {
         <h4 className='font-semibold'>All Brands</h4>
         <AddBrand />
       </div>
-      <BrandsTable brandsData={brandData} />
+      <div className='mt-5 overflow-auto rounded pb-2 shadow'>
+        <BrandsTable brandsData={brandData} />
+      </div>
     </section>
   );
 }

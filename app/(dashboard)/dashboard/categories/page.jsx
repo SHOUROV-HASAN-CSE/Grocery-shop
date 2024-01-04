@@ -9,7 +9,9 @@ export default function CategoriesPage() {
         <h4 className='font-semibold'>All Categories</h4>
         <AddCategory />
       </div>
-      <CategoriesTable categoriesData={categoriesDataForCategoriesPage} />
+      <div className='mt-5 w-full overflow-auto rounded pb-2 shadow'>
+        <CategoriesTable categoriesData={categoriesDataForCategoriesPage} />
+      </div>
     </section>
   );
 }
