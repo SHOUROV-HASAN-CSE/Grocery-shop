@@ -1,17 +1,11 @@
 import Link from 'next/link';
-import { FaUser } from 'react-icons/fa';
+import { FaUser, FaUserSecret } from 'react-icons/fa';
 import { IoGiftSharp } from 'react-icons/io5';
-import { CiDesktop } from 'react-icons/ci';
-import { AiOutlineLaptop } from 'react-icons/ai';
-import { GiProcessor, GiClothes } from 'react-icons/gi';
-import {
-  MdOutlineElectricalServices,
-  MdOutlinePhotoCamera,
-} from 'react-icons/md';
-import { RiCustomerServiceLine } from 'react-icons/ri';
-import { TfiShoppingCartFull } from 'react-icons/tfi';
-import { SiPaloaltosoftware } from 'react-icons/si';
-import { PiOfficeChairBold } from 'react-icons/pi';
+import { MdOutlineDashboard } from 'react-icons/md';
+import { TiShoppingCart } from 'react-icons/ti';
+import { BsHandbag } from 'react-icons/bs';
+import { MdOutlineBrandingWatermark } from 'react-icons/md';
+import { LuLayoutList } from 'react-icons/lu';
 
 export const navData = [
   {
@@ -35,209 +29,15 @@ export const navData = [
   },
 ];
 
-export const navMenuData = [
+export const sidebarData = [
+  { title: 'Dashboard', url: '/dashboard', icon: <MdOutlineDashboard /> },
+  { title: 'Products', url: '/dashboard/products', icon: <TiShoppingCart /> },
+  { title: 'Vendors', url: '/dashboard/vendors', icon: <FaUserSecret /> },
+  { title: 'Orders', url: '/dashboard/orders', icon: <BsHandbag /> },
   {
-    title: 'Desktop',
-    icon: <CiDesktop />,
-    menus: [
-      {
-        title: 'Desktop Offer',
-        url: '/category-details',
-      },
-      {
-        title: 'Star PC',
-        subMenus: [
-          { title: 'Intel PC', url: '/category-details' },
-          { title: 'AMD PC', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'Gaming PC',
-        subMenus: [
-          { title: 'Intel PC', url: '/category-details' },
-          { title: 'AMD PC', url: '/category-details' },
-        ],
-      },
-    ],
+    title: 'Brands',
+    url: '/dashboard/brands',
+    icon: <MdOutlineBrandingWatermark />,
   },
-  {
-    title: 'Laptop',
-    icon: <AiOutlineLaptop />,
-    menus: [
-      {
-        title: 'All Laptop',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'Gaming PC',
-        subMenus: [
-          { title: 'Intel PC', url: '/category-details' },
-          { title: 'AMD PC', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Components',
-    icon: <GiProcessor />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Electronics',
-    icon: <MdOutlineElectricalServices />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Clothing',
-    icon: <GiClothes />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Business Services',
-    icon: <RiCustomerServiceLine />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Groceries',
-    icon: <TfiShoppingCartFull />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Camera',
-    icon: <MdOutlinePhotoCamera />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Software',
-    icon: <SiPaloaltosoftware />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
-  {
-    title: 'Office Equipment',
-    icon: <PiOfficeChairBold />,
-    menus: [
-      {
-        title: 'Processors',
-        subMenus: [
-          { title: 'Lenovo', url: '/category-details' },
-          { title: 'HP', url: '/category-details' },
-        ],
-      },
-      {
-        title: 'CPU',
-        subMenus: [
-          { title: 'Intel', url: '/category-details' },
-          { title: 'AMD', url: '/category-details' },
-        ],
-      },
-    ],
-  },
+  { title: 'Categories', url: '/dashboard/categories', icon: <LuLayoutList /> },
 ];

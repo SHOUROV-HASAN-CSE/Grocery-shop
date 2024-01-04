@@ -110,3 +110,16 @@ input[type='number']::-webkit-outer-spin-button {
   scroll-behavior: smooth;
 }
 /* ------------------------------------------------------------------ */
+
+/* ---------------- Scrollbar -------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6c757d;
+}
+::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+/* ---------------- Scrollbar -------------------- */

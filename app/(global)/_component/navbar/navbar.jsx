@@ -1,10 +1,11 @@
 'use client';
 import Link from 'next/link';
-import * as Dialog from '@radix-ui/react-dialog';
 import { Search } from './search';
+import { Logo } from '@/components/logo';
+import * as Dialog from '@radix-ui/react-dialog';
+import { CgMenuRightAlt } from 'react-icons/cg';
 import { navData } from '../../../../data/nav-data';
 import { NavIconContainer } from './nav-icon-container';
-import { CgMenuRightAlt } from 'react-icons/cg';
 import { CategoriesMenu } from '../../(home)/_components/categories-menu/categories-menu';
 
 export const Navbar = () => {
@@ -12,10 +13,7 @@ export const Navbar = () => {
     <>
       <nav className='navbar bg-primary py-3 text-white'>
         <div className='container flex gap-6 whitespace-nowrap'>
-          <Link className='text-xl font-bold' href={'/'}>
-            <span className='text-orange-600'>LOGO</span>{' '}
-            <span className='text-sky-600'>HERE</span>
-          </Link>
+          <Logo />
           <Search />
 
           <div className='hidden items-center gap-5 xl:flex'>

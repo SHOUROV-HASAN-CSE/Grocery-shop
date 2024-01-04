@@ -3,7 +3,7 @@ import {
   MdOutlineLinkedCamera,
   MdOutlineElectricalServices,
 } from 'react-icons/md';
-import { GiClothes, GiDeliveryDrone, GiProcessor } from 'react-icons/gi';
+import { GiDeliveryDrone, GiProcessor } from 'react-icons/gi';
 import { TbBatteryAutomotive } from 'react-icons/tb';
 import { PiOfficeChairBold, PiTelevisionDuotone } from 'react-icons/pi';
 import { AiOutlineLaptop, AiTwotoneMobile } from 'react-icons/ai';
@@ -245,4 +245,14 @@ export const categoriesList = [
       },
     ],
   },
+];
+
+export const categoriesDataForCategoriesPage = [
+  { name: 'Desktop', totalProduct: 150 },
+  { name: 'Laptop', totalProduct: 250 },
+  { name: 'Electronic', totalProduct: 160 },
+  { name: 'Phone', totalProduct: 250 },
+  { name: 'Monitor', totalProduct: 100 },
+  { name: 'Processor', totalProduct: 100 },
+  { name: 'Clothing', totalProduct: 100 },
 ];
