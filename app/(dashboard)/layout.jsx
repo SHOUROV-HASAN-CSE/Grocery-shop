@@ -1,48 +1,13 @@
-'use client';
-import { useEffect, useState } from 'react';
-import DashboardNavbar from './_component/navbar/DashboardNavbar';
-import Sidebar from './_component/sidebar/Siderbar';
-export default function GlobalLayout({ children }) {
-  const [isVisible, setIsVisible] = useState(true);
-  const [darkMode, setDarkMode] = useState(true); 
+import { Navbar } from './_component/navbar/navbar';
 
-  useEffect(() => {
-    const storedDarkMode = localStorage.getItem('darkMode');
-    if (typeof storedDarkMode !== 'undefined' && storedDarkMode !== null) {
-   
-      setDarkMode(JSON.parse(storedDarkMode));
-    }
-  }, []); 
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-    localStorage.setItem('darkMode', JSON.stringify(darkMode));
-  }, [darkMode]);
-
-  const toggleDarkMode = () => {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
-  };
-
-  const toggleVisibility = () => {
-    setIsVisible((prevState) => !prevState);
-  };
-
+export default function DashboardLayout({ children }) {
   return (
-    <div className='false flex h-screen bg-gray-50 dark:bg-gray-900 '>
-      {isVisible && <Sidebar isVisible={isVisible} />}
-
-      <div className='flex w-full flex-1 flex-col'>
-        <DashboardNavbar
-          toggleVisibility={toggleVisibility}
-          toggleDarkMode={toggleDarkMode}
-        />
-       
+    <section className='min-h-screen gap-6 md:flex'>
+      <section className='hidden'>Sidebar</section>
+      <section className='w-full'>
+        <Navbar />
         <main>{children}</main>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 }
