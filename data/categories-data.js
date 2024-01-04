@@ -3,7 +3,7 @@ import {
   MdOutlineLinkedCamera,
   MdOutlineElectricalServices,
 } from 'react-icons/md';
-import { GiClothes, GiDeliveryDrone, GiProcessor } from 'react-icons/gi';
+import { GiDeliveryDrone, GiProcessor } from 'react-icons/gi';
 import { TbBatteryAutomotive } from 'react-icons/tb';
 import { PiOfficeChairBold, PiTelevisionDuotone } from 'react-icons/pi';
 import { AiOutlineLaptop, AiTwotoneMobile } from 'react-icons/ai';
