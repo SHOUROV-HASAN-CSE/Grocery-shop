@@ -24,8 +24,8 @@ export const Navbar = () => {
       </Dialog.Root>
 
       <Logo className={'md:hidden'} />
-      <div className='ml-auto h-10 w-[2px] bg-gray-500' />
-      <ProfileIcon image={userData.image} name={userData.name} size={'50px'} />
+      <div className='ml-auto h-8 w-[1px] bg-gray-500' />
+      <ProfileIcon image={userData.image} name={userData.name} size={'40px'} />
     </nav>
   );
 };

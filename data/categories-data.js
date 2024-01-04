@@ -246,3 +246,13 @@ export const categoriesList = [
     ],
   },
 ];
+
+export const categoriesDataForCategoriesPage = [
+  { name: 'Desktop', totalProduct: 150 },
+  { name: 'Laptop', totalProduct: 250 },
+  { name: 'Electronic', totalProduct: 160 },
+  { name: 'Phone', totalProduct: 250 },
+  { name: 'Monitor', totalProduct: 100 },
+  { name: 'Processor', totalProduct: 100 },
+  { name: 'Clothing', totalProduct: 100 },
+];
