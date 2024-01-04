@@ -3,7 +3,7 @@ import Table from './Table';
 
 const AllProducts = () => {
   return (
-    <div className='mx-auto flex w-full flex-col gap-10 py-10 lg:w-[80%]'>
+    <div className='mx-auto flex w-full flex-col gap-10 py-10 lg:w-[90%]'>
       <Filters />
       <Table />
     </div>
