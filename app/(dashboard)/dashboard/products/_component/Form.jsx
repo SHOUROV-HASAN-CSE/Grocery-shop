@@ -1,9 +1,9 @@
 import { brandData } from '@/data/brand-data';
 import { categoriesDataForCategoriesPage as categories } from '@/data/categories-data';
 import Image from 'next/image';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const Form = ({ previewImages, setPreviewImages }) => {
+const Form = ({ previewImages, setPreviewImages, product }) => {
   const inputClass = 'rounded-md border-gray-300';
   const inputParent = 'flex flex-col gap-2';
 
@@ -44,7 +44,7 @@ const Form = ({ previewImages, setPreviewImages }) => {
           {/* title */}
           <div className={inputParent}>
             <label>Product Title/Name </label>
-            <input type='text' className={inputClass} />
+            <input value={product.title} type='text' className={inputClass} />
           </div>
 
           {/* description */}
@@ -52,6 +52,7 @@ const Form = ({ previewImages, setPreviewImages }) => {
           <div className={inputParent}>
             <label>Product Description </label>
             <textarea
+              value={product.description}
               name=''
               id=''
               cols='30'
@@ -79,7 +80,7 @@ const Form = ({ previewImages, setPreviewImages }) => {
                 type='text'
                 className='w-full rounded-md border-gray-300 pl-16'
               />
-              <p className='absolute left-[1px] flex h-[95%] items-center rounded-l  bg-gray-100 px-5 text-xl text-gray-500'>
+              <p className='absolute left-[1px] flex h-[95%] items-center rounded-l  bg-gray-100 px-5 text-2xl text-gray-500'>
                 ৳
               </p>
             </div>
@@ -93,7 +94,7 @@ const Form = ({ previewImages, setPreviewImages }) => {
                 type='text'
                 className='w-full rounded-md border-gray-300 pl-16'
               />
-              <p className='absolute left-[1px] flex h-[95%] items-center rounded-l  bg-gray-100 px-5 text-xl text-gray-500'>
+              <p className='absolute left-[1px] flex h-[95%] items-center rounded-l  bg-gray-100 px-5 text-2xl text-gray-500'>
                 ৳
               </p>
             </div>
@@ -121,29 +122,32 @@ const Form = ({ previewImages, setPreviewImages }) => {
               />
               <label
                 htmlFor='file'
-                className={`flex min-h-[10vh] w-full cursor-pointer items-center justify-center rounded-md border border-dashed border-[#00000026] p-3  ${
+                className={` flex min-h-[10vh] w-full cursor-pointer items-center justify-center rounded-md border border-dashed border-[#00000026]  ${
                   dragging ? 'bg-[#f974161e]' : 'bg-transparent'
                 }`}
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
               >
-                <span className='text-black dark:text-white'>
+                <span className='block text-center text-black'>
                   Drag and drop your thumbnail here or click to browse
                 </span>
               </label>
-              <div className='mt-3 grid grid-cols-2 gap-3 lg:grid-cols-5 '>
-                {previewImages?.map((image, i) => (
-                  <Image
-                    key={i}
-                    width={200}
-                    height={200}
-                    src={image}
-                    alt=''
-                    className='max-h-[100px]  w-full rounded-md object-cover '
-                  />
-                ))}
-              </div>
+
+              {previewImages.length > 0 && (
+                <div className='lg:grid-col-4 mt-5  grid grid-cols-2 gap-5  xl:grid-cols-6  '>
+                  {previewImages?.map((image, i) => (
+                    <Image
+                      key={i}
+                      width={150}
+                      height={150}
+                      src={image}
+                      alt=''
+                      className='max-h-[100px]  w-full rounded-md object-cover '
+                    />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -194,13 +198,3 @@ const Form = ({ previewImages, setPreviewImages }) => {
 };
 
 export default Form;
-
-// {previewImage ? (
-//     <Image
-//       width={500}
-//       height={500}
-//       src={previewImage}
-//       alt=''
-//       className='max-h-full w-full object-cover'
-//     />
-//   ) : (

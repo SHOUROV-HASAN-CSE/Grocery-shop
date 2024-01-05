@@ -16,6 +16,7 @@ const Table = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const [prodId, setProdId] = useState('');
   return (
     <div>
       <Root>
@@ -69,7 +70,7 @@ const Table = () => {
                         </div>
                       </div>
                       <div>
-                        <div className='font-medium'>Hart Hagerty</div>
+                        <div className='font-medium'>{product.title}</div>
                       </div>
                     </div>
                   </td>
@@ -110,7 +111,10 @@ const Table = () => {
                   <td>
                     <div className=' flex items-center justify-end gap-5 text-xl'>
                       <Trigger asChild>
-                        <button className='duration-200 hover:text-[#F97316]'>
+                        <button
+                          className='duration-200 hover:text-[#F97316]'
+                          onClick={() => setProdId(product.id)}
+                        >
                           <BiSolidEdit className='cursor-pointer duration-200 hover:text-[#F97316]' />
                         </button>
                       </Trigger>
@@ -134,7 +138,7 @@ const Table = () => {
         </div>
 
         {/* dialog */}
-        <EditProduct />
+        {prodId && <EditProduct id={prodId} />}
       </Root>
     </div>
   );
