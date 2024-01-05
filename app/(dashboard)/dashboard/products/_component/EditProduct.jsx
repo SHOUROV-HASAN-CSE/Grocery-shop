@@ -25,7 +25,7 @@ const EditProduct = () => {
         </div>
 
         {/* content */}
-        <div className='mt-10 px-5'>
+        <div className='mt-10 h-[90vh] overflow-y-auto px-5'>
           <Form />
         </div>
       </Content>
