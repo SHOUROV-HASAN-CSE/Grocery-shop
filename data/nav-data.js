@@ -6,6 +6,7 @@ import { TiShoppingCart } from 'react-icons/ti';
 import { BsHandbag } from 'react-icons/bs';
 import { MdOutlineBrandingWatermark } from 'react-icons/md';
 import { LuLayoutList } from 'react-icons/lu';
+import { BsBox2 } from 'react-icons/bs';
 
 export const navData = [
   {
@@ -40,4 +41,9 @@ export const sidebarData = [
     icon: <MdOutlineBrandingWatermark />,
   },
   { title: 'Categories', url: '/dashboard/categories', icon: <LuLayoutList /> },
+  {
+    title: 'Bundle Products',
+    url: '/dashboard/bundle-products',
+    icon: <BsBox2 />,
+  },
 ];

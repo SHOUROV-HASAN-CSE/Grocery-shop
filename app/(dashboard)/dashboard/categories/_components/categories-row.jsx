@@ -1,4 +1,3 @@
-import { RiEditLine } from 'react-icons/ri';
 import { RiDeleteBin7Fill } from 'react-icons/ri';
 import { EditCategory } from './edit-category';
 

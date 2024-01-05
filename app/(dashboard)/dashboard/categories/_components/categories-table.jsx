@@ -3,7 +3,7 @@ import { CategoriesRow } from './categories-row';
 export const CategoriesTable = ({ categoriesData }) => {
   const thClass = `py-2 px-5 text-left whitespace-nowrap`;
   return (
-    <table className=''>
+    <table>
       <thead className='bg-gray-300'>
         <tr>
           <th className={thClass}>Selected</th>
