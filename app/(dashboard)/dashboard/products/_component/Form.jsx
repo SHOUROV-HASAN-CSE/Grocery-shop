@@ -33,8 +33,8 @@ const Form = ({ previewImages, setPreviewImages, product }) => {
     e.preventDefault();
     setDragging(false);
 
-    const file = e.dataTransfer.files[0];
-    setPreviewImage(URL.createObjectURL(file));
+    const files = e.dataTransfer.files;
+    setPreviewImages(URL.createObjectURL(files));
   };
 
   return (
