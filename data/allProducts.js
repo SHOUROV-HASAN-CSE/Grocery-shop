@@ -14,7 +14,7 @@ export const products = [
     productCode: 'P1000',
     category: 'electronics',
     brand: 'Brand 1',
-    title: 'Product 1 Title',
+    title: 'Product 1 Title all products check',
     keyFeatures: ['Feature 1A', 'Feature 1B', 'Feature 1C'],
     vendorInfo: {
       id: '1',

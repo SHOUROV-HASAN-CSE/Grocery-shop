@@ -36,8 +36,8 @@ export const ProductDetails = ({ image, title, details }) => {
                 <p className='text-justify font-semibold'>{title}</p>
                 <ul className='mt-3'>
                   {details &&
-                    Object.keys(details).map((key) => (
-                      <li className='flex items-center gap-3 text-sm' key={key}>
+                    Object.keys(details).map((key, i) => (
+                      <li className='flex items-center gap-3 text-sm' key={i}>
                         <span className='flex items-center gap-2 font-semibold'>
                           <VscDebugBreakpointFunction className='text-sm' />{' '}
                           {key}
