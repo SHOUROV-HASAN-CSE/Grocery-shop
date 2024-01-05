@@ -34,7 +34,13 @@ const Form = ({ previewImages, setPreviewImages, product }) => {
     setDragging(false);
 
     const files = e.dataTransfer.files;
-    setPreviewImages(URL.createObjectURL(files));
+    if (files) {
+      const imageUrls = Array.from(files).map((file) =>
+        URL.createObjectURL(file),
+      );
+
+      setPreviewImages([...previewImages, ...imageUrls]);
+    }
   };
 
   return (
