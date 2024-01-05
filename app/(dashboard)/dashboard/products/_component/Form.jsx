@@ -1,14 +1,40 @@
 import { brandData } from '@/data/brand-data';
 import { categoriesDataForCategoriesPage as categories } from '@/data/categories-data';
-import React from 'react';
+import Image from 'next/image';
+import React, { useState } from 'react';
 
-const Form = ({ edit }) => {
+const Form = ({ previewImage, setPreviewImage }) => {
   const inputClass = 'rounded-md border-gray-300';
   const inputParent = 'flex flex-col gap-2';
+
+  const [dragging, setDragging] = useState(false);
+
+  const handleFileChange = (e) => {
+    const file = e.target.files?.[0];
+    setPreviewImage(URL.createObjectURL(file));
+  };
+
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setDragging(true);
+  };
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    setDragging(false);
+  };
+
+  const handleDrop = (e) => {
+    e.preventDefault();
+    setDragging(false);
+
+    const file = e.dataTransfer.files[0];
+    setPreviewImage(URL.createObjectURL(file));
+  };
+
   return (
     <form>
       <div className='flex flex-col gap-10 lg:flex-row'>
-        <div className='flex w-full flex-col gap-3 lg:w-1/2'>
+        <div className='flex w-full flex-col gap-5 lg:w-1/2'>
           {/* title */}
           <div className={inputParent}>
             <label>Product Title/Name </label>
@@ -74,16 +100,42 @@ const Form = ({ edit }) => {
           </div>
         </div>
 
-        <div className='flex w-full flex-col gap-3 lg:w-1/2'>
+        <div className='flex w-full flex-col gap-5 lg:w-1/2'>
+          {/* images */}
           <div className={inputParent}>
             <label>Product Images </label>
-            <textarea
-              name=''
-              id=''
-              cols='30'
-              rows='5 '
-              className={inputClass}
-            ></textarea>
+            <div className='w-full'>
+              <input
+                type='file'
+                accept='image/*'
+                id='file'
+                className='hidden'
+                onChange={handleFileChange}
+              />
+              <label
+                htmlFor='file'
+                className={`flex min-h-[10vh] w-full cursor-pointer items-center justify-center rounded-md border border-dashed border-[#00000026] p-3  ${
+                  dragging ? 'bg-[#f974161e]' : 'bg-transparent'
+                }`}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onDrop={handleDrop}
+              >
+                {previewImage ? (
+                  <Image
+                    width={500}
+                    height={500}
+                    src={previewImage}
+                    alt=''
+                    className='max-h-full w-full object-cover'
+                  />
+                ) : (
+                  <span className='text-black dark:text-white'>
+                    Drag and drop your thumbnail here or click to browse
+                  </span>
+                )}
+              </label>
+            </div>
           </div>
 
           {/* key features */}
@@ -127,20 +179,6 @@ const Form = ({ edit }) => {
             />
           </div>
         </div>
-      </div>
-      <div className='mt-10 flex gap-5'>
-        <button className='w-1/2 rounded-md border border-red-200 p-2 text-red-600 duration-300 hover:bg-red-50'>
-          Cancel
-        </button>
-        {edit ? (
-          <button className='w-1/2 rounded-md border bg-[#f97416d7] p-2 text-white duration-200 hover:bg-[#F97316]'>
-            Update Product
-          </button>
-        ) : (
-          <button className='w-1/2 rounded-md border bg-[#f97416d7] p-2 text-white duration-200 hover:bg-[#F97316]'>
-            Add Product
-          </button>
-        )}
       </div>
     </form>
   );

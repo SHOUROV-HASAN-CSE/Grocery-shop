@@ -1,8 +1,12 @@
 import { Portal, Overlay, Content, Title, Close } from '@radix-ui/react-dialog';
 import { IoClose } from 'react-icons/io5';
 import Form from './Form';
+import { useState } from 'react';
+import FormActions from './FormActions';
 
 const AddProduct = () => {
+  const [previewImage, setPreviewImage] = useState('');
+
   return (
     <Portal>
       <Overlay className='bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0' />
@@ -25,8 +29,15 @@ const AddProduct = () => {
         </div>
 
         {/* content */}
-        <div className='mt-10 h-[75vh] overflow-y-auto px-5'>
-          <Form />
+        {/* content */}
+        <div>
+          <div className='mt-5 h-[75vh] overflow-y-auto px-5'>
+            <Form
+              previewImage={previewImage}
+              setPreviewImage={setPreviewImage}
+            />
+          </div>
+          <FormActions edit={false} />
         </div>
       </Content>
     </Portal>
