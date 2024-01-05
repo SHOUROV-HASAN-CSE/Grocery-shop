@@ -5,7 +5,7 @@ import { useState } from 'react';
 import FormActions from './FormActions';
 
 const EditProduct = () => {
-  const [previewImage, setPreviewImage] = useState('');
+  const [previewImages, setPreviewImages] = useState('');
 
   return (
     <Portal>
@@ -32,8 +32,8 @@ const EditProduct = () => {
         <div>
           <div className='mt-5 h-[75vh] overflow-y-auto px-5'>
             <Form
-              previewImage={previewImage}
-              setPreviewImage={setPreviewImage}
+              previewImages={previewImages}
+              setPreviewImages={setPreviewImages}
             />
           </div>
           <FormActions edit={true} />

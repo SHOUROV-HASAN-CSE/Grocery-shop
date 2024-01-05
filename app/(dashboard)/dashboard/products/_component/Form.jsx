@@ -3,15 +3,21 @@ import { categoriesDataForCategoriesPage as categories } from '@/data/categories
 import Image from 'next/image';
 import React, { useState } from 'react';
 
-const Form = ({ previewImage, setPreviewImage }) => {
+const Form = ({ previewImages, setPreviewImages }) => {
   const inputClass = 'rounded-md border-gray-300';
   const inputParent = 'flex flex-col gap-2';
 
   const [dragging, setDragging] = useState(false);
 
   const handleFileChange = (e) => {
-    const file = e.target.files?.[0];
-    setPreviewImage(URL.createObjectURL(file));
+    const files = e.target.files;
+    if (files) {
+      const imageUrls = Array.from(files).map((file) =>
+        URL.createObjectURL(file),
+      );
+
+      setPreviewImages([...previewImages, ...imageUrls]);
+    }
   };
 
   const handleDragOver = (e) => {
@@ -111,6 +117,7 @@ const Form = ({ previewImage, setPreviewImage }) => {
                 id='file'
                 className='hidden'
                 onChange={handleFileChange}
+                multiple
               />
               <label
                 htmlFor='file'
@@ -121,20 +128,22 @@ const Form = ({ previewImage, setPreviewImage }) => {
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
               >
-                {previewImage ? (
-                  <Image
-                    width={500}
-                    height={500}
-                    src={previewImage}
-                    alt=''
-                    className='max-h-full w-full object-cover'
-                  />
-                ) : (
-                  <span className='text-black dark:text-white'>
-                    Drag and drop your thumbnail here or click to browse
-                  </span>
-                )}
+                <span className='text-black dark:text-white'>
+                  Drag and drop your thumbnail here or click to browse
+                </span>
               </label>
+              <div className='mt-3 grid grid-cols-2 gap-3 lg:grid-cols-5 '>
+                {previewImages?.map((image, i) => (
+                  <Image
+                    key={i}
+                    width={200}
+                    height={200}
+                    src={image}
+                    alt=''
+                    className='max-h-[100px]  w-full rounded-md object-cover '
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -185,3 +194,13 @@ const Form = ({ previewImage, setPreviewImage }) => {
 };
 
 export default Form;
+
+// {previewImage ? (
+//     <Image
+//       width={500}
+//       height={500}
+//       src={previewImage}
+//       alt=''
+//       className='max-h-full w-full object-cover'
+//     />
+//   ) : (
