@@ -1,11 +1,11 @@
 'use client';
-import { stores } from '@/data/user-data';
 import Image from 'next/image';
 import { useState } from 'react';
 import { MdDelete, MdToggleOff, MdToggleOn } from 'react-icons/md';
 import ResponsivePagination from 'react-responsive-pagination';
 import { Root, Trigger } from '@radix-ui/react-dialog';
 import DeleteDialog from './DeleteDialog';
+import { stores } from '@/data/store-data';
 
 const VendorsTable = () => {
   const totalPages = 5;
@@ -18,7 +18,7 @@ const VendorsTable = () => {
     <div>
       <Root>
         <div className='overflow-x-auto'>
-          <table className='table'>
+          <table className='table border'>
             {/* head */}
             <thead>
               <tr>

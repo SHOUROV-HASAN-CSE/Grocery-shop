@@ -4,7 +4,6 @@ const VendorPage = () => {
   return (
     <div>
       <AllVendors />
-      {/* <AllProducts /> */}
     </div>
   );
 };
