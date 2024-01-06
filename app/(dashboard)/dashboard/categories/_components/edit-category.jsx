@@ -2,7 +2,7 @@
 
 import { RiEditLine } from 'react-icons/ri';
 import { Root, Trigger } from '@radix-ui/react-dialog';
-import { Input } from '../../../../../components/input';
+import { Input } from '../../../../../components/form-components/input';
 import { ModalBody } from '../../../../../components/modal-body';
 
 export const EditCategory = ({ name }) => {
