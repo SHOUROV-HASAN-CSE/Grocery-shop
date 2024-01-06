@@ -8,7 +8,7 @@ const VendorFilters = () => {
       <p className=' text-xl font-semibold'>All Stores</p>
       <div className='mt-5 flex justify-between gap-5'>
         <Link
-          href={'/dashboard/vendors/submissions'}
+          href={'/dashboard/vendors/new-submissions'}
           className='flex items-center gap-2 rounded-md bg-[#f97416dc] p-2 font-medium text-white duration-200 hover:bg-[#f97416]'
         >
           <CiMoneyCheck1 className='text-2xl' /> New Submissions

@@ -1,13 +1,13 @@
 'use client';
 
-import { stores, submissions } from '@/data/store-data';
 import { Root, Trigger } from '@radix-ui/react-dialog';
 import Image from 'next/image';
 import { useState } from 'react';
-import { MdDelete } from 'react-icons/md';
 import ResponsivePagination from 'react-responsive-pagination';
+import AcceptDialog from './AcceptDialog';
+import { submissions as allSubmissions } from '../../../../../../../data/store-data';
 
-const SubmissionTable = () => {
+const SubmissionTable = ({ submissions = allSubmissions }) => {
   const totalPages = 5;
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -22,26 +22,15 @@ const SubmissionTable = () => {
             {/* head */}
             <thead>
               <tr>
-                <th></th>
                 <th>STORE NAME</th>
                 <th className='text-center'>OWNER</th>
-                <th>DESCRIPTION / MESSAGE</th>
+                <th className=''>DESCRIPTION / MESSAGE</th>
                 <th className=' text-right'>STATUS / ACTIONS</th>
               </tr>
             </thead>
             <tbody>
               {submissions?.map((submission, i) => (
                 <tr key={i} className='boeder-b border-gray-400'>
-                  {/* checbox */}
-                  <th>
-                    <label>
-                      <input
-                        type='checkbox'
-                        className='checkbox h-4 w-4 rounded-sm'
-                      />
-                    </label>
-                  </th>
-
                   {/* logo and name */}
                   <td>
                     <div className='flex items-center gap-3'>
@@ -66,7 +55,7 @@ const SubmissionTable = () => {
 
                   {/* description */}
                   <td className=' w-96  font-medium'>
-                    <p className=''>{submission?.message}</p>
+                    <p className='w-96'>{submission?.message}</p>
                   </td>
 
                   {/* actions */}
@@ -74,11 +63,9 @@ const SubmissionTable = () => {
                     <div className=' flex items-center justify-end gap-5 text-sm'>
                       {submission.status === 'pending' ? (
                         <>
-                          <Trigger asChild>
-                            <button className='rounded-md  border-red-300 p-1 px-4 text-red-600 duration-500 hover:bg-red-200'>
-                              Cancel
-                            </button>
-                          </Trigger>
+                          <button className='rounded-md  border-red-300 p-1 px-4 text-red-600 duration-500 hover:bg-red-200'>
+                            Cancel
+                          </button>
                           <Trigger asChild>
                             <button className='rounded-md border  bg-[#f97416d7] p-1  px-4  text-white duration-200 hover:bg-[#F97316]'>
                               Accept
@@ -86,7 +73,15 @@ const SubmissionTable = () => {
                           </Trigger>
                         </>
                       ) : (
-                        <p>{submission.status}</p>
+                        <p
+                          className={`${
+                            submission?.status === 'accepted'
+                              ? ' bg-green-100 text-green-600'
+                              : 'bg-red-100 text-red-600'
+                          }`}
+                        >
+                          {submission.status}
+                        </p>
                       )}
                     </div>
                   </td>
@@ -96,7 +91,7 @@ const SubmissionTable = () => {
           </table>
         </div>
         <div className='flex justify-center border-t pt-5'>
-          {stores.length >= 2 && (
+          {submissions?.length >= 10 && (
             <ResponsivePagination
               total={totalPages}
               current={currentPage}
@@ -104,7 +99,7 @@ const SubmissionTable = () => {
             />
           )}
         </div>
-        {/* <DeleteDialog /> */}
+        <AcceptDialog />
       </Root>
     </div>
   );

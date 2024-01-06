@@ -180,6 +180,62 @@ export const submissions = [
     user: 'user9@example.com',
     message:
       'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
+    store: 'Store 6',
+    status: 'cancelled',
+  },
+  {
+    logo: 'https://www.startech.com.bd/image/cache/catalog/monitor/msi/pro-mp273aw/pro-mp273aw-500x500.webp',
+    user: 'user9@example.com',
+    message:
+      'Our team will be in touch shortly to discuss the next steps and answer any questions you may have. Thank you for choosing our platform, and we look forward to a successful partnership!',
     store: 'Store 7',
     status: 'pending',
   },
