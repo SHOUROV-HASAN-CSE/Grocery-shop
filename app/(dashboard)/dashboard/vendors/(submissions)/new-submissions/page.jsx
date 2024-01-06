@@ -1,9 +1,9 @@
-import AllProducts from './_component/AllProducts';
+import Submissions from './_components/Submissions';
 
 const page = () => {
   return (
     <div>
-      <AllProducts />
+      <Submissions />
     </div>
   );
 };
