@@ -16,6 +16,7 @@ export const Input = ({
         id={name}
         type={type}
         name={name}
+        min={0}
         defaultValue={defaultValue}
         placeholder={placeholder}
         required={required}

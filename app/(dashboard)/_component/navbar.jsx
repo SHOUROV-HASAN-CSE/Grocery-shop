@@ -11,7 +11,9 @@ export const Navbar = () => {
     <nav className='sticky top-0 z-30 flex w-full items-center gap-5 px-5 py-2 shadow backdrop-blur'>
       <Dialog.Root>
         <Dialog.Trigger asChild>
-          <HiOutlineMenuAlt1 className='block cursor-pointer text-2xl lg:hidden' />
+          <span className='block cursor-pointer text-2xl lg:hidden'>
+            <HiOutlineMenuAlt1 />
+          </span>
         </Dialog.Trigger>
         <Dialog.Portal>
           <Dialog.Overlay className='fixed top-0 z-40 h-screen w-screen bg-gray-500/60 transition delay-300 duration-500'>

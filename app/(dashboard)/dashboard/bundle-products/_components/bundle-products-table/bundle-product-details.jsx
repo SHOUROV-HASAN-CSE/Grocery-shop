@@ -8,11 +8,10 @@ import Image from 'next/image';
 export const BundleProductDetails = ({ products, title, image }) => {
   return (
     <Root>
-      <Trigger
-        className='mx-auto cursor-pointer rounded bg-primary p-1 text-center text-3xl text-white transition hover:scale-110'
-        asChild
-      >
-        <MdOutlineViewCarousel />
+      <Trigger asChild>
+        <span className='mx-auto cursor-pointer rounded bg-primary p-1 text-center text-xl text-white transition hover:scale-110'>
+          <MdOutlineViewCarousel />
+        </span>
       </Trigger>
       <ModalBody title={title}>
         <div className='grid sm:grid-cols-2'>
