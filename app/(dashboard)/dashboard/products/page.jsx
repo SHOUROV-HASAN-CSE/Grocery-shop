@@ -1,4 +1,3 @@
-import React from 'react';
 import AllProducts from './_component/AllProducts';
 
 const page = () => {
