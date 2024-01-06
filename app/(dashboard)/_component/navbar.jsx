@@ -1,9 +1,9 @@
 'use client';
-import { Logo } from '@/components/logo';
-import { userData } from '@/data/user-data';
+import { Logo } from '../../../components/logo';
+import { userData } from '../../../data/user-data';
 import * as Dialog from '@radix-ui/react-dialog';
 import { HiOutlineMenuAlt1 } from 'react-icons/hi';
-import { ProfileIcon } from '@/components/profile-icon';
+import { ProfileIcon } from '../../../components/profile-icon';
 import { Sidebar } from './sidebar/sidebar';
 
 export const Navbar = () => {

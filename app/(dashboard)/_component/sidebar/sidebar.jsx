@@ -1,7 +1,7 @@
 'use client';
 
-import { Logo } from '@/components/logo';
-import { sidebarData } from '@/data/nav-data';
+import { Logo } from '../../../../components/logo';
+import { sidebarData } from '../../../../data/nav-data';
 import { SidebarLink } from './sidebar-link';
 import { usePathname } from 'next/navigation';
 
