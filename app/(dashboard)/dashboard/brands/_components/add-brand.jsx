@@ -2,8 +2,8 @@
 
 import { IoMdAdd } from 'react-icons/io';
 import * as Dialog from '@radix-ui/react-dialog';
-import { ModalBody } from '@/components/modal-body';
-import { Input } from '@/components/form-components/input';
+import { ModalBody } from '../../../../../components/modal-body';
+import { Input } from '../../../../../components/form-components/input';
 
 export const AddBrand = () => {
   const handleAddBrand = (event) => {

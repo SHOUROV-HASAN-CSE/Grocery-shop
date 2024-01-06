@@ -1,9 +1,9 @@
 'use client';
-import { products } from '@/data/allProducts';
-import { Root, Trigger } from '@radix-ui/react-dialog';
+import AddProduct from './AddProduct';
 import { FiPlus } from 'react-icons/fi';
 import { MdDelete } from 'react-icons/md';
-import AddProduct from './AddProduct';
+import { products } from '../../../../../data/allProducts';
+import { Root, Trigger } from '@radix-ui/react-dialog';
 
 const Filters = () => {
   return (

@@ -1,9 +1,9 @@
-import { Portal, Overlay, Content, Title, Close } from '@radix-ui/react-dialog';
-import { IoClose } from 'react-icons/io5';
 import Form from './Form';
-import { useEffect, useState } from 'react';
 import FormActions from './FormActions';
-import { products } from '@/data/allProducts';
+import { Portal, Overlay, Content, Title, Close } from '@radix-ui/react-dialog';
+import { useEffect, useState } from 'react';
+import { IoClose } from 'react-icons/io5';
+import { products } from '../../../../../data/allProducts';
 
 const EditProduct = ({ id }) => {
   const [previewImages, setPreviewImages] = useState('');

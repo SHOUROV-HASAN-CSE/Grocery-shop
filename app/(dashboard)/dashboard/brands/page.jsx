@@ -1,4 +1,4 @@
-import { brandData } from '@/data/brand-data';
+import { brandData } from '../../../../data/brand-data';
 import { AddBrand } from './_components/add-brand';
 import { BrandsTable } from './_components/brands-table/brands-table';
 

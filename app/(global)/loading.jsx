@@ -1,9 +1,7 @@
-import LoadingSection from "@/components/loading-sectionl"
+import LoadingSection from '../../components/loading-sectionl';
 
 const Loading = () => {
-  return (
-    <LoadingSection/>
-  )
-}
+  return <LoadingSection />;
+};
 
-export default Loading
+export default Loading;

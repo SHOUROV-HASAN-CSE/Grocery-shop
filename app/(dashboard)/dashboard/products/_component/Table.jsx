@@ -1,7 +1,7 @@
 'use client';
-import { products } from '@/data/allProducts';
-import { Root, Trigger } from '@radix-ui/react-dialog';
 import Image from 'next/image';
+import { products } from '../../../../../data/allProducts';
+import { Root, Trigger } from '@radix-ui/react-dialog';
 import { useState } from 'react';
 import { BiSolidEdit } from 'react-icons/bi';
 import { MdDelete, MdToggleOff, MdToggleOn } from 'react-icons/md';

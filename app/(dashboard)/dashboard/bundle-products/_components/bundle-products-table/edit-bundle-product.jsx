@@ -1,10 +1,10 @@
 'use client';
-import { Root, Trigger } from '@radix-ui/react-dialog';
-import { ModalBody } from '@/components/modal-body';
-import { Input } from '@/components/form-components/input';
-import { ComboBox } from '@/components/form-components/combo-box';
 import { useState } from 'react';
 import { RiEditLine } from 'react-icons/ri';
+import { Root, Trigger } from '@radix-ui/react-dialog';
+import { ModalBody } from '../../../../../../components/modal-body';
+import { Input } from '../../../../../../components/form-components/input';
+import { ComboBox } from '../../../../../../components/form-components/combo-box';
 
 export const EditBundleProduct = ({
   allProducts,

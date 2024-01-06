@@ -1,9 +1,9 @@
 'use client';
-import { Card } from '@/components/card';
-import { DoubleRangedSlider } from '@/components/double-ranged-slider';
-import { CheckBox } from '@/components/form-components/check-box';
-import { storData } from '@/data/store-data';
 import { useState } from 'react';
+import { Card } from '../../../../../../components/card';
+import { DoubleRangedSlider } from '../../../../../../components/double-ranged-slider';
+import { CheckBox } from '../../../../../../components/form-components/check-box';
+import { storData } from '../../../../../../data/store-data';
 
 export const FilterOptions = () => {
   const min = 0;

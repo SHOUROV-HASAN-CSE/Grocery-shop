@@ -1,4 +1,4 @@
-import { categoriesDataForCategoriesPage } from '@/data/categories-data';
+import { categoriesDataForCategoriesPage } from '../../../../data/categories-data';
 import { CategoriesTable } from './_components/categories-table';
 import { AddCategory } from './_components/add-category';
 

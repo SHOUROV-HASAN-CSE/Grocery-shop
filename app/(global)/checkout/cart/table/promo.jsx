@@ -1,4 +1,5 @@
-import { Input } from '@/components/form-components/input';
+import { Input } from '../../../../../components/form-components/input';
+
 const Promo = () => {
   return (
     <div className='col-span-2 space-y-6 rounded bg-white p-4 shadow lg:grid-cols-2 lg:gap-6 xl:grid xl:grid-cols-2 xl:gap-6 xl:space-y-0'>

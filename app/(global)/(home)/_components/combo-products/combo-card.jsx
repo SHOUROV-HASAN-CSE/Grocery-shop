@@ -1,13 +1,7 @@
 'use client';
-import { RatingStar } from '@/components/product-cart/rating-start';
 import Image from 'next/image';
+import { RatingStar } from '../../../../../components/product-cart/rating-star';
 import { useRouter } from 'next/navigation';
-import {
-  MdOutlineStar,
-  MdOutlineStarBorder,
-  MdOutlineStarHalf,
-} from 'react-icons/md';
-import { twMerge } from 'tailwind-merge';
 
 export const ComboCard = ({
   title,
@@ -20,11 +14,6 @@ export const ComboCard = ({
 }) => {
   const router = useRouter();
 
-  const starCount = {
-    fullStar: Math.floor(rating),
-    halfStar: Math.ceil(rating) > Math.floor(rating),
-    emptyStar: 5 - Math.ceil(rating),
-  };
   return (
     <div
       onClick={() => router.push(url)}
@@ -61,28 +50,6 @@ export const ComboCard = ({
           </button>
         </div>
       </div>
-
-      {/* <div className='mt-2 flex items-center'>
-        {[...Array(starCount.fullStar)].map((el, index) => (
-          <div key={`${el}-${index}`} className='text-orange-300'>
-            <MdOutlineStar />
-          </div>
-        ))}
-        {starCount.halfStar ? (
-          <div className='text-orange-300'>
-            <MdOutlineStarHalf />
-          </div>
-        ) : null}
-        {[...Array(starCount.emptyStar)].map((el, index) => (
-          <div
-            key={`${el}-${index + starCount.fullStar}`}
-            className='text-orange-300'
-          >
-            <MdOutlineStarBorder />
-          </div>
-        ))}
-        <span className='ml-3 text-gray-500'>({reviewsCount})</span>
-      </div> */}
     </div>
   );
 };

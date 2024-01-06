@@ -1,11 +1,11 @@
 'use client';
 
+import { useState } from 'react';
 import { IoMdAdd } from 'react-icons/io';
 import { Root, Trigger } from '@radix-ui/react-dialog';
-import { ModalBody } from '@/components/modal-body';
-import { Input } from '@/components/form-components/input';
-import { ComboBox } from '@/components/form-components/combo-box';
-import { useState } from 'react';
+import { ModalBody } from '../../../../../components/modal-body';
+import { Input } from '../../../../../components/form-components/input';
+import { ComboBox } from '../../../../../components/form-components/combo-box';
 import { featuredProductData } from '../../../../../data/products-data';
 
 export const AddBundleProduct = () => {

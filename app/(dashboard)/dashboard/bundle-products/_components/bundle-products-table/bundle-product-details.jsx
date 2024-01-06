@@ -2,7 +2,7 @@
 
 import { MdOutlineViewCarousel } from 'react-icons/md';
 import { Root, Trigger } from '@radix-ui/react-dialog';
-import { ModalBody } from '@/components/modal-body';
+import { ModalBody } from '../../../../../../components/modal-body';
 import Image from 'next/image';
 
 export const BundleProductDetails = ({ products, title, image }) => {

@@ -1,9 +1,9 @@
 'use client';
 
-import * as Dialog from '@radix-ui/react-dialog';
-import { ModalBody } from '@/components/modal-body';
-import { Input } from '@/components/form-components/input';
 import { RiEditLine } from 'react-icons/ri';
+import { Root, Trigger } from '@radix-ui/react-dialog';
+import { Input } from '../../../../../components/input';
+import { ModalBody } from '../../../../../components/modal-body';
 
 export const EditCategory = ({ name }) => {
   const handleEditCategory = (event) => {
@@ -11,12 +11,12 @@ export const EditCategory = ({ name }) => {
   };
 
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
+    <Root>
+      <Trigger asChild>
         <span className='cursor-pointer rounded bg-blue-600 p-1 text-xl text-white'>
           <RiEditLine />
         </span>
-      </Dialog.Trigger>
+      </Trigger>
       <ModalBody title={'Edit Category'}>
         <form onSubmit={handleEditCategory}>
           <Input
@@ -32,6 +32,6 @@ export const EditCategory = ({ name }) => {
           </button>
         </form>
       </ModalBody>
-    </Dialog.Root>
+    </Root>
   );
 };

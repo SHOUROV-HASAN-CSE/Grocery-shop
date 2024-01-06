@@ -1,4 +1,4 @@
-import { bundleProductsForAdmin } from '@/data/products-data';
+import { bundleProductsForAdmin } from '../../../../data/products-data';
 import { BundleProductsTable } from './_components/bundle-products-table/bundle-products-table';
 import { AddBundleProduct } from './_components/add-bundle-product';
 

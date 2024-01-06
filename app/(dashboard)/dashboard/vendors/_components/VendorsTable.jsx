@@ -1,11 +1,11 @@
 'use client';
 import Image from 'next/image';
 import { useState } from 'react';
-import { MdDelete, MdToggleOff, MdToggleOn } from 'react-icons/md';
-import ResponsivePagination from 'react-responsive-pagination';
-import { Root, Trigger } from '@radix-ui/react-dialog';
 import DeleteDialog from './DeleteDialog';
-import { stores } from '@/data/store-data';
+import ResponsivePagination from 'react-responsive-pagination';
+import { MdDelete, MdToggleOff, MdToggleOn } from 'react-icons/md';
+import { Root, Trigger } from '@radix-ui/react-dialog';
+import { stores } from '../../../../../data/store-data';
 
 const VendorsTable = () => {
   const totalPages = 5;

@@ -1,7 +1,7 @@
-import { brandData } from '@/data/brand-data';
-import { categoriesDataForCategoriesPage as categories } from '@/data/categories-data';
 import Image from 'next/image';
 import { useState } from 'react';
+import { brandData } from '../../../../../data/brand-data';
+import { categoriesDataForCategoriesPage as categories } from '../../../../../data/categories-data';
 
 const Form = ({ previewImages, setPreviewImages, product }) => {
   const inputClass = 'rounded-md border-gray-300';

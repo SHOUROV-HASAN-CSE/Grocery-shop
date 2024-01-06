@@ -1,7 +1,6 @@
 'use client';
-import { heroHeight } from '@/data/style-data';
 import { AllMenus } from './all-menus';
-import { categoriesList } from '@/data/categories-data';
+import { categoriesList } from '../../../../../data/categories-data';
 import { useState } from 'react';
 
 export const CategoriesMenu = () => {

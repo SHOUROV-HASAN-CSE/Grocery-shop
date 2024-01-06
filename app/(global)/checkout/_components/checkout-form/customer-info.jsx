@@ -1,8 +1,8 @@
-import { zones } from '@/data/zone';
+import { zones } from '../../../../../data/zone';
 import { CheckoutCard } from '../checkout-card';
-import { Input } from '@/components/form-components/input';
-import { Select } from '@/components/form-components/select';
-import { TextArea } from '@/components/form-components/text-area';
+import { Input } from '../../../../../components/form-components/input';
+import { Select } from '../../../../../components/form-components/select';
+import { TextArea } from '../../../../../components/form-components/text-area';
 
 export const CustomerInfo = () => {
   return (
