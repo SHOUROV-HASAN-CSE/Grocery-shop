@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { Radio } from '@/components/form-components/radio';
+import { Radio } from '../../../../../components/form-components/radio';
 import { CheckoutCard } from '../checkout-card';
 import { CustomerInfo } from './customer-info';
-import { Input } from '@/components/form-components/input';
+import { Input } from '../../../../../components/form-components/input';
 import { CheckoutTable } from './checkout-table';
-import { orders } from '@/data/orders';
+import { orders } from '../../../../../data/orders';
 import { twMerge } from 'tailwind-merge';
 
 export const CheckoutForm = () => {

@@ -1,10 +1,9 @@
 'use client';
-import { Card } from '@/components/card';
-import { DoubleRangedSlider } from '@/components/double-ranged-slider';
-import { CheckBox } from '@/components/form-components/check-box';
-import { Radio } from '@/components/form-components/radio';
-import { storData } from '@/data/store-data';
 import { useState } from 'react';
+import { Card } from '../../../../../../components/card';
+import { DoubleRangedSlider } from '../../../../../../components/double-ranged-slider';
+import { CheckBox } from '../../../../../../components/form-components/check-box';
+import { storData } from '../../../../../../data/store-data';
 
 export const FilterOptions = () => {
   const min = 0;
@@ -21,7 +20,7 @@ export const FilterOptions = () => {
       {Object.keys(storData).map((key) => (
         <Card title={key} key={key}>
           {storData[key].map(({ name, label }, index) => (
-            <CheckBox key={name} name={name} label={label} />
+            <CheckBox key={index} name={name} label={label} />
           ))}
         </Card>
       ))}

@@ -1,21 +1,25 @@
 'use client';
-import Link from 'next/link';
-import * as Dialog from '@radix-ui/react-dialog';
+
 import { Search } from './search';
+import { Logo } from '../../../../components/logo';
+import { CgMenuRightAlt } from 'react-icons/cg';
 import { navData } from '../../../../data/nav-data';
 import { NavIconContainer } from './nav-icon-container';
-import { CgMenuRightAlt } from 'react-icons/cg';
 import { CategoriesMenu } from '../../(home)/_components/categories-menu/categories-menu';
+import {
+  Root,
+  Trigger,
+  Overlay,
+  Content,
+  Portal,
+} from '@radix-ui/react-dialog';
 
 export const Navbar = () => {
   return (
     <>
       <nav className='navbar bg-primary py-3 text-white'>
         <div className='container flex gap-6 whitespace-nowrap'>
-          <Link className='text-xl font-bold' href={'/'}>
-            <span className='text-orange-600'>LOGO</span>{' '}
-            <span className='text-sky-600'>HERE</span>
-          </Link>
+          <Logo />
           <Search />
 
           <div className='hidden items-center gap-5 xl:flex'>
@@ -31,18 +35,18 @@ export const Navbar = () => {
             ))}
           </div>
 
-          <Dialog.Root>
-            <Dialog.Trigger asChild>
+          <Root>
+            <Trigger asChild>
               <CgMenuRightAlt className='block cursor-pointer text-4xl lg:hidden' />
-            </Dialog.Trigger>
-            <Dialog.Portal>
-              <Dialog.Overlay className='fixed inset-0 z-[1010] h-full w-full bg-gray-500/80'>
-                <Dialog.Content className='ml-auto h-full w-full max-w-[320px] border-0 bg-white'>
+            </Trigger>
+            <Portal>
+              <Overlay className='fixed inset-0 z-[1010] h-full w-full bg-gray-500/80'>
+                <Content className='ml-auto h-full w-full max-w-[320px] border-0 bg-white'>
                   <CategoriesMenu />
-                </Dialog.Content>
-              </Dialog.Overlay>
-            </Dialog.Portal>
-          </Dialog.Root>
+                </Content>
+              </Overlay>
+            </Portal>
+          </Root>
         </div>
       </nav>
     </>

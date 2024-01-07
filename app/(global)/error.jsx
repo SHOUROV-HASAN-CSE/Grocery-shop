@@ -24,12 +24,12 @@ export default function Error({ error, reset }) {
 
         <p>Something went wrong!</p>
 
-        <div className='flex justify-center items-center gap-8'>
+        <div className='flex items-center justify-center gap-8'>
           <Link href='/'>
-            <button class='blueButton'>Return Home</button>
+            <button className='blueButton'>Return Home</button>
           </Link>
 
-          <button onClick={() => reset()} class='blueButton'>
+          <button onClick={() => reset()} className='blueButton'>
             Try Again
           </button>
         </div>

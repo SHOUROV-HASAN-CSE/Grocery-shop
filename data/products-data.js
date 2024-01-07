@@ -298,3 +298,32 @@ export const comboProducts = [
     url: '/products/MSI',
   },
 ];
+
+export const bundleProductsForAdmin = [
+  {
+    image: 'https://i.ibb.co/tmBYYhm/laptop.jpg',
+    title: 'MacBook And Monitor Combo Pack',
+    price: 11200,
+    regularPrice: 16500,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+    products: [
+      { name: 'MacBook Pro', image: 'https://i.ibb.co/tmBYYhm/laptop.jpg' },
+      { name: 'Best Monitor', image: 'https://i.ibb.co/FVmG3Kz/monitor.jpg' },
+    ],
+  },
+  {
+    image: 'https://i.ibb.co/F6sKNDn/speaker.jpg',
+    title: 'Canon Camera and Speakers',
+    price: 11200,
+    regularPrice: 16500,
+    rating: 4,
+    reviewsCount: 16,
+    url: '/products/MSI',
+    products: [
+      { name: 'MacBook Pro', image: 'https://i.ibb.co/tmBYYhm/laptop.jpg' },
+      { name: 'Best Monitor', image: 'https://i.ibb.co/tmBYYhm/laptop.jpg' },
+    ],
+  },
+];

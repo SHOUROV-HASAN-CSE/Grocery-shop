@@ -1,5 +1,5 @@
-import { ProductCard } from '@/components/product-cart/product-card';
-import { featuredProductData } from '@/data/products-data';
+import { ProductCard } from '../../../../../components/product-cart/product-card';
+import { featuredProductData } from '../../../../../data/products-data';
 
 export const FeaturedProducts = () => {
   return (

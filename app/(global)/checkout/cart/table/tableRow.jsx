@@ -2,17 +2,14 @@ import { ImCross } from 'react-icons/im';
 
 import { useState } from 'react';
 import { FaBangladeshiTakaSign } from 'react-icons/fa6';
+import Image from 'next/image';
 
 const TableRow = ({ product, handleRemoveClick, handleQuantityChange }) => {
   const [value, setValue] = useState(product.quantity);
   return (
     <tr key={product.id} className='border-b-2'>
       <td className='hidden border-gray-400 px-4  py-2 md:table-cell'>
-        <img
-          src={product.image}
-          alt={product.productName}
-          className='h-20 object-cover'
-        />
+        <Image src={product?.image} alt='' width={100} height={100} />
       </td>
       <td className='row-span-4 border-gray-400 px-4 py-2 md:w-6/12'>
         <div>
@@ -30,7 +27,7 @@ const TableRow = ({ product, handleRemoveClick, handleQuantityChange }) => {
         >
           <span
             onClick={() => handleQuantityChange(product.id, 'decrement')}
-            class='minus inline-block h-8 w-20 cursor-pointer rounded-md border
+            className='minus inline-block h-8 w-20 cursor-pointer rounded-md border
             border-gray-300 bg-gray-200 p-1 text-center align-middle'
           >
             -
@@ -45,7 +42,7 @@ const TableRow = ({ product, handleRemoveClick, handleQuantityChange }) => {
           />
           <span
             onClick={() => handleQuantityChange(product.id, 'increment')}
-            class='plus inline-block h-8 w-20 cursor-pointer rounded-md border border-gray-300 bg-gray-200 p-1 text-center align-middle'
+            className='plus inline-block h-8 w-20 cursor-pointer rounded-md border border-gray-300 bg-gray-200 p-1 text-center align-middle'
           >
             +
           </span>

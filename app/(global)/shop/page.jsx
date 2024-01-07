@@ -1,10 +1,11 @@
 'use client';
-import { ProductCard } from '@/components/product-cart/product-card';
-import { featuredProductData } from '@/data/products-data';
+import { ProductCard } from '../../../components/product-cart/product-card';
+import { featuredProductData } from '../../../data/products-data';
 import { useState } from 'react';
 import ResponsivePagination from 'react-responsive-pagination';
 import { FilterOptions } from '../stores/[storeId]/_components/store-details/filter-options';
 import Allshop from './_shop-components/Allshop';
+
 const ShopPage = () => {
   const totalPages = 5;
   const [currentPage, setCurrentPage] = useState(1);

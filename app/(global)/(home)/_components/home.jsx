@@ -6,7 +6,7 @@ import { FlashProducts } from './flash-products/flash-products';
 import { Banner } from './banner';
 import { ComboProducts } from './combo-products/combo-products';
 import { CategoriesMenu } from './categories-menu/categories-menu';
-import { heroHeight } from '@/data/style-data';
+import { heroHeight } from '../../../../data/style-data';
 
 export const Home = () => {
   return (

@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import { ComboCard } from './combo-card';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { comboProducts } from '@/data/products-data';
+import { comboProducts } from '../../../../../data/products-data';
 
 export const ComboProducts = () => {
   return (

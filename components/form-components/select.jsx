@@ -9,7 +9,7 @@ export const Select = ({ name, label, options }) => {
         id={name}
         name={name}
       >
-        {options.map((option) => (
+        {options?.map((option) => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>

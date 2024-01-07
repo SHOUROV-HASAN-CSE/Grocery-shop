@@ -1,4 +1,11 @@
-export const Input = ({ name, label, placeholder, type, required }) => {
+export const Input = ({
+  name,
+  label,
+  placeholder,
+  type,
+  defaultValue,
+  required,
+}) => {
   return (
     <div className={`w-full ${label ? 'space-y-2' : ''}`}>
       <label className='block text-sm font-bold' htmlFor={name}>
@@ -9,6 +16,8 @@ export const Input = ({ name, label, placeholder, type, required }) => {
         id={name}
         type={type}
         name={name}
+        min={0}
+        defaultValue={defaultValue}
         placeholder={placeholder}
         required={required}
       />

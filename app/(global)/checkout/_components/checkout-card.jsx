@@ -1,4 +1,4 @@
-import { CircleContainer } from '@/components/circle-container';
+import { CircleContainer } from '../../../../components/circle-container';
 import { twMerge } from 'tailwind-merge';
 import { orange } from 'tailwindcss/colors';
 

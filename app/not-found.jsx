@@ -10,7 +10,7 @@ const ErrorPage = () => {
       </h3>
       <p>The page you requested cannot be found.</p>
       <Link href='/'>
-        <button class='mt-5 rounded bg-blue-700 px-4 py-2 font-bold text-white hover:bg-blue-500'>
+        <button className='mt-5 rounded bg-blue-700 px-4 py-2 font-bold text-white hover:bg-blue-500'>
           Return Home
         </button>
       </Link>
